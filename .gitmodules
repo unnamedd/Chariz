@@ -1,0 +1,3 @@
+[submodule "UXKit"]
+	path = UXKit
+	url = git@github.com:hbang/UXKit-Headers.git

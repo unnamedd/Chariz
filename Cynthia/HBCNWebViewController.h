@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import "UXKit.h"
+#import <UXKit/UXKit.h>
 #import <WebKit/WebKit.h>
 
 @interface HBCNWebViewController : UXViewController <WKUIDelegate, WKNavigationDelegate>

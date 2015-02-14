@@ -8,7 +8,6 @@
 
 #import "HBCNAppDelegate.h"
 #import "HBCNRootViewController.h"
-#import "UXKit.h"
 
 static NSString *const kHBCNUserDefaultsRootWindowFrameKey = @"RootWindowFrame";
 

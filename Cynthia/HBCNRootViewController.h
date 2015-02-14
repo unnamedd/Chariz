@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import "UXKit.h"
+#import <UXKit/UXKit.h>
 
 @interface HBCNRootViewController : UXTabBarController
 

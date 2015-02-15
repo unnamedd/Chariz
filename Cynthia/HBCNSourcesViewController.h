@@ -8,12 +8,6 @@
 
 #import <UXKit/UXKit.h>
 
-@interface UXSourceController : UXViewController
-
-@property (copy, nonatomic) NSArray *rootViewControllers;
-
-@end
-
-@interface HBCNSourcesViewController : UXSourceController
+@interface HBCNSourcesViewController : UXViewController
 
 @end

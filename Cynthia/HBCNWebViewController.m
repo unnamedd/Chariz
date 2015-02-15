@@ -13,7 +13,7 @@
 - (void)loadView {
 	[super loadView];
 	
-	self.title = @"Untitled";
+	self.title = L18N(@"Untitled");
 	
 	WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
 	configuration.preferences.plugInsEnabled = NO;

@@ -15,10 +15,8 @@
 - (void)loadView {
 	[super loadView];
 	
-	self.title = @"Sources";
+	self.title = L18N(@"Sources");
 	
-	self.rootViewControllers = @[ [[HBCNSourcesListViewController alloc] init], [[HBCNPackageListViewController alloc] init] ];
-	/*
 	NSSplitView *splitView = [[NSSplitView alloc] initWithFrame:self.view.bounds];
 	splitView.autoresizingMask = UXViewAutoresizingFlexibleWidth | UXViewAutoresizingFlexibleHeight;
 	splitView.vertical = YES;
@@ -37,7 +35,7 @@
 	[viewController willMoveToParentViewController:self];
 	[self addChildViewController:viewController];
 	[splitView addSubview:viewController.view];
-	[viewController didMoveToParentViewController:self];*/
+	[viewController didMoveToParentViewController:self];
 }
 
 @end

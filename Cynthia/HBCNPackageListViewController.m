@@ -13,7 +13,7 @@
 - (void)loadView {
 	[super loadView];
 	
-	self.title = @"Packages";
+	self.title = L18N(@"Packages");
 	
 	[self.tableView registerClass:UXTableViewCell.class forCellReuseIdentifier:@"Cell"];
 }

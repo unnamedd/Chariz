@@ -1,0 +1,16 @@
+//
+//  Cynthia-Prefix.pch
+//  Cynthia
+//
+//  Created by Adam D on 15/02/2015.
+//  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import <UXKit/UXKit.h>
+
+#define L18N(string) [[NSBundle mainBundle] localizedStringForKey:string value:string table:nil]
+
+#endif

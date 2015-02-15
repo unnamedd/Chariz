@@ -23,6 +23,7 @@
 		CF678C5A1A85B4370084360F /* HBCNPackageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C581A85B4370084360F /* HBCNPackageListViewController.m */; };
 		CF678C5F1A8661D30084360F /* HBCNSourcesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C5E1A8661D30084360F /* HBCNSourcesListViewController.m */; };
 		CF8CAE9E1A8F913A00EC7ECC /* HBCNWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8CAE9D1A8F913A00EC7ECC /* HBCNWelcomeViewController.m */; };
+		CFFE4F161A906D3E00051B92 /* HBCNPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFE4F151A906D3E00051B92 /* HBCNPreferences.m */; };
 		F849E64487BD828BAACC4C52 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E063264AAB01B6E98D54B2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +37,6 @@
 		CF678C181A84C7490084360F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF678C1D1A84C7490084360F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF678C361A84C83B0084360F /* UXKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UXKit.framework; path = /System/Library/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks/UXKit.framework; sourceTree = "<absolute>"; };
-		CF678C391A84CAC10084360F /* UXKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UXKit.h; sourceTree = "<group>"; };
 		CF678C3A1A84D49F0084360F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CF678C3C1A84D4A40084360F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CF678C3E1A84D4A80084360F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,6 +56,9 @@
 		CF678C5E1A8661D30084360F /* HBCNSourcesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNSourcesListViewController.m; sourceTree = "<group>"; };
 		CF8CAE9C1A8F913A00EC7ECC /* HBCNWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNWelcomeViewController.h; sourceTree = "<group>"; };
 		CF8CAE9D1A8F913A00EC7ECC /* HBCNWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNWelcomeViewController.m; sourceTree = "<group>"; };
+		CFA074E31A8F94560094C486 /* Cynthia-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cynthia-Prefix.pch"; sourceTree = "<group>"; };
+		CFFE4F141A906D3E00051B92 /* HBCNPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBCNPreferences.h; path = Cynthia/HBCNPreferences.h; sourceTree = "<group>"; };
+		CFFE4F151A906D3E00051B92 /* HBCNPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBCNPreferences.m; path = Cynthia/HBCNPreferences.m; sourceTree = "<group>"; };
 		F9E063264AAB01B6E98D54B2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				CF678C441A84E2D20084360F /* Delegates */,
+				CFFE4F181A906D4A00051B92 /* Model */,
 				CF678C461A84E81F0084360F /* View Controllers */,
 				CF678C1D1A84C7490084360F /* Images.xcassets */,
 				CF678C131A84C7490084360F /* Supporting Files */,
@@ -118,7 +122,7 @@
 		CF678C131A84C7490084360F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C391A84CAC10084360F /* UXKit.h */,
+				CFA074E31A8F94560094C486 /* Cynthia-Prefix.pch */,
 				CF678C141A84C7490084360F /* Info.plist */,
 				CF678C181A84C7490084360F /* main.m */,
 			);
@@ -230,6 +234,24 @@
 				CF8CAE9D1A8F913A00EC7ECC /* HBCNWelcomeViewController.m */,
 			);
 			name = Welcome;
+			sourceTree = "<group>";
+		};
+		CFFE4F171A906D4100051B92 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE4F141A906D3E00051B92 /* HBCNPreferences.h */,
+				CFFE4F151A906D3E00051B92 /* HBCNPreferences.m */,
+			);
+			name = Preferences;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CFFE4F181A906D4A00051B92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE4F171A906D4100051B92 /* Preferences */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +366,7 @@
 				CF678C421A84E2C50084360F /* HBCNRootViewController.m in Sources */,
 				CF678C5F1A8661D30084360F /* HBCNSourcesListViewController.m in Sources */,
 				CF678C491A84E83F0084360F /* HBCNWebViewController.m in Sources */,
+				CFFE4F161A906D3E00051B92 /* HBCNPreferences.m in Sources */,
 				CF678C171A84C7490084360F /* HBCNAppDelegate.m in Sources */,
 				CF678C5A1A85B4370084360F /* HBCNPackageListViewController.m in Sources */,
 			);
@@ -438,6 +461,7 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks",
 				);
+				GCC_PREFIX_HEADER = "Cynthia/Cynthia-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -459,6 +483,7 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks",
 				);
+				GCC_PREFIX_HEADER = "Cynthia/Cynthia-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,

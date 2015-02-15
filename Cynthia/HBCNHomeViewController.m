@@ -14,9 +14,9 @@
 - (void)loadView {
 	[super loadView];
 	
-	self.title = @"Home";
+	self.title = L18N(@"Home");
 	
-	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.hbang.ws/"]]];
+	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://cynthia.tmnlsthrn.com/"]]];
 }
 
 @end

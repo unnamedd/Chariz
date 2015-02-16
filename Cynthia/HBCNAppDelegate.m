@@ -19,13 +19,20 @@ static NSString *const kHBCNUserDefaultsRootWindowFrameKey = @"RootWindowFrame";
 	CGSize windowSize = CGSizeMake(900.f, 800.f);
 	CGSize screenSize = [NSScreen mainScreen].frame.size;
 	
-	_rootWindowController = [[UXWindowController alloc] initWithRootViewController:[[UXNavigationController alloc] initWithRootViewController:[[HBCNRootViewController alloc] init]]];
+	_rootWindowController = [[UXWindowController alloc] initWithRootViewController:nil];
 	_rootWindowController.window.contentSize = windowSize;
 	_rootWindowController.window.frameOrigin = CGPointMake((screenSize.width - windowSize.width) / 2, (screenSize.height - windowSize.height) / 2);
 	_rootWindowController.windowFrameAutosaveName = kHBCNUserDefaultsRootWindowFrameKey;
+	
+	if (NO){//[HBCNPreferences sharedInstance].lastLaunch) {
+		_rootWindowController.rootViewController = [[HBCNRootViewController alloc] init];
+	} else {
+		_rootWindowController.rootViewController = [[UXNavigationController alloc] initWithRootViewController:[[HBCNWelcomeViewController alloc] init]];
+	}
+	
 	[_rootWindowController showWindow:self];
 	
-	// [HBCNPreferences sharedInstance].lastLaunch = [NSDate date];
+	[HBCNPreferences sharedInstance].lastLaunch = [NSDate date];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {

@@ -26,6 +26,8 @@ static NSString *const kHBCNUserDefaultsRootWindowFrameKey = @"RootWindowFrame";
 	[_rootWindowController showWindow:self];
 	
 	[HBCNPreferences sharedInstance].lastLaunch = [NSDate date];
+    
+	[_rootWindowController.window makeKeyAndOrderFront:self];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {

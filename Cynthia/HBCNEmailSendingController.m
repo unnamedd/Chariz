@@ -96,7 +96,6 @@ static NSString *const kHBCNEmailSendingControllerDpkgListURL = @"file:///tmp/cy
 }
 
 - (void)displayError:(NSError *)error {
-	NSLog(@"%@",_window);
 	[[NSAlert alertWithError:error] beginSheetModalForWindow:_window completionHandler:nil];
 }
 

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CF3E40D11A91E10A00C11DE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3E40D01A91E10A00C11DE3 /* Images.xcassets */; };
-		CF3E40D41A91E3BB00C11DE3 /* HBCNSetupProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3E40D31A91E3BB00C11DE3 /* HBCNSetupProgressViewController.m */; };
 		CF3E40D91A92151300C11DE3 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3E40D81A92151300C11DE3 /* ScriptingBridge.framework */; };
 		CF3E40DF1A92172700C11DE3 /* Mail.app in Sources */ = {isa = PBXBuildFile; fileRef = CF3E40DE1A92172700C11DE3 /* Mail.app */; };
 		CF3E40E21A92235600C11DE3 /* HBCNEmailSendingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3E40E11A92235600C11DE3 /* HBCNEmailSendingController.m */; };
@@ -26,7 +25,6 @@
 		CF678C551A85AC270084360F /* HBCNSourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C541A85AC270084360F /* HBCNSourcesViewController.m */; };
 		CF678C5A1A85B4370084360F /* HBCNPackageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C581A85B4370084360F /* HBCNPackageListViewController.m */; };
 		CF678C5F1A8661D30084360F /* HBCNSourcesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C5E1A8661D30084360F /* HBCNSourcesListViewController.m */; };
-		CF8CAE9E1A8F913A00EC7ECC /* HBCNWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8CAE9D1A8F913A00EC7ECC /* HBCNWelcomeViewController.m */; };
 		CFC8AE0D1A9750EB001D2C91 /* HBCNInstalledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE0C1A9750EB001D2C91 /* HBCNInstalledViewController.m */; };
 		CFC8AE121A975117001D2C91 /* HBCNChangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE101A975117001D2C91 /* HBCNChangesViewController.m */; };
 		CFFE4F161A906D3E00051B92 /* HBCNPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFE4F151A906D3E00051B92 /* HBCNPreferences.m */; };
@@ -51,8 +49,6 @@
 		80B03565FDF1BD7C3C7AD82E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A455C5F5A95B37B57ECE19 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CF3E40D01A91E10A00C11DE3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CF3E40D21A91E3BB00C11DE3 /* HBCNSetupProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBCNSetupProgressViewController.h; path = Cynthia/HBCNSetupProgressViewController.h; sourceTree = "<group>"; };
-		CF3E40D31A91E3BB00C11DE3 /* HBCNSetupProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBCNSetupProgressViewController.m; path = Cynthia/HBCNSetupProgressViewController.m; sourceTree = "<group>"; };
 		CF3E40D71A920EA900C11DE3 /* PrivateAPIs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateAPIs.h; sourceTree = "<group>"; };
 		CF3E40D81A92151300C11DE3 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		CF3E40DE1A92172700C11DE3 /* Mail.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Mail.app; path = /Applications/Mail.app; sourceTree = "<absolute>"; };
@@ -81,8 +77,6 @@
 		CF678C581A85B4370084360F /* HBCNPackageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNPackageListViewController.m; sourceTree = "<group>"; };
 		CF678C5D1A8661D30084360F /* HBCNSourcesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNSourcesListViewController.h; sourceTree = "<group>"; };
 		CF678C5E1A8661D30084360F /* HBCNSourcesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNSourcesListViewController.m; sourceTree = "<group>"; };
-		CF8CAE9C1A8F913A00EC7ECC /* HBCNWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNWelcomeViewController.h; sourceTree = "<group>"; };
-		CF8CAE9D1A8F913A00EC7ECC /* HBCNWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNWelcomeViewController.m; sourceTree = "<group>"; };
 		CFA074E31A8F94560094C486 /* Cynthia-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cynthia-Prefix.pch"; sourceTree = "<group>"; };
 		CFC8AE0B1A9750EB001D2C91 /* HBCNInstalledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNInstalledViewController.h; sourceTree = "<group>"; };
 		CFC8AE0C1A9750EB001D2C91 /* HBCNInstalledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNInstalledViewController.m; sourceTree = "<group>"; };
@@ -118,25 +112,6 @@
 				C4A455C5F5A95B37B57ECE19 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		CF3E40D51A91E3BE00C11DE3 /* Setup Progress */ = {
-			isa = PBXGroup;
-			children = (
-				CF3E40D21A91E3BB00C11DE3 /* HBCNSetupProgressViewController.h */,
-				CF3E40D31A91E3BB00C11DE3 /* HBCNSetupProgressViewController.m */,
-			);
-			name = "Setup Progress";
-			path = ..;
-			sourceTree = "<group>";
-		};
-		CF3E40D61A91E3CA00C11DE3 /* First Run */ = {
-			isa = PBXGroup;
-			children = (
-				CF8CAE9F1A8F913C00EC7ECC /* Welcome */,
-				CF3E40D51A91E3BE00C11DE3 /* Setup Progress */,
-			);
-			name = "First Run";
 			sourceTree = "<group>";
 		};
 		CF3E40E31A92235A00C11DE3 /* Email Sending */ = {
@@ -238,7 +213,6 @@
 				CF678C4A1A84E8490084360F /* Web View */,
 				CF678C5C1A85B43B0084360F /* Package List */,
 				CF678C561A85AC2B0084360F /* Sources */,
-				CF3E40D61A91E3CA00C11DE3 /* First Run */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -290,15 +264,6 @@
 				CF678C5E1A8661D30084360F /* HBCNSourcesListViewController.m */,
 			);
 			name = "Sources List";
-			sourceTree = "<group>";
-		};
-		CF8CAE9F1A8F913C00EC7ECC /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				CF8CAE9C1A8F913A00EC7ECC /* HBCNWelcomeViewController.h */,
-				CF8CAE9D1A8F913A00EC7ECC /* HBCNWelcomeViewController.m */,
-			);
-			name = Welcome;
 			sourceTree = "<group>";
 		};
 		CFC8AE0E1A9750EE001D2C91 /* Installed */ = {
@@ -445,7 +410,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF3E40DF1A92172700C11DE3 /* Mail.app in Sources */,
-				CF8CAE9E1A8F913A00EC7ECC /* HBCNWelcomeViewController.m in Sources */,
 				CFC8AE0D1A9750EB001D2C91 /* HBCNInstalledViewController.m in Sources */,
 				CF678C4F1A84E95F0084360F /* HBCNHomeViewController.m in Sources */,
 				CF678C191A84C7490084360F /* main.m in Sources */,
@@ -457,7 +421,6 @@
 				CF678C171A84C7490084360F /* HBCNAppDelegate.m in Sources */,
 				CF3E40E21A92235600C11DE3 /* HBCNEmailSendingController.m in Sources */,
 				CF678C5A1A85B4370084360F /* HBCNPackageListViewController.m in Sources */,
-				CF3E40D41A91E3BB00C11DE3 /* HBCNSetupProgressViewController.m in Sources */,
 				CFC8AE121A975117001D2C91 /* HBCNChangesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,6 @@
 
 #import "HBCNAppDelegate.h"
 #import "HBCNRootViewController.h"
-#import "HBCNWelcomeViewController.h"
 #import "HBCNPreferences.h"
 
 static NSString *const kHBCNUserDefaultsRootWindowFrameKey = @"RootWindowFrame";
@@ -16,23 +15,19 @@ static NSString *const kHBCNUserDefaultsRootWindowFrameKey = @"RootWindowFrame";
 @implementation HBCNAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
-	CGSize windowSize = CGSizeMake(900.f, 800.f);
+	CGSize windowSize = CGSizeMake(1000.f, 800.f);
 	CGSize screenSize = [NSScreen mainScreen].frame.size;
 	
-	_rootWindowController = [[UXWindowController alloc] initWithRootViewController:nil];
+	_rootWindowController = [[UXWindowController alloc] initWithRootViewController:[[UXNavigationController alloc] initWithRootViewController:[[HBCNRootViewController alloc] init]]];
+	_rootWindowController.window.minSize = windowSize;
 	_rootWindowController.window.contentSize = windowSize;
 	_rootWindowController.window.frameOrigin = CGPointMake((screenSize.width - windowSize.width) / 2, (screenSize.height - windowSize.height) / 2);
 	_rootWindowController.windowFrameAutosaveName = kHBCNUserDefaultsRootWindowFrameKey;
-	
-	if (NO){//[HBCNPreferences sharedInstance].lastLaunch) {
-		_rootWindowController.rootViewController = [[HBCNRootViewController alloc] init];
-	} else {
-		_rootWindowController.rootViewController = [[UXNavigationController alloc] initWithRootViewController:[[HBCNWelcomeViewController alloc] init]];
-	}
-	
 	[_rootWindowController showWindow:self];
 	
 	[HBCNPreferences sharedInstance].lastLaunch = [NSDate date];
+    
+	[_rootWindowController.window makeKeyAndOrderFront:self];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {

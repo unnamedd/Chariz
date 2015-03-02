@@ -9,9 +9,8 @@
 #import "HBCNRootViewController.h"
 #import "HBCNHomeViewController.h"
 #import "HBCNSourcesViewController.h"
-// #import "HBCNChangesViewController.h"
-// #import "HBCNInstalledViewController.h"
-// #import "HBCNSearchViewController.h"
+#import "HBCNChangesViewController.h"
+#import "HBCNInstalledViewController.h"
 
 @implementation HBCNRootViewController
 
@@ -21,9 +20,8 @@
 	self.viewControllers = @[
 		[[HBCNHomeViewController alloc] init],
 		[[HBCNSourcesViewController alloc] init],
-		// [[HBCNChangesViewController alloc] init],
-		// [[HBCNInstalledViewController alloc] init],
-		// [[HBCNSearchViewController alloc] init]
+		[[HBCNChangesViewController alloc] init],
+		[[HBCNInstalledViewController alloc] init]
 	];
 }
 

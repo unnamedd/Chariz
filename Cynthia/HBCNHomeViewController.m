@@ -15,7 +15,7 @@
 	
 	self.title = L18N(@"Home");
 	
-	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://cynthia.tmnlsthrn.com/"]]];
+	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://cynthia.tmnlsthrn.com/ui/osx/1.0/featured/"]]];
 }
 
 @end

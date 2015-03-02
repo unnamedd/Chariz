@@ -27,6 +27,8 @@
 		CF678C5A1A85B4370084360F /* HBCNPackageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C581A85B4370084360F /* HBCNPackageListViewController.m */; };
 		CF678C5F1A8661D30084360F /* HBCNSourcesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C5E1A8661D30084360F /* HBCNSourcesListViewController.m */; };
 		CF8CAE9E1A8F913A00EC7ECC /* HBCNWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8CAE9D1A8F913A00EC7ECC /* HBCNWelcomeViewController.m */; };
+		CFC8AE0D1A9750EB001D2C91 /* HBCNInstalledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE0C1A9750EB001D2C91 /* HBCNInstalledViewController.m */; };
+		CFC8AE121A975117001D2C91 /* HBCNChangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE101A975117001D2C91 /* HBCNChangesViewController.m */; };
 		CFFE4F161A906D3E00051B92 /* HBCNPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFE4F151A906D3E00051B92 /* HBCNPreferences.m */; };
 		F849E64487BD828BAACC4C52 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E063264AAB01B6E98D54B2 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -82,6 +84,10 @@
 		CF8CAE9C1A8F913A00EC7ECC /* HBCNWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNWelcomeViewController.h; sourceTree = "<group>"; };
 		CF8CAE9D1A8F913A00EC7ECC /* HBCNWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNWelcomeViewController.m; sourceTree = "<group>"; };
 		CFA074E31A8F94560094C486 /* Cynthia-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cynthia-Prefix.pch"; sourceTree = "<group>"; };
+		CFC8AE0B1A9750EB001D2C91 /* HBCNInstalledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNInstalledViewController.h; sourceTree = "<group>"; };
+		CFC8AE0C1A9750EB001D2C91 /* HBCNInstalledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNInstalledViewController.m; sourceTree = "<group>"; };
+		CFC8AE0F1A975117001D2C91 /* HBCNChangesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNChangesViewController.h; sourceTree = "<group>"; };
+		CFC8AE101A975117001D2C91 /* HBCNChangesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNChangesViewController.m; sourceTree = "<group>"; };
 		CFFE4F141A906D3E00051B92 /* HBCNPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBCNPreferences.h; path = Cynthia/HBCNPreferences.h; sourceTree = "<group>"; };
 		CFFE4F151A906D3E00051B92 /* HBCNPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBCNPreferences.m; path = Cynthia/HBCNPreferences.m; sourceTree = "<group>"; };
 		F9E063264AAB01B6E98D54B2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +277,8 @@
 			children = (
 				CF678C571A85B4370084360F /* HBCNPackageListViewController.h */,
 				CF678C581A85B4370084360F /* HBCNPackageListViewController.m */,
+				CFC8AE141A975123001D2C91 /* Changes */,
+				CFC8AE0E1A9750EE001D2C91 /* Installed */,
 			);
 			name = "Package List";
 			sourceTree = "<group>";
@@ -291,6 +299,24 @@
 				CF8CAE9D1A8F913A00EC7ECC /* HBCNWelcomeViewController.m */,
 			);
 			name = Welcome;
+			sourceTree = "<group>";
+		};
+		CFC8AE0E1A9750EE001D2C91 /* Installed */ = {
+			isa = PBXGroup;
+			children = (
+				CFC8AE0B1A9750EB001D2C91 /* HBCNInstalledViewController.h */,
+				CFC8AE0C1A9750EB001D2C91 /* HBCNInstalledViewController.m */,
+			);
+			name = Installed;
+			sourceTree = "<group>";
+		};
+		CFC8AE141A975123001D2C91 /* Changes */ = {
+			isa = PBXGroup;
+			children = (
+				CFC8AE0F1A975117001D2C91 /* HBCNChangesViewController.h */,
+				CFC8AE101A975117001D2C91 /* HBCNChangesViewController.m */,
+			);
+			name = Changes;
 			sourceTree = "<group>";
 		};
 		CFFE4F171A906D4100051B92 /* Preferences */ = {
@@ -420,6 +446,7 @@
 			files = (
 				CF3E40DF1A92172700C11DE3 /* Mail.app in Sources */,
 				CF8CAE9E1A8F913A00EC7ECC /* HBCNWelcomeViewController.m in Sources */,
+				CFC8AE0D1A9750EB001D2C91 /* HBCNInstalledViewController.m in Sources */,
 				CF678C4F1A84E95F0084360F /* HBCNHomeViewController.m in Sources */,
 				CF678C191A84C7490084360F /* main.m in Sources */,
 				CF678C551A85AC270084360F /* HBCNSourcesViewController.m in Sources */,
@@ -431,6 +458,7 @@
 				CF3E40E21A92235600C11DE3 /* HBCNEmailSendingController.m in Sources */,
 				CF678C5A1A85B4370084360F /* HBCNPackageListViewController.m in Sources */,
 				CF3E40D41A91E3BB00C11DE3 /* HBCNSetupProgressViewController.m in Sources */,
+				CFC8AE121A975117001D2C91 /* HBCNChangesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,14 +1,14 @@
 //
-//  HBCNChangesViewController.m
-//  Cynthia
+//  CHRChangesViewController.m
+//  Chariz
 //
 //  Created by Adam D on 20/02/2015.
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import "HBCNChangesViewController.h"
+#import "CHRChangesViewController.h"
 
-@implementation HBCNChangesViewController
+@implementation CHRChangesViewController
 
 - (void)loadView {
 	[super loadView];

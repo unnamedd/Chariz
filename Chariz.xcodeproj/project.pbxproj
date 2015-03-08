@@ -10,24 +10,24 @@
 		CF3E40D11A91E10A00C11DE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3E40D01A91E10A00C11DE3 /* Images.xcassets */; };
 		CF3E40D91A92151300C11DE3 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3E40D81A92151300C11DE3 /* ScriptingBridge.framework */; };
 		CF3E40DF1A92172700C11DE3 /* Mail.app in Sources */ = {isa = PBXBuildFile; fileRef = CF3E40DE1A92172700C11DE3 /* Mail.app */; };
-		CF3E40E21A92235600C11DE3 /* HBCNEmailSendingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3E40E11A92235600C11DE3 /* HBCNEmailSendingController.m */; };
-		CF678C171A84C7490084360F /* HBCNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C161A84C7490084360F /* HBCNAppDelegate.m */; };
+		CF3E40E21A92235600C11DE3 /* CHREmailSendingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3E40E11A92235600C11DE3 /* CHREmailSendingController.m */; };
+		CF678C171A84C7490084360F /* CHRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C161A84C7490084360F /* CHRAppDelegate.m */; };
 		CF678C191A84C7490084360F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C181A84C7490084360F /* main.m */; };
 		CF678C371A84C83B0084360F /* UXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF678C361A84C83B0084360F /* UXKit.framework */; };
 		CF678C3B1A84D49F0084360F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF678C3A1A84D49F0084360F /* Cocoa.framework */; };
 		CF678C3D1A84D4A40084360F /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF678C3C1A84D4A40084360F /* AppKit.framework */; };
 		CF678C3F1A84D4A80084360F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF678C3E1A84D4A80084360F /* CoreGraphics.framework */; };
-		CF678C421A84E2C50084360F /* HBCNRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C411A84E2C50084360F /* HBCNRootViewController.m */; };
-		CF678C491A84E83F0084360F /* HBCNWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C481A84E83F0084360F /* HBCNWebViewController.m */; };
+		CF678C421A84E2C50084360F /* CHRRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C411A84E2C50084360F /* CHRRootViewController.m */; };
+		CF678C491A84E83F0084360F /* CHRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C481A84E83F0084360F /* CHRWebViewController.m */; };
 		CF678C4C1A84E8670084360F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF678C4B1A84E8660084360F /* WebKit.framework */; };
-		CF678C4F1A84E95F0084360F /* HBCNHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C4E1A84E95F0084360F /* HBCNHomeViewController.m */; };
+		CF678C4F1A84E95F0084360F /* CHRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C4E1A84E95F0084360F /* CHRHomeViewController.m */; };
 		CF678C521A84F0650084360F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF678C511A84F0650084360F /* MainMenu.xib */; };
-		CF678C551A85AC270084360F /* HBCNSourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C541A85AC270084360F /* HBCNSourcesViewController.m */; };
-		CF678C5A1A85B4370084360F /* HBCNPackageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C581A85B4370084360F /* HBCNPackageListViewController.m */; };
-		CF678C5F1A8661D30084360F /* HBCNSourcesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C5E1A8661D30084360F /* HBCNSourcesListViewController.m */; };
-		CFC8AE0D1A9750EB001D2C91 /* HBCNInstalledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE0C1A9750EB001D2C91 /* HBCNInstalledViewController.m */; };
-		CFC8AE121A975117001D2C91 /* HBCNChangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE101A975117001D2C91 /* HBCNChangesViewController.m */; };
-		CFFE4F161A906D3E00051B92 /* HBCNPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFE4F151A906D3E00051B92 /* HBCNPreferences.m */; };
+		CF678C551A85AC270084360F /* CHRSourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C541A85AC270084360F /* CHRSourcesViewController.m */; };
+		CF678C5A1A85B4370084360F /* CHRPackageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C581A85B4370084360F /* CHRPackageListViewController.m */; };
+		CF678C5F1A8661D30084360F /* CHRSourcesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C5E1A8661D30084360F /* CHRSourcesListViewController.m */; };
+		CFC8AE0D1A9750EB001D2C91 /* CHRInstalledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */; };
+		CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */; };
+		CFFE4F161A906D3E00051B92 /* CHRPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFE4F151A906D3E00051B92 /* CHRPreferences.m */; };
 		F849E64487BD828BAACC4C52 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E063264AAB01B6E98D54B2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,38 +52,38 @@
 		CF3E40D71A920EA900C11DE3 /* PrivateAPIs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateAPIs.h; sourceTree = "<group>"; };
 		CF3E40D81A92151300C11DE3 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		CF3E40DE1A92172700C11DE3 /* Mail.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Mail.app; path = /Applications/Mail.app; sourceTree = "<absolute>"; };
-		CF3E40E01A92235600C11DE3 /* HBCNEmailSendingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNEmailSendingController.h; sourceTree = "<group>"; };
-		CF3E40E11A92235600C11DE3 /* HBCNEmailSendingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNEmailSendingController.m; sourceTree = "<group>"; };
-		CF678C101A84C7490084360F /* Cynthia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cynthia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3E40E01A92235600C11DE3 /* CHREmailSendingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHREmailSendingController.h; sourceTree = "<group>"; };
+		CF3E40E11A92235600C11DE3 /* CHREmailSendingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHREmailSendingController.m; sourceTree = "<group>"; };
+		CF678C101A84C7490084360F /* Chariz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chariz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF678C141A84C7490084360F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF678C151A84C7490084360F /* HBCNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBCNAppDelegate.h; sourceTree = "<group>"; };
-		CF678C161A84C7490084360F /* HBCNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBCNAppDelegate.m; sourceTree = "<group>"; };
+		CF678C151A84C7490084360F /* CHRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHRAppDelegate.h; sourceTree = "<group>"; };
+		CF678C161A84C7490084360F /* CHRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHRAppDelegate.m; sourceTree = "<group>"; };
 		CF678C181A84C7490084360F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF678C361A84C83B0084360F /* UXKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UXKit.framework; path = /System/Library/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks/UXKit.framework; sourceTree = "<absolute>"; };
 		CF678C3A1A84D49F0084360F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CF678C3C1A84D4A40084360F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CF678C3E1A84D4A80084360F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CF678C401A84E2C50084360F /* HBCNRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNRootViewController.h; sourceTree = "<group>"; };
-		CF678C411A84E2C50084360F /* HBCNRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNRootViewController.m; sourceTree = "<group>"; };
-		CF678C471A84E83F0084360F /* HBCNWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNWebViewController.h; sourceTree = "<group>"; };
-		CF678C481A84E83F0084360F /* HBCNWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNWebViewController.m; sourceTree = "<group>"; };
+		CF678C401A84E2C50084360F /* CHRRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRRootViewController.h; sourceTree = "<group>"; };
+		CF678C411A84E2C50084360F /* CHRRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRRootViewController.m; sourceTree = "<group>"; };
+		CF678C471A84E83F0084360F /* CHRWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRWebViewController.h; sourceTree = "<group>"; };
+		CF678C481A84E83F0084360F /* CHRWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRWebViewController.m; sourceTree = "<group>"; };
 		CF678C4B1A84E8660084360F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		CF678C4D1A84E95F0084360F /* HBCNHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNHomeViewController.h; sourceTree = "<group>"; };
-		CF678C4E1A84E95F0084360F /* HBCNHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNHomeViewController.m; sourceTree = "<group>"; };
+		CF678C4D1A84E95F0084360F /* CHRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRHomeViewController.h; sourceTree = "<group>"; };
+		CF678C4E1A84E95F0084360F /* CHRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRHomeViewController.m; sourceTree = "<group>"; };
 		CF678C511A84F0650084360F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		CF678C531A85AC270084360F /* HBCNSourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNSourcesViewController.h; sourceTree = "<group>"; };
-		CF678C541A85AC270084360F /* HBCNSourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNSourcesViewController.m; sourceTree = "<group>"; };
-		CF678C571A85B4370084360F /* HBCNPackageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNPackageListViewController.h; sourceTree = "<group>"; };
-		CF678C581A85B4370084360F /* HBCNPackageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNPackageListViewController.m; sourceTree = "<group>"; };
-		CF678C5D1A8661D30084360F /* HBCNSourcesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNSourcesListViewController.h; sourceTree = "<group>"; };
-		CF678C5E1A8661D30084360F /* HBCNSourcesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNSourcesListViewController.m; sourceTree = "<group>"; };
-		CFA074E31A8F94560094C486 /* Cynthia-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cynthia-Prefix.pch"; sourceTree = "<group>"; };
-		CFC8AE0B1A9750EB001D2C91 /* HBCNInstalledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNInstalledViewController.h; sourceTree = "<group>"; };
-		CFC8AE0C1A9750EB001D2C91 /* HBCNInstalledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNInstalledViewController.m; sourceTree = "<group>"; };
-		CFC8AE0F1A975117001D2C91 /* HBCNChangesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCNChangesViewController.h; sourceTree = "<group>"; };
-		CFC8AE101A975117001D2C91 /* HBCNChangesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCNChangesViewController.m; sourceTree = "<group>"; };
-		CFFE4F141A906D3E00051B92 /* HBCNPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBCNPreferences.h; path = Cynthia/HBCNPreferences.h; sourceTree = "<group>"; };
-		CFFE4F151A906D3E00051B92 /* HBCNPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBCNPreferences.m; path = Cynthia/HBCNPreferences.m; sourceTree = "<group>"; };
+		CF678C531A85AC270084360F /* CHRSourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRSourcesViewController.h; sourceTree = "<group>"; };
+		CF678C541A85AC270084360F /* CHRSourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRSourcesViewController.m; sourceTree = "<group>"; };
+		CF678C571A85B4370084360F /* CHRPackageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRPackageListViewController.h; sourceTree = "<group>"; };
+		CF678C581A85B4370084360F /* CHRPackageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRPackageListViewController.m; sourceTree = "<group>"; };
+		CF678C5D1A8661D30084360F /* CHRSourcesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRSourcesListViewController.h; sourceTree = "<group>"; };
+		CF678C5E1A8661D30084360F /* CHRSourcesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRSourcesListViewController.m; sourceTree = "<group>"; };
+		CFA074E31A8F94560094C486 /* Chariz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chariz-Prefix.pch"; sourceTree = "<group>"; };
+		CFC8AE0B1A9750EB001D2C91 /* CHRInstalledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRInstalledViewController.h; sourceTree = "<group>"; };
+		CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRInstalledViewController.m; sourceTree = "<group>"; };
+		CFC8AE0F1A975117001D2C91 /* CHRChangesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRChangesViewController.h; sourceTree = "<group>"; };
+		CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRChangesViewController.m; sourceTree = "<group>"; };
+		CFFE4F141A906D3E00051B92 /* CHRPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHRPreferences.h; path = Chariz/CHRPreferences.h; sourceTree = "<group>"; };
+		CFFE4F151A906D3E00051B92 /* CHRPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHRPreferences.m; path = Chariz/CHRPreferences.m; sourceTree = "<group>"; };
 		F9E063264AAB01B6E98D54B2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,8 +117,8 @@
 		CF3E40E31A92235A00C11DE3 /* Email Sending */ = {
 			isa = PBXGroup;
 			children = (
-				CF3E40E01A92235600C11DE3 /* HBCNEmailSendingController.h */,
-				CF3E40E11A92235600C11DE3 /* HBCNEmailSendingController.m */,
+				CF3E40E01A92235600C11DE3 /* CHREmailSendingController.h */,
+				CF3E40E11A92235600C11DE3 /* CHREmailSendingController.m */,
 			);
 			name = "Email Sending";
 			sourceTree = "<group>";
@@ -126,7 +126,7 @@
 		CF678C071A84C7490084360F = {
 			isa = PBXGroup;
 			children = (
-				CF678C121A84C7490084360F /* Cynthia */,
+				CF678C121A84C7490084360F /* Chariz */,
 				CF678C381A84C8450084360F /* Frameworks */,
 				CF678C111A84C7490084360F /* Products */,
 				712386427D5634C982569D89 /* Pods */,
@@ -136,12 +136,12 @@
 		CF678C111A84C7490084360F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C101A84C7490084360F /* Cynthia.app */,
+				CF678C101A84C7490084360F /* Chariz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CF678C121A84C7490084360F /* Cynthia */ = {
+		CF678C121A84C7490084360F /* Chariz */ = {
 			isa = PBXGroup;
 			children = (
 				CF678C441A84E2D20084360F /* Delegates */,
@@ -150,13 +150,13 @@
 				CF3E40D01A91E10A00C11DE3 /* Images.xcassets */,
 				CF678C131A84C7490084360F /* Supporting Files */,
 			);
-			path = Cynthia;
+			path = Chariz;
 			sourceTree = "<group>";
 		};
 		CF678C131A84C7490084360F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CFA074E31A8F94560094C486 /* Cynthia-Prefix.pch */,
+				CFA074E31A8F94560094C486 /* Chariz-Prefix.pch */,
 				CF3E40D71A920EA900C11DE3 /* PrivateAPIs.h */,
 				CF678C141A84C7490084360F /* Info.plist */,
 				CF678C181A84C7490084360F /* main.m */,
@@ -183,8 +183,8 @@
 		CF678C431A84E2CC0084360F /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C151A84C7490084360F /* HBCNAppDelegate.h */,
-				CF678C161A84C7490084360F /* HBCNAppDelegate.m */,
+				CF678C151A84C7490084360F /* CHRAppDelegate.h */,
+				CF678C161A84C7490084360F /* CHRAppDelegate.m */,
 			);
 			name = "App Delegate";
 			sourceTree = "<group>";
@@ -200,8 +200,8 @@
 		CF678C451A84E2E50084360F /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C401A84E2C50084360F /* HBCNRootViewController.h */,
-				CF678C411A84E2C50084360F /* HBCNRootViewController.m */,
+				CF678C401A84E2C50084360F /* CHRRootViewController.h */,
+				CF678C411A84E2C50084360F /* CHRRootViewController.m */,
 			);
 			name = Root;
 			sourceTree = "<group>";
@@ -220,8 +220,8 @@
 		CF678C4A1A84E8490084360F /* Web View */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C471A84E83F0084360F /* HBCNWebViewController.h */,
-				CF678C481A84E83F0084360F /* HBCNWebViewController.m */,
+				CF678C471A84E83F0084360F /* CHRWebViewController.h */,
+				CF678C481A84E83F0084360F /* CHRWebViewController.m */,
 				CF678C501A84E9640084360F /* Home */,
 			);
 			name = "Web View";
@@ -230,8 +230,8 @@
 		CF678C501A84E9640084360F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C4D1A84E95F0084360F /* HBCNHomeViewController.h */,
-				CF678C4E1A84E95F0084360F /* HBCNHomeViewController.m */,
+				CF678C4D1A84E95F0084360F /* CHRHomeViewController.h */,
+				CF678C4E1A84E95F0084360F /* CHRHomeViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -239,8 +239,8 @@
 		CF678C561A85AC2B0084360F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C531A85AC270084360F /* HBCNSourcesViewController.h */,
-				CF678C541A85AC270084360F /* HBCNSourcesViewController.m */,
+				CF678C531A85AC270084360F /* CHRSourcesViewController.h */,
+				CF678C541A85AC270084360F /* CHRSourcesViewController.m */,
 				CF678C601A8661D70084360F /* Sources List */,
 			);
 			name = Sources;
@@ -249,8 +249,8 @@
 		CF678C5C1A85B43B0084360F /* Package List */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C571A85B4370084360F /* HBCNPackageListViewController.h */,
-				CF678C581A85B4370084360F /* HBCNPackageListViewController.m */,
+				CF678C571A85B4370084360F /* CHRPackageListViewController.h */,
+				CF678C581A85B4370084360F /* CHRPackageListViewController.m */,
 				CFC8AE141A975123001D2C91 /* Changes */,
 				CFC8AE0E1A9750EE001D2C91 /* Installed */,
 			);
@@ -260,8 +260,8 @@
 		CF678C601A8661D70084360F /* Sources List */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C5D1A8661D30084360F /* HBCNSourcesListViewController.h */,
-				CF678C5E1A8661D30084360F /* HBCNSourcesListViewController.m */,
+				CF678C5D1A8661D30084360F /* CHRSourcesListViewController.h */,
+				CF678C5E1A8661D30084360F /* CHRSourcesListViewController.m */,
 			);
 			name = "Sources List";
 			sourceTree = "<group>";
@@ -269,8 +269,8 @@
 		CFC8AE0E1A9750EE001D2C91 /* Installed */ = {
 			isa = PBXGroup;
 			children = (
-				CFC8AE0B1A9750EB001D2C91 /* HBCNInstalledViewController.h */,
-				CFC8AE0C1A9750EB001D2C91 /* HBCNInstalledViewController.m */,
+				CFC8AE0B1A9750EB001D2C91 /* CHRInstalledViewController.h */,
+				CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */,
 			);
 			name = Installed;
 			sourceTree = "<group>";
@@ -278,8 +278,8 @@
 		CFC8AE141A975123001D2C91 /* Changes */ = {
 			isa = PBXGroup;
 			children = (
-				CFC8AE0F1A975117001D2C91 /* HBCNChangesViewController.h */,
-				CFC8AE101A975117001D2C91 /* HBCNChangesViewController.m */,
+				CFC8AE0F1A975117001D2C91 /* CHRChangesViewController.h */,
+				CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */,
 			);
 			name = Changes;
 			sourceTree = "<group>";
@@ -287,8 +287,8 @@
 		CFFE4F171A906D4100051B92 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				CFFE4F141A906D3E00051B92 /* HBCNPreferences.h */,
-				CFFE4F151A906D3E00051B92 /* HBCNPreferences.m */,
+				CFFE4F141A906D3E00051B92 /* CHRPreferences.h */,
+				CFFE4F151A906D3E00051B92 /* CHRPreferences.m */,
 			);
 			name = Preferences;
 			path = ..;
@@ -306,9 +306,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CF678C0F1A84C7490084360F /* Cynthia */ = {
+		CF678C0F1A84C7490084360F /* Chariz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF678C301A84C74A0084360F /* Build configuration list for PBXNativeTarget "Cynthia" */;
+			buildConfigurationList = CF678C301A84C74A0084360F /* Build configuration list for PBXNativeTarget "Chariz" */;
 			buildPhases = (
 				412DD21AB229E5112953B066 /* Check Pods Manifest.lock */,
 				CF678C0C1A84C7490084360F /* Sources */,
@@ -321,9 +321,9 @@
 			);
 			dependencies = (
 			);
-			name = Cynthia;
-			productName = Cynthia;
-			productReference = CF678C101A84C7490084360F /* Cynthia.app */;
+			name = Chariz;
+			productName = Chariz;
+			productReference = CF678C101A84C7490084360F /* Chariz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -332,7 +332,7 @@
 		CF678C081A84C7490084360F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = HBCN;
+				CLASSPREFIX = CHR;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "HASHBANG Productions";
 				TargetAttributes = {
@@ -341,7 +341,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CF678C0B1A84C7490084360F /* Build configuration list for PBXProject "Cynthia" */;
+			buildConfigurationList = CF678C0B1A84C7490084360F /* Build configuration list for PBXProject "Chariz" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -354,7 +354,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF678C0F1A84C7490084360F /* Cynthia */,
+				CF678C0F1A84C7490084360F /* Chariz */,
 			);
 		};
 /* End PBXProject section */
@@ -410,18 +410,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF3E40DF1A92172700C11DE3 /* Mail.app in Sources */,
-				CFC8AE0D1A9750EB001D2C91 /* HBCNInstalledViewController.m in Sources */,
-				CF678C4F1A84E95F0084360F /* HBCNHomeViewController.m in Sources */,
+				CFC8AE0D1A9750EB001D2C91 /* CHRInstalledViewController.m in Sources */,
+				CF678C4F1A84E95F0084360F /* CHRHomeViewController.m in Sources */,
 				CF678C191A84C7490084360F /* main.m in Sources */,
-				CF678C551A85AC270084360F /* HBCNSourcesViewController.m in Sources */,
-				CF678C421A84E2C50084360F /* HBCNRootViewController.m in Sources */,
-				CF678C5F1A8661D30084360F /* HBCNSourcesListViewController.m in Sources */,
-				CF678C491A84E83F0084360F /* HBCNWebViewController.m in Sources */,
-				CFFE4F161A906D3E00051B92 /* HBCNPreferences.m in Sources */,
-				CF678C171A84C7490084360F /* HBCNAppDelegate.m in Sources */,
-				CF3E40E21A92235600C11DE3 /* HBCNEmailSendingController.m in Sources */,
-				CF678C5A1A85B4370084360F /* HBCNPackageListViewController.m in Sources */,
-				CFC8AE121A975117001D2C91 /* HBCNChangesViewController.m in Sources */,
+				CF678C551A85AC270084360F /* CHRSourcesViewController.m in Sources */,
+				CF678C421A84E2C50084360F /* CHRRootViewController.m in Sources */,
+				CF678C5F1A8661D30084360F /* CHRSourcesListViewController.m in Sources */,
+				CF678C491A84E83F0084360F /* CHRWebViewController.m in Sources */,
+				CFFE4F161A906D3E00051B92 /* CHRPreferences.m in Sources */,
+				CF678C171A84C7490084360F /* CHRAppDelegate.m in Sources */,
+				CF3E40E21A92235600C11DE3 /* CHREmailSendingController.m in Sources */,
+				CF678C5A1A85B4370084360F /* CHRPackageListViewController.m in Sources */,
+				CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,13 +514,13 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks",
 				);
-				GCC_PREFIX_HEADER = "Cynthia/Cynthia-Prefix.pch";
+				GCC_PREFIX_HEADER = "Chariz/Chariz-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					headers,
 				);
-				INFOPLIST_FILE = Cynthia/Info.plist;
+				INFOPLIST_FILE = Chariz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -536,13 +536,13 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks",
 				);
-				GCC_PREFIX_HEADER = "Cynthia/Cynthia-Prefix.pch";
+				GCC_PREFIX_HEADER = "Chariz/Chariz-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					headers,
 				);
-				INFOPLIST_FILE = Cynthia/Info.plist;
+				INFOPLIST_FILE = Chariz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -551,7 +551,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CF678C0B1A84C7490084360F /* Build configuration list for PBXProject "Cynthia" */ = {
+		CF678C0B1A84C7490084360F /* Build configuration list for PBXProject "Chariz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF678C2E1A84C74A0084360F /* Debug */,
@@ -560,7 +560,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF678C301A84C74A0084360F /* Build configuration list for PBXNativeTarget "Cynthia" */ = {
+		CF678C301A84C74A0084360F /* Build configuration list for PBXNativeTarget "Chariz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF678C311A84C74A0084360F /* Debug */,

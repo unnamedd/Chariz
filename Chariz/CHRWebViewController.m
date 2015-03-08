@@ -1,28 +1,28 @@
 //
-//  HBCNWebViewController.m
-//  Cynthia
+//  CHRWebViewController.m
+//  Chariz
 //
 //  Created by Adam D on 6/02/2015.
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import "HBCNWebViewController.h"
-#import "HBCNEmailSendingController.h"
+#import "CHRWebViewController.h"
+#import "CHREmailSendingController.h"
 
-static NSString *const kHBCNWebViewUserScript = @"(function(window, undefined) {"
+static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 	"var handlers = webkit.messageHandlers;"
-	"window.cynthia = {};"
+	"window.chariz = {};"
 
 	"for (var i in handlers) {"
 		"if (handlers.hasOwnProperty(i)) {"
-			"window.cynthia[i] = function() {"
+			"window.chariz[i] = function() {"
 				"handlers[i].postMessage.apply(this, arguments.length == 0 ? [ null ] : arguments);"
 			"};"
 		"}"
 	"}"
 "})(window, undefined)";
 
-@implementation HBCNWebViewController
+@implementation CHRWebViewController
 
 - (void)loadView {
 	[super loadView];
@@ -34,7 +34,7 @@ static NSString *const kHBCNWebViewUserScript = @"(function(window, undefined) {
 	configuration.preferences.javaEnabled = NO; // probably redundant?
 	
 	_userContentController = [[WKUserContentController alloc] init];
-	[_userContentController addUserScript:[[WKUserScript alloc] initWithSource:kHBCNWebViewUserScript injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO]];
+	[_userContentController addUserScript:[[WKUserScript alloc] initWithSource:kCHRWebViewUserScript injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO]];
 	configuration.userContentController = _userContentController;
 	
 	_webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:configuration];
@@ -72,7 +72,7 @@ static NSString *const kHBCNWebViewUserScript = @"(function(window, undefined) {
 	if ([navigationAction.request.URL.scheme isEqualToString:@"mailto"]) {
 		decisionHandler(WKNavigationActionPolicyCancel);
 		
-		HBCNEmailSendingController *emailSendingController = [[HBCNEmailSendingController alloc] init];
+		CHREmailSendingController *emailSendingController = [[CHREmailSendingController alloc] init];
 		[emailSendingController handleEmailWithURL:navigationAction.request.URL window:self.view.window];
 	} else {
 		decisionHandler(WKNavigationActionPolicyAllow);

@@ -1,19 +1,19 @@
 //
-//  HBCNEmailSendingController.m
-//  Cynthia
+//  CHREmailSendingController.m
+//  Chariz
 //
 //  Created by Adam D on 16/02/2015.
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import "HBCNEmailSendingController.h"
+#import "CHREmailSendingController.h"
 #import "PrivateAPIs.h"
 #import "Mail.h"
 #include <sys/sysctl.h>
 
-static NSString *const kHBCNEmailSendingControllerDpkgListURL = @"file:///tmp/cynthia_dpkgl.txt";
+static NSString *const kCHREmailSendingControllerDpkgListURL = @"file:///tmp/chariz_dpkgl.txt";
 
-@implementation HBCNEmailSendingController {
+@implementation CHREmailSendingController {
 	NSWindow *_window;
 }
 
@@ -23,7 +23,7 @@ static NSString *const kHBCNEmailSendingControllerDpkgListURL = @"file:///tmp/cy
 	
 	_window = window;
 	
-	NSURL *dpkglURL = [NSURL URLWithString:kHBCNEmailSendingControllerDpkgListURL];
+	NSURL *dpkglURL = [NSURL URLWithString:kCHREmailSendingControllerDpkgListURL];
 	
 	[self writeDpkgListToURL:dpkglURL completion:^(NSTask *task, NSError *dpkglError) {
 		if (dpkglError) {

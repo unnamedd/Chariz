@@ -1,14 +1,14 @@
 //
-//  HBCNInstalledViewController.m
-//  Cynthia
+//  CHRInstalledViewController.m
+//  Chariz
 //
 //  Created by Adam D on 20/02/2015.
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import "HBCNInstalledViewController.h"
+#import "CHRInstalledViewController.h"
 
-@implementation HBCNInstalledViewController
+@implementation CHRInstalledViewController
 
 - (void)loadView {
 	[super loadView];

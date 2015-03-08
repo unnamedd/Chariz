@@ -1,19 +1,19 @@
 //
-//  HBCNPackageListViewController.m
-//  Cynthia
+//  CHRSourcesListViewController.m
+//  Chariz
 //
-//  Created by Adam D on 7/02/2015.
+//  Created by Adam D on 8/02/2015.
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import "HBCNPackageListViewController.h"
+#import "CHRSourcesListViewController.h"
 
-@implementation HBCNPackageListViewController
+@implementation CHRSourcesListViewController
 
 - (void)loadView {
 	[super loadView];
 	
-	self.title = L18N(@"Packages");
+	self.title = L18N(@"Sources");
 	
 	[self.tableView registerClass:UXTableViewCell.class forCellReuseIdentifier:@"Cell"];
 }

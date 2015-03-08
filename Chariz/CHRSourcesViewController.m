@@ -1,16 +1,16 @@
 //
-//  HBCNSourcesViewController.m
-//  Cynthia
+//  CHRSourcesViewController.m
+//  Chariz
 //
 //  Created by Adam D on 7/02/2015.
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import "HBCNSourcesViewController.h"
-#import "HBCNSourcesListViewController.h"
-#import "HBCNPackageListViewController.h"
+#import "CHRSourcesViewController.h"
+#import "CHRSourcesListViewController.h"
+#import "CHRPackageListViewController.h"
 
-@implementation HBCNSourcesViewController
+@implementation CHRSourcesViewController
 
 - (void)loadView {
 	[super loadView];
@@ -28,7 +28,7 @@
 	sidebarOutlineView.backgroundColor = [NSColor purpleColor];
 	[splitView addSubview:sidebarOutlineView];
 	
-	HBCNPackageListViewController *viewController = [[HBCNPackageListViewController alloc] init];
+	CHRPackageListViewController *viewController = [[CHRPackageListViewController alloc] init];
 	viewController.view.autoresizingMask = UXViewAutoresizingFlexibleHeight;
 	viewController.view.frame = CGRectMake(sidebarOutlineView.frame.size.width, 0, splitView.frame.size.width - sidebarOutlineView.frame.size.width, splitView.frame.size.height);
 	

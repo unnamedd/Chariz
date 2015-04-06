@@ -13,4 +13,7 @@
 
 #define L18N(string) [[NSBundle mainBundle] localizedStringForKey:string value:string table:nil]
 
+static NSString *const kCHRCharizWebsiteURL = @"https://chariz.io/";
+static NSString *const kCHRWebUIRootURL = @"https://chariz.io/ui/osx/1.0/";
+
 #endif

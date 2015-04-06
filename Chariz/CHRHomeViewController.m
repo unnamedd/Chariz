@@ -15,7 +15,7 @@
 	
 	self.title = L18N(@"Home");
 	
-	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://chariz.tmnlsthrn.com/ui/osx/1.0/featured/"]]];
+	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"/featured/" relativeToURL:[NSURL URLWithString:kCHRWebUIRootURL]]]];
 }
 
 @end

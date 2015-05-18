@@ -4,7 +4,7 @@ A package manager for OS X.
 ## Building
 Building Chariz requires [CocoaPods](https://cocoapods.org/). Install it with `sudo gem install cocoapods` before following the instructions below.
 
-```bash
+```
 $ git clone --recursive https://github.com/CharizTeam/Chariz
 $ cd Chariz
 $ pod install

@@ -10,7 +10,6 @@ $ cd Chariz
 $ pod install
 $ xcodebuild -project cpm/cpm/external/fmdb/fmdb.xcodeproj -alltargets -configuration Debug
 $ xcodebuild -project cpm/cpm.xcodeproj -alltargets -configuration Debug
-$ ln -s $PWD/cpm/build/Debug/libcpm.dylib /usr/local/lib/
 ```
 Then open the `Chariz.xcworkspace` (xcworkspace, not xcodeproj) file and the project will build and run.
 

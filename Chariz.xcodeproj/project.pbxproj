@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B7BE3E21B0A8FB60071AFC7 /* cpm in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7BE3E11B0A8FB60071AFC7 /* cpm */; };
 		CF3E40D11A91E10A00C11DE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3E40D01A91E10A00C11DE3 /* Images.xcassets */; };
 		CF3E40D91A92151300C11DE3 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3E40D81A92151300C11DE3 /* ScriptingBridge.framework */; };
 		CF3E40DF1A92172700C11DE3 /* Mail.app in Sources */ = {isa = PBXBuildFile; fileRef = CF3E40DE1A92172700C11DE3 /* Mail.app */; };
@@ -25,7 +26,6 @@
 		CF678C551A85AC270084360F /* CHRSourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C541A85AC270084360F /* CHRSourcesViewController.m */; };
 		CF678C5A1A85B4370084360F /* CHRPackageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C581A85B4370084360F /* CHRPackageListViewController.m */; };
 		CF678C5F1A8661D30084360F /* CHRSourcesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C5E1A8661D30084360F /* CHRSourcesListViewController.m */; };
-		CF79F6151B0228C500887121 /* libcpm.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF79F6141B0228C500887121 /* libcpm.dylib */; };
 		CFC8AE0D1A9750EB001D2C91 /* CHRInstalledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */; };
 		CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */; };
 		CFFE4F161A906D3E00051B92 /* CHRPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFE4F151A906D3E00051B92 /* CHRPreferences.m */; };
@@ -47,6 +47,7 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
+		3B7BE3E11B0A8FB60071AFC7 /* cpm */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = cpm; path = cpm/build/Debug/cpm; sourceTree = "<group>"; };
 		80B03565FDF1BD7C3C7AD82E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A455C5F5A95B37B57ECE19 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CF3E40D01A91E10A00C11DE3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		CF678C581A85B4370084360F /* CHRPackageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRPackageListViewController.m; sourceTree = "<group>"; };
 		CF678C5D1A8661D30084360F /* CHRSourcesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRSourcesListViewController.h; sourceTree = "<group>"; };
 		CF678C5E1A8661D30084360F /* CHRSourcesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRSourcesListViewController.m; sourceTree = "<group>"; };
-		CF79F6141B0228C500887121 /* libcpm.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcpm.dylib; path = cpm/build/Debug/libcpm.dylib; sourceTree = "<group>"; };
 		CFA074E31A8F94560094C486 /* Chariz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chariz-Prefix.pch"; sourceTree = "<group>"; };
 		CFC8AE0B1A9750EB001D2C91 /* CHRInstalledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRInstalledViewController.h; sourceTree = "<group>"; };
 		CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRInstalledViewController.m; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF79F6151B0228C500887121 /* libcpm.dylib in Frameworks */,
+				3B7BE3E21B0A8FB60071AFC7 /* cpm in Frameworks */,
 				CF678C3D1A84D4A40084360F /* AppKit.framework in Frameworks */,
 				CF678C3B1A84D49F0084360F /* Cocoa.framework in Frameworks */,
 				CF678C3F1A84D4A80084360F /* CoreGraphics.framework in Frameworks */,
@@ -171,7 +171,7 @@
 		CF678C381A84C8450084360F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CF79F6141B0228C500887121 /* libcpm.dylib */,
+				3B7BE3E11B0A8FB60071AFC7 /* cpm */,
 				CF678C3C1A84D4A40084360F /* AppKit.framework */,
 				CF678C3A1A84D49F0084360F /* Cocoa.framework */,
 				CF678C3E1A84D4A80084360F /* CoreGraphics.framework */,

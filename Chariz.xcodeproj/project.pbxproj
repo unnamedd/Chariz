@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B7BE3E21B0A8FB60071AFC7 /* cpm in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7BE3E11B0A8FB60071AFC7 /* cpm */; };
+		B9CDD1561B0ACAFC0093D7A4 /* libcpm.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CDD1551B0ACAFC0093D7A4 /* libcpm.dylib */; };
 		CF3E40D11A91E10A00C11DE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3E40D01A91E10A00C11DE3 /* Images.xcassets */; };
 		CF3E40D91A92151300C11DE3 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3E40D81A92151300C11DE3 /* ScriptingBridge.framework */; };
 		CF3E40DF1A92172700C11DE3 /* Mail.app in Sources */ = {isa = PBXBuildFile; fileRef = CF3E40DE1A92172700C11DE3 /* Mail.app */; };
@@ -47,8 +47,8 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
-		3B7BE3E11B0A8FB60071AFC7 /* cpm */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = cpm; path = cpm/build/Debug/cpm; sourceTree = "<group>"; };
 		80B03565FDF1BD7C3C7AD82E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B9CDD1551B0ACAFC0093D7A4 /* libcpm.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcpm.dylib; path = ../../../../usr/local/lib/libcpm.dylib; sourceTree = "<group>"; };
 		C4A455C5F5A95B37B57ECE19 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CF3E40D01A91E10A00C11DE3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF3E40D71A920EA900C11DE3 /* PrivateAPIs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateAPIs.h; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B7BE3E21B0A8FB60071AFC7 /* cpm in Frameworks */,
+				B9CDD1561B0ACAFC0093D7A4 /* libcpm.dylib in Frameworks */,
 				CF678C3D1A84D4A40084360F /* AppKit.framework in Frameworks */,
 				CF678C3B1A84D49F0084360F /* Cocoa.framework in Frameworks */,
 				CF678C3F1A84D4A80084360F /* CoreGraphics.framework in Frameworks */,
@@ -171,7 +171,7 @@
 		CF678C381A84C8450084360F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3B7BE3E11B0A8FB60071AFC7 /* cpm */,
+				B9CDD1551B0ACAFC0093D7A4 /* libcpm.dylib */,
 				CF678C3C1A84D4A40084360F /* AppKit.framework */,
 				CF678C3A1A84D49F0084360F /* Cocoa.framework */,
 				CF678C3E1A84D4A80084360F /* CoreGraphics.framework */,

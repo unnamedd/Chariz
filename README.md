@@ -1,19 +1,16 @@
 # ![Chariz](https://i.imgur.com/BWTtsMO.png)
 A package manager for OS X.
 
+License: [GNU GPL v2](https://www.gnu.org/licenses/gpl-2.0.html)
+
 ## Building
-Building Chariz requires [CocoaPods](https://cocoapods.org/). Install it with `sudo gem install cocoapods` before following the instructions below.
+Building Chariz requires [CocoaPods](https://cocoapods.org/). Install it with `gem install cocoapods` before following the instructions below. (You'll need to prefix that command with `sudo` if you haven't installed your own copy of Ruby.)
 
 ```
-$ git clone --recursive https://github.com/CharizTeam/Chariz
+$ git clone --recursive https://github.com/CharizTeam/Chariz.git
 $ cd Chariz
 $ pod install
-$ xcodebuild -project cpm/cpm/external/fmdb/fmdb.xcodeproj -alltargets -configuration Debug
-$ xcodebuild -project cpm/cpm.xcodeproj -alltargets -configuration Debug
-$ ln -s $PWD/cpm/build/Debug/libcpm.dylib /usr/local/lib/
+$ open Chariz.xcworkspace
 ```
-Then open the `Chariz.xcworkspace` (xcworkspace, not xcodeproj) file and the project will build and run.
 
-
-
-License: [GNU GPL v2](https://www.gnu.org/licenses/gpl-2.0.html)
+Note that the `.xcodeproj` is the Chariz app itself, while `.xcworkspace` contains the cpm and CocoaPods modules. Chariz will not compile from the standalone `.xcodeproj`.

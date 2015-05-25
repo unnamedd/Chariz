@@ -8,6 +8,7 @@
 
 #import "CHRWebViewController.h"
 #import "CHREmailSendingController.h"
+#import "CHRLoadingIndicatorView.h"
 
 static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 	"var handlers = webkit.messageHandlers;"
@@ -22,7 +23,9 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 	"}"
 "})(window, undefined)";
 
-@implementation CHRWebViewController
+@implementation CHRWebViewController {
+	CHRLoadingIndicatorView *_loadingIndicatorView;
+}
 
 - (void)loadView {
 	[super loadView];
@@ -42,9 +45,20 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 	_webView.UIDelegate = self;
 	_webView.navigationDelegate = self;
 	[self.view addSubview:_webView];
+	
+	_loadingIndicatorView = [[CHRLoadingIndicatorView alloc] init];
+	self.navigationItem.leftBarButtonItem = [[UXBarButtonItem alloc] initWithCustomView:_loadingIndicatorView];
 }
 
 #pragma mark - WKUIDelegate
+
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+	[_loadingIndicatorView startAnimation:nil];
+}
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+	[_loadingIndicatorView stopAnimation:nil];
+}
 
 - (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures {
 	// TODO: implement

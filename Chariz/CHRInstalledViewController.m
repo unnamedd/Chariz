@@ -16,4 +16,14 @@
 	self.title = L18N(@"Installed");
 }
 
+#pragma mark - UXTableView
+
+- (NSUInteger)numberOfSectionsInTableView:(UXTableView *)tableView {
+	return 1;
+}
+
+- (NSUInteger)tableView:(UXTableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	return 1;
+}
+
 @end

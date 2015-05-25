@@ -26,7 +26,9 @@
 		CF678C551A85AC270084360F /* CHRSourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C541A85AC270084360F /* CHRSourcesViewController.m */; };
 		CF678C5A1A85B4370084360F /* CHRPackageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C581A85B4370084360F /* CHRPackageListViewController.m */; };
 		CF678C5F1A8661D30084360F /* CHRSourcesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C5E1A8661D30084360F /* CHRSourcesListViewController.m */; };
-		CF79F6151B0228C500887121 /* libcpm.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF79F6141B0228C500887121 /* libcpm.dylib */; };
+		CF80DF4C1B13483D00725929 /* CHRRefreshStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF80DF4B1B13483D00725929 /* CHRRefreshStatusView.m */; };
+		CF80DF511B135F6800725929 /* CHRSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF80DF501B135F6800725929 /* CHRSearchField.m */; };
+		CF80DF551B13663200725929 /* CHRLoadingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF80DF541B13663200725929 /* CHRLoadingIndicatorView.m */; };
 		CFC8AE0D1A9750EB001D2C91 /* CHRInstalledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */; };
 		CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */; };
 		CFFE4F161A906D3E00051B92 /* CHRPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFE4F151A906D3E00051B92 /* CHRPreferences.m */; };
@@ -81,6 +83,12 @@
 		CF678C5D1A8661D30084360F /* CHRSourcesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRSourcesListViewController.h; sourceTree = "<group>"; };
 		CF678C5E1A8661D30084360F /* CHRSourcesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRSourcesListViewController.m; sourceTree = "<group>"; };
 		CF79F6141B0228C500887121 /* libcpm.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcpm.dylib; path = cpm/build/Debug/libcpm.dylib; sourceTree = "<group>"; };
+		CF80DF4A1B13483D00725929 /* CHRRefreshStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRRefreshStatusView.h; sourceTree = "<group>"; };
+		CF80DF4B1B13483D00725929 /* CHRRefreshStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRRefreshStatusView.m; sourceTree = "<group>"; };
+		CF80DF4F1B135F6800725929 /* CHRSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRSearchField.h; sourceTree = "<group>"; };
+		CF80DF501B135F6800725929 /* CHRSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRSearchField.m; sourceTree = "<group>"; };
+		CF80DF531B13663200725929 /* CHRLoadingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRLoadingIndicatorView.h; sourceTree = "<group>"; };
+		CF80DF541B13663200725929 /* CHRLoadingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRLoadingIndicatorView.m; sourceTree = "<group>"; };
 		CFA074E31A8F94560094C486 /* Chariz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chariz-Prefix.pch"; sourceTree = "<group>"; };
 		CFC8AE0B1A9750EB001D2C91 /* CHRInstalledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRInstalledViewController.h; sourceTree = "<group>"; };
 		CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRInstalledViewController.m; sourceTree = "<group>"; };
@@ -152,6 +160,7 @@
 				CF678C441A84E2D20084360F /* Delegates */,
 				CFFE4F181A906D4A00051B92 /* Model */,
 				CF678C461A84E81F0084360F /* View Controllers */,
+				CF80DF4E1B1349F200725929 /* Interface */,
 				CF3E40D01A91E10A00C11DE3 /* Images.xcassets */,
 				CF678C131A84C7490084360F /* Supporting Files */,
 			);
@@ -270,6 +279,43 @@
 				CF678C5E1A8661D30084360F /* CHRSourcesListViewController.m */,
 			);
 			name = "Sources List";
+			sourceTree = "<group>";
+		};
+		CF80DF4D1B1349EE00725929 /* Refresh Status */ = {
+			isa = PBXGroup;
+			children = (
+				CF80DF4A1B13483D00725929 /* CHRRefreshStatusView.h */,
+				CF80DF4B1B13483D00725929 /* CHRRefreshStatusView.m */,
+			);
+			name = "Refresh Status";
+			sourceTree = "<group>";
+		};
+		CF80DF4E1B1349F200725929 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CF80DF561B13663800725929 /* Loading Indicator */,
+				CF80DF4D1B1349EE00725929 /* Refresh Status */,
+				CF80DF521B135F6A00725929 /* Search Field */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		CF80DF521B135F6A00725929 /* Search Field */ = {
+			isa = PBXGroup;
+			children = (
+				CF80DF4F1B135F6800725929 /* CHRSearchField.h */,
+				CF80DF501B135F6800725929 /* CHRSearchField.m */,
+			);
+			name = "Search Field";
+			sourceTree = "<group>";
+		};
+		CF80DF561B13663800725929 /* Loading Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				CF80DF531B13663200725929 /* CHRLoadingIndicatorView.h */,
+				CF80DF541B13663200725929 /* CHRLoadingIndicatorView.m */,
+			);
+			name = "Loading Indicator";
 			sourceTree = "<group>";
 		};
 		CFC8AE0E1A9750EE001D2C91 /* Installed */ = {
@@ -417,14 +463,17 @@
 			files = (
 				CF3E40DF1A92172700C11DE3 /* Mail.app in Sources */,
 				CFC8AE0D1A9750EB001D2C91 /* CHRInstalledViewController.m in Sources */,
+				CF80DF4C1B13483D00725929 /* CHRRefreshStatusView.m in Sources */,
 				CF678C4F1A84E95F0084360F /* CHRHomeViewController.m in Sources */,
 				CF678C191A84C7490084360F /* main.m in Sources */,
 				CF678C551A85AC270084360F /* CHRSourcesViewController.m in Sources */,
 				CF678C421A84E2C50084360F /* CHRRootViewController.m in Sources */,
+				CF80DF551B13663200725929 /* CHRLoadingIndicatorView.m in Sources */,
 				CF678C5F1A8661D30084360F /* CHRSourcesListViewController.m in Sources */,
 				CF678C491A84E83F0084360F /* CHRWebViewController.m in Sources */,
 				CFFE4F161A906D3E00051B92 /* CHRPreferences.m in Sources */,
 				CF678C171A84C7490084360F /* CHRAppDelegate.m in Sources */,
+				CF80DF511B135F6800725929 /* CHRSearchField.m in Sources */,
 				CF3E40E21A92235600C11DE3 /* CHREmailSendingController.m in Sources */,
 				CF678C5A1A85B4370084360F /* CHRPackageListViewController.m in Sources */,
 				CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */,

@@ -8,6 +8,14 @@
 
 #import "CHRPackageListViewController.h"
 
+typedef NS_ENUM(NSUInteger, CHRRefreshState) {
+	CHRRefreshStateIdle,
+	CHRRefreshStateRefreshing,
+	CHRRefreshStateOffline
+};
+
 @interface CHRChangesViewController : CHRPackageListViewController
+
+@property CHRRefreshState refreshState;
 
 @end

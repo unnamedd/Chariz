@@ -8,6 +8,6 @@
 
 #import <UXKit/UXKit.h>
 
-@interface CHRRootViewController : UXTabBarController
+@interface CHRRootViewController : UXSourceController
 
 @end

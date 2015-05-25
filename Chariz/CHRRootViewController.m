@@ -17,7 +17,7 @@
 - (void)loadView {
 	[super loadView];
 	
-	self.viewControllers = @[
+	self.rootViewControllers = @[
 		[[CHRHomeViewController alloc] init],
 		[[CHRSourcesViewController alloc] init],
 		[[CHRChangesViewController alloc] init],

@@ -18,7 +18,7 @@ static NSString *const kCHRUserDefaultsRootWindowFrameKey = @"RootWindowFrame";
 	CGSize windowSize = CGSizeMake(1000.f, 800.f);
 	CGSize screenSize = [NSScreen mainScreen].frame.size;
 	
-	_rootWindowController = [[UXWindowController alloc] initWithRootViewController:[[UXNavigationController alloc] initWithRootViewController:[[CHRRootViewController alloc] init]]];
+	_rootWindowController = [[UXWindowController alloc] initWithRootViewController:[[CHRRootViewController alloc] init]];
 	_rootWindowController.window.minSize = windowSize;
 	_rootWindowController.window.contentSize = windowSize;
 	_rootWindowController.window.frameOrigin = CGPointMake((screenSize.width - windowSize.width) / 2, (screenSize.height - windowSize.height) / 2);

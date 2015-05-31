@@ -25,6 +25,22 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 
 @implementation CHRWebViewController {
 	CHRLoadingIndicatorView *_loadingIndicatorView;
+	NSURLRequest *_initialRequest;
+}
+
++ (Class)viewControllerClassForURL:(NSURL *)url {
+	// TODO: implement
+	return CHRWebViewController.class;
+}
+
+- (instancetype)initWithRequest:(NSURLRequest *)request {
+	self = [super init];
+	
+	if (self) {
+		_initialRequest = [request copy];
+	}
+	
+	return self;
 }
 
 - (void)loadView {
@@ -41,13 +57,18 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 	configuration.userContentController = _userContentController;
 	
 	_webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:configuration];
-	_webView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
+	_webView.autoresizingMask = UXViewAutoresizingFlexibleWidth | UXViewAutoresizingFlexibleHeight;
 	_webView.UIDelegate = self;
 	_webView.navigationDelegate = self;
 	[self.view addSubview:_webView];
 	
 	_loadingIndicatorView = [[CHRLoadingIndicatorView alloc] init];
 	self.navigationItem.leftBarButtonItem = [[UXBarButtonItem alloc] initWithCustomView:_loadingIndicatorView];
+	
+	if (_initialRequest) {
+		[self.webView loadRequest:_initialRequest];
+		_initialRequest = nil;
+	}
 }
 
 #pragma mark - WKUIDelegate
@@ -61,7 +82,18 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 }
 
 - (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures {
-	// TODO: implement
+	NSLog(@"create %@ %@ %@ %@", webView, configuration, navigationAction, windowFeatures);
+	
+	if (!navigationAction.targetFrame) {
+		Class viewControllerClass = [self.class viewControllerClassForURL:navigationAction.request.URL];
+		
+		CHRWebViewController *viewController = [[viewControllerClass alloc] initWithRequest:navigationAction.request];
+		[self.navigationController pushViewController:viewController animated:YES];
+		
+		return nil;
+	}
+	
+	NSLog(@"%@: attempting to perform a navigation action in a frame that's not supported", self);
 	return nil;
 }
 

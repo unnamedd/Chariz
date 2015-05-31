@@ -23,7 +23,7 @@ static NSString *const kCHRUserDefaultsRootWindowFrameKey = @"RootWindowFrame";
 	[_rootWindowController showWindow:self];
 	
 	[CHRPreferences sharedInstance].lastLaunch = [NSDate date];
-    
+	
 	[_rootWindowController.window makeKeyAndOrderFront:self];
 }
 

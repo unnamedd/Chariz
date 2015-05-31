@@ -60,7 +60,7 @@ static NSString *const kCHREmailSendingControllerDpkgListURL = @"file:///tmp/cha
 		
 		MailOutgoingMessage *email = [[[mail classForScriptingClass:@"outgoing message"] alloc] initWithProperties:@{
 			@"subject": components[@"subject"] ?: @"",
-			@"content": [components[@"body"] ?: @"" stringByAppendingFormat:@"\n\n%@: %@, %@\n\n", L18N(@"Device information:"), [NSProcessInfo processInfo].operatingSystemVersionString, hardwareModel]
+			@"content": [components[@"body"] ?: @"" stringByAppendingFormat:@"\n\n%@: %@, %@\n\n", I18N(@"Device information:"), [NSProcessInfo processInfo].operatingSystemVersionString, hardwareModel]
 		}];
 		
 		[mail.outgoingMessages addObject:email];
@@ -89,7 +89,7 @@ static NSString *const kCHREmailSendingControllerDpkgListURL = @"file:///tmp/cha
 			[[NSFileManager defaultManager] removeItemAtURL:dpkglURL error:&removeError];
 			
 			if (removeError) {
-				NSLog(@"failed to remove %@: %@", dpkglURL, removeError);
+				HBLogError(@"failed to remove %@: %@", dpkglURL, removeError);
 			}
 		});
 	}];
@@ -104,7 +104,7 @@ static NSString *const kCHREmailSendingControllerDpkgListURL = @"file:///tmp/cha
 	[@"" writeToURL:url atomically:YES encoding:NSUTF8StringEncoding error:&writeError];
 	
 	if (writeError) {
-		NSLog(@"error writing file: %@", writeError);
+		HBLogError(@"error writing file: %@", writeError);
 		completion(nil, writeError);
 		return;
 	}
@@ -113,7 +113,7 @@ static NSString *const kCHREmailSendingControllerDpkgListURL = @"file:///tmp/cha
 	NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingToURL:url error:&handleError];
 	
 	if (handleError) {
-		NSLog(@"error creating file handle: %@", handleError);
+		HBLogError(@"error creating file handle: %@", handleError);
 		completion(nil, handleError);
 		return;
 	}
@@ -131,7 +131,7 @@ static NSString *const kCHREmailSendingControllerDpkgListURL = @"file:///tmp/cha
 #pragma mark - SBApplicationDelegate
 
 - (id)eventDidFail:(const AppleEvent *)event withError:(NSError *)error {
-	NSLog(@"apple event failed: %@, %@", event, error);
+	HBLogError(@"apple event failed: %@, %@", event, error);
 	[[NSAlert alertWithError:error] beginSheetModalForWindow:_window completionHandler:nil];
 	return nil;
 }

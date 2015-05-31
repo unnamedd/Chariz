@@ -13,7 +13,7 @@
 - (void)loadView {
 	[super loadView];
 	
-	self.title = L18N(@"Installed");
+	self.title = I18N(@"Installed");
 }
 
 #pragma mark - UXTableView

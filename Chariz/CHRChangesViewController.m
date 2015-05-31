@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	self.title = L18N(@"Recent");
+	self.title = I18N(@"Recent");
 	self.refreshState = CHRRefreshStateIdle;
 	
 	_refreshStatusView = [[CHRRefreshStatusView alloc] init];

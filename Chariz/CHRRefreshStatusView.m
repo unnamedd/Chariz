@@ -24,7 +24,7 @@
 		[self addSubview:_progressIndicator];
 		
 		_label = [[UXLabel alloc] init];
-		_label.text = L18N(@"Updating sources…");
+		_label.text = I18N(@"Updating sources…");
 		_label.font = [NSFont titleBarFontOfSize:0];
 		_label.centerVertically = YES;
 		_label.frame = CGRectMake(_progressIndicator.frame.size.width + 4.f, 0, ceilf([_label sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)].width), _progressIndicator.frame.size.height);

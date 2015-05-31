@@ -15,7 +15,7 @@
 - (void)loadView {
 	[super loadView];
 	
-	self.title = L18N(@"Sources");
+	self.title = I18N(@"Sources");
 	
 	NSSplitView *splitView = [[NSSplitView alloc] initWithFrame:self.view.bounds];
 	splitView.autoresizingMask = UXViewAutoresizingFlexibleWidth | UXViewAutoresizingFlexibleHeight;

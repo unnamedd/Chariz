@@ -30,6 +30,7 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 
 + (Class)viewControllerClassForURL:(NSURL *)url {
 	// TODO: implement
+	HBLogInfo(@"url: %@", url);
 	return CHRWebViewController.class;
 }
 
@@ -46,7 +47,7 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 - (void)loadView {
 	[super loadView];
 	
-	self.title = L18N(@"Untitled");
+	self.title = I18N(@"Untitled");
 	
 	WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
 	configuration.preferences.plugInsEnabled = NO;
@@ -91,24 +92,24 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 		return nil;
 	}
 	
-	NSLog(@"%@: attempting to perform a navigation action in a frame that's not supported", self);
+	HBLogWarn(@"%@: attempting to perform a navigation action in a frame that's not supported", self);
 	return nil;
 }
 
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)())completionHandler {
 	// TODO: implement
-	NSLog(@"alert: %@", message);
+	HBLogDebug(@"alert: %@", message);
 }
 
 - (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL result))completionHandler {
 	// TODO: implement
-	NSLog(@"confirm: %@", message);
+	HBLogDebug(@"confirm: %@", message);
 	completionHandler(NO);
 }
 
 - (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString *result))completionHandler {
 	// TODO: implement
-	NSLog(@"prompt: %@", prompt);
+	HBLogDebug(@"prompt: %@", prompt);
 	completionHandler(@"");
 }
 
@@ -126,7 +127,7 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 #pragma mark - WKScriptMessageHandler
 
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
-	NSLog(@"unhandled script message: %@", message);
+	HBLogDebug(@"unhandled script message: %@", message);
 }
 
 @end

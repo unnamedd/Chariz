@@ -367,6 +367,7 @@
 				CF678C0D1A84C7490084360F /* Frameworks */,
 				CF678C0E1A84C7490084360F /* Resources */,
 				555A965E1B0767FD3BE96982 /* Copy Pods Resources */,
+				CF23D8271B1B2E8D002280F9 /* Set Build Number */,
 			);
 			buildRules = (
 				CF3E40DD1A92167900C11DE3 /* PBXBuildRule */,
@@ -453,6 +454,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CF23D8271B1B2E8D002280F9 /* Set Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "defaults write \"$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH\" CFBundleVersion \"$(git describe --always)\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 

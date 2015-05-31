@@ -15,13 +15,10 @@ static NSString *const kCHRUserDefaultsRootWindowFrameKey = @"RootWindowFrame";
 @implementation CHRAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
-	CGSize windowSize = CGSizeMake(1000.f, 800.f);
-	CGSize screenSize = [NSScreen mainScreen].frame.size;
-	
 	_rootWindowController = [[UXWindowController alloc] initWithRootViewController:[[CHRRootViewController alloc] init]];
-	_rootWindowController.window.minSize = windowSize;
-	_rootWindowController.window.contentSize = windowSize;
-	_rootWindowController.window.frameOrigin = CGPointMake((screenSize.width - windowSize.width) / 2, (screenSize.height - windowSize.height) / 2);
+	_rootWindowController.window.minSize = CGSizeMake(1000.f, 500.f);
+	_rootWindowController.window.contentSize = CGSizeMake(1000.f, 800.f);
+	[_rootWindowController.window center];
 	_rootWindowController.windowFrameAutosaveName = kCHRUserDefaultsRootWindowFrameKey;
 	[_rootWindowController showWindow:self];
 	

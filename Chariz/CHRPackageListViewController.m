@@ -8,14 +8,16 @@
 
 #import "CHRPackageListViewController.h"
 
+static NSString *const kCHRPackageCellReuseIdentifier = @"PackageCell";
+
 @implementation CHRPackageListViewController
 
-- (void)loadView {
-	[super loadView];
+- (void)viewDidLoad {
+	[super viewDidLoad];
 	
-	self.title = L18N(@"Packages");
+	self.title = I18N(@"Packages");
 	
-	[self.tableView registerClass:UXTableViewCell.class forCellReuseIdentifier:@"Cell"];
+	[self.tableView registerClass:UXTableViewCell.class forCellWithReuseIdentifier:kCHRPackageCellReuseIdentifier];
 }
 
 #pragma mark - Table View
@@ -25,7 +27,16 @@
 }
 
 - (UXTableViewCell *)tableView:(UXTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return [self.tableView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+	UXTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCHRPackageCellReuseIdentifier forIndexPath:indexPath];
+	
+	if (!cell) {
+		cell = [[UXTableViewCell alloc] initWithStyle:UXTableViewCellStyleDefault reuseIdentifier:kCHRPackageCellReuseIdentifier];
+	}
+	
+	cell.textLabel.text = @"hi";
+	cell.detailTextLabel.text = @"hi";
+	
+	return cell;
 }
 
 @end

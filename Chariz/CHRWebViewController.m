@@ -82,8 +82,6 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 }
 
 - (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures {
-	NSLog(@"create %@ %@ %@ %@", webView, configuration, navigationAction, windowFeatures);
-	
 	if (!navigationAction.targetFrame) {
 		Class viewControllerClass = [self.class viewControllerClassForURL:navigationAction.request.URL];
 		

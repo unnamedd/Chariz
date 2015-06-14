@@ -19,7 +19,6 @@
 	
 	NSSplitView *splitView = [[NSSplitView alloc] initWithFrame:self.view.bounds];
 	splitView.autoresizingMask = UXViewAutoresizingFlexibleWidth | UXViewAutoresizingFlexibleHeight;
-	splitView.vertical = YES;
 	splitView.dividerStyle = NSSplitViewDividerStyleThin;
 	[self.view addSubview:splitView];
 	

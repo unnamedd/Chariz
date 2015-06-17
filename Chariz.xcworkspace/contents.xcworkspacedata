@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:cpm/cpm/src/CPMPackageManagerAggregate.h">
+   </FileRef>
+   <FileRef
+      location = "group:cpm/cpm/src/CPMPackageManagerAggregate.m">
+   </FileRef>
+   <FileRef
       location = "group:Chariz.xcodeproj">
    </FileRef>
    <FileRef

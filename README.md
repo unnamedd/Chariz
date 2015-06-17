@@ -1,4 +1,4 @@
-# ![Chariz](https://i.imgur.com/BWTtsMO.png)
+# ![Chariz](https://i.imgur.com/BWTtsMO.png) [![Build Status](https://travis-ci.org/CharizTeam/Chariz.svg)](https://travis-ci.org/CharizTeam/Chariz)
 A package manager for OS X.
 
 License: [GNU GPL v2](https://www.gnu.org/licenses/gpl-2.0.html)

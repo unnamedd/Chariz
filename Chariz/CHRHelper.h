@@ -21,7 +21,7 @@
 - (void)startXPCService;
 typedef void(^completed)(void);
 - (void)sendXPCRequest:(const char *)message completed:(completed)comp;
-- (NSString *)last_response;
+- (NSString *)lastResponse;
 - (void) check_brew:(completed)comp;
 - (void)install_brew:(completed)comp;
 - (void) check_dpkg:(completed)comp;

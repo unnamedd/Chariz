@@ -1,5 +1,4 @@
 language: objective-c
-osx_image: beta-xcode6.3
 xcode_workspace: Chariz.xcworkspace
 xcode_scheme: Chariz
 
@@ -9,6 +8,9 @@ git:
 before_install:
   - git submodule update --init --recursive
 
+script: xctool -workspace Chariz.xcworkspace -scheme Chariz build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+
 notifications:
   slack:
     secure: GafPr/W9TKQF2/oYF0SHHZSrE6OS2ea9+CwEdpgCl2ZDkkvCcFHCyy2SkK4b7cYpqUfEp0Q9+sPQqkmdWyWD+WQAM6IdNNI8xU8/SWcb5hKCanNzfVUwGXk0xhULaLDKr9rtypGZrtkvgenT0JYrh/xTNnNEBU4hkXxplIuSSBo=
+

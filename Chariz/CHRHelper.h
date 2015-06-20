@@ -16,11 +16,15 @@
 	NSInteger _brew_installed;
 	NSString *_install_status;
 	NSInteger _dpkg_installed;
+	AuthorizationRef _authRef;
 }
+@property (atomic, copy,   readwrite) NSData * authorization;
++ (instancetype)sharedInstance;
 - (NSError *)blessService;
 - (void)startXPCService;
-typedef void(^completed)(void);
+typedef void(^completed)(NSString *lastResponse);
 - (void)sendXPCRequest:(const char *)message completed:(completed)comp;
+- (NSError *)authorize;
 - (NSString *)lastResponse;
 - (void) check_brew:(completed)comp;
 - (void)install_brew:(completed)comp;

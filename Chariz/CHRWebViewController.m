@@ -124,8 +124,8 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 		[emailSendingController handleEmailWithURL:navigationAction.request.URL window:self.view.window];
 	} else if ([navigationAction.request.URL.scheme isEqualToString:@"startinstall"]) {
 		decisionHandler(WKNavigationActionPolicyCancel);
-		CHRHelper *helper = [[CHRHelper alloc] init];
-		NSError *createHelper = [helper blessService];
+		CHRHelper *helper = [CHRHelper sharedInstance];
+		NSError *createHelper = [helper authorize];
 		if (createHelper) {
 			HBLogError(@"Failed to create Helper. Error: %@", createHelper);
 			NSAlert *alert = [[NSAlert alloc] init];
@@ -134,11 +134,11 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 			exit(0);
 		} else {
 			[helper startXPCService];
-			[helper check_brew:^(void){
+			[helper check_brew:^(NSString *lastResponse){
 				if ([helper brew_installed] == 0) {
 					HBLogInfo(@"Installing Homebrew");
 					[_webView evaluateJavaScript:@"window.location.href = '#Installing_Homebrew'" completionHandler:nil];
-					[helper install_brew:^{
+					[helper install_brew:^(NSString *lastResponse){
 						if ([[helper install_status] containsString:@"error"]) {
 							HBLogError(@"[Chariz] Error: %@", [helper install_status]);
 							NSAlert *alert = [[NSAlert alloc] init];
@@ -149,9 +149,9 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 					}];
 				} else {
 					[_webView evaluateJavaScript:@"window.location.href = '#Installing_dpkg'" completionHandler:nil];
-					[helper check_dpkg:^{
+					[helper check_dpkg:^(NSString *lastResponse){
 						if ([helper dpkg_installed] == 0) {
-							[helper install_dpkg:^{
+							[helper install_dpkg:^(NSString *lastResponse){
 								if ([helper dpkg_installed] == 0) {
 									HBLogError(@"[Chariz] Error: DPKG could not be installed");
 									NSAlert *alert = [[NSAlert alloc] init];

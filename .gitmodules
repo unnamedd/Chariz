@@ -7,3 +7,6 @@
 [submodule "Helper"]
 	path = Helper
 	url = https://github.com/CharizTeam/Helper
+[submodule "libdpkg-objc"]
+	path = libdpkg-objc
+	url = https://github.com/mstg/libdpkg-objc

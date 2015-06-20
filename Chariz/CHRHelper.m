@@ -9,32 +9,27 @@
 #import "CHRHelper.h"
 
 @implementation CHRHelper
-- (NSError *)blessService {
-	AuthorizationItem authItem		= { kSMRightBlessPrivilegedHelper, 0, NULL, 0 };
-	AuthorizationRights authRights	= { 1, &authItem };
-	AuthorizationFlags flags		=	kAuthorizationFlagDefaults				|
-	kAuthorizationFlagInteractionAllowed	|
-	kAuthorizationFlagPreAuthorize			|
-	kAuthorizationFlagExtendRights;
++ (instancetype)sharedInstance {
+	static CHRHelper *sharedInstance = nil;
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		sharedInstance = [[self.class alloc] init];
+	});
 	
-	AuthorizationRef authRef = NULL;
+	return sharedInstance;
+}
+
+- (NSError *)blessService {
 	CFErrorRef tError;
 	
-	/* Obtain the right to install privileged helper tools (kSMRightBlessPrivilegedHelper). */
-	OSStatus status = AuthorizationCreate(&authRights, kAuthorizationEmptyEnvironment, flags, &authRef);
-	if (status != errAuthorizationSuccess) {
-		HBLogError(@"Failed to create AuthorizationRef. Error code: %d", (int)status);
+	if (!self->_authRef) {
+		HBLogError(@"Failed to create AuthorizationRef.");
 		NSAlert *alert = [[NSAlert alloc] init];
 		[alert setMessageText:@"Authorization failed"];
 		[alert runModal];
 		exit(0);
 	} else {
-		/* This does all the work of verifying the helper tool against the application
-		 * and vice-versa. Once verification has passed, the embedded launchd.plist
-		 * is extracted and placed in /Library/LaunchDaemons and then loaded. The
-		 * executable is placed in /Library/PrivilegedHelperTools.
-		 */
-		SMJobBless(kSMDomainSystemLaunchd, CFSTR("io.chariz.CharizHelper"), authRef, &tError);
+		SMJobBless(kSMDomainSystemLaunchd, CFSTR("io.chariz.CharizHelper"), self->_authRef, &tError);
 	}
 	
 	return (__bridge NSError *)(tError);
@@ -91,8 +86,32 @@
 		const char* response = xpc_dictionary_get_string(event, "reply");
 		self->last_response = response;
 		HBLogInfo(@"Received response: %s.", response);
-		comp();
+		comp([NSString stringWithFormat:@"%s", response]);
 	});
+}
+
+- (NSError *)authorize
+{
+	OSStatus                    err;
+	AuthorizationExternalForm   extForm;
+	
+	AuthorizationItem authItem		= { kSMRightBlessPrivilegedHelper, 0, NULL, 0 };
+	AuthorizationRights authRights	= { 1, &authItem };
+	AuthorizationFlags flags		=	kAuthorizationFlagDefaults				|
+	kAuthorizationFlagInteractionAllowed	|
+	kAuthorizationFlagPreAuthorize			|
+	kAuthorizationFlagExtendRights;
+	
+	err = AuthorizationCreate(&authRights, NULL, flags, &self->_authRef);
+	if (err == errAuthorizationSuccess) {
+		err = AuthorizationMakeExternalForm(self->_authRef, &extForm);
+	}
+	if (err == errAuthorizationSuccess) {
+		self.authorization = [[NSData alloc] initWithBytes:&extForm length:sizeof(extForm)];
+	}
+	assert(err == errAuthorizationSuccess);
+	
+	return [self blessService];
 }
 
 - (NSString *)lastResponse {
@@ -106,13 +125,13 @@
 		if ([output containsString:@"Example usage:"]) {
 			self->_brew_installed = 1;
 		}
-		comp();
+		comp([NSString stringWithFormat:@"%ld", (long)self->_brew_installed]);
 	 }];
 }
 
 - (void)install_brew:(completed)comp {
 	[self _launchRubyTask:@[@"-e",@"\"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\""] find:@"Installation successful!" completion:^(NSError *error, id json, NSString *output, NSString *errorOutput) {
-		[self check_brew:^{
+		[self check_brew:^(NSString *lastResponse){
 			
 		}];
 	}];
@@ -124,7 +143,7 @@
 			} else {
 				self->_install_status = @"error_install_not_successful";
 			}
-			comp();
+			comp(self->_install_status);
 		 }];
 	} else {
 		self->_install_status = @"error_install_not_started";
@@ -138,7 +157,7 @@
 		} else {
 			self->_dpkg_installed = 0;
 		}
-		comp();
+		comp([NSString stringWithFormat:@"%ld", (long)self->_dpkg_installed]);
 	}];
 }
 
@@ -149,10 +168,10 @@
 	
 	self->_dpkg_installed = 0;
 	[self _launchBrewTaskWithArguments:@[@"install", @"CharizTeam/chariz/dpkg-chariz"] completion:^(NSError *error, id json, NSString *output, NSString *errorOutput) {
-		[self check_dpkg:^{
+		[self check_dpkg:^(NSString *lastResponse){
 			
 		}];
-		comp();
+		comp([NSString stringWithFormat:@"%ld", (long)self->_dpkg_installed]);
 	 }];
 }
 

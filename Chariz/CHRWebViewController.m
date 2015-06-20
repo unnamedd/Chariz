@@ -193,6 +193,31 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 				}
 			}];
 		}
+	} else if ([navigationAction.request.URL.scheme isEqualToString:@"chariz"]) {
+		decisionHandler(WKNavigationActionPolicyCancel);
+		
+		[[CHRHelper sharedInstance] startXPCService];
+		
+		NSString * requestURL = [[NSString stringWithFormat:@"%@", navigationAction.request.URL] stringByReplacingOccurrencesOfString:@"chariz://" withString:@""];
+		
+		NSArray * splitted_request = [requestURL componentsSeparatedByString:@"%7CAction%7C"];
+		
+		if ([splitted_request[0]  isEqual: @"install"]) {
+			[[CHRHelper sharedInstance] sendXPCRequest:[[NSString stringWithFormat:@"dpkg download |%@,%@", splitted_request[1], [[NSString stringWithFormat:@"%@", splitted_request[1]] lastPathComponent]] UTF8String] completed:^(NSString *lastResponse){
+				
+				NSString *resp = @"";
+				
+				if ([lastResponse isEqualToString:@""]) {
+					resp = @"Successful!";
+				} else {
+					resp = @"Failed!";
+				}
+				
+				NSAlert *alert = [[NSAlert alloc] init];
+				[alert setMessageText:[NSString stringWithFormat:@"[Chariz] %@", resp]];
+				[alert runModal];
+			}];
+		}
 	} else {
 		decisionHandler(WKNavigationActionPolicyAllow);
 	}

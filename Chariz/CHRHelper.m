@@ -108,6 +108,9 @@
 	}
 	if (err == errAuthorizationSuccess) {
 		self.authorization = [[NSData alloc] initWithBytes:&extForm length:sizeof(extForm)];
+	} else if (err == errAuthorizationCanceled) {
+		[[NSApplication sharedApplication] terminate:nil];
+		return nil;
 	}
 	assert(err == errAuthorizationSuccess);
 	

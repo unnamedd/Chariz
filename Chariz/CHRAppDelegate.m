@@ -8,24 +8,25 @@
 
 #import "CHRAppDelegate.h"
 #import "CHRRootViewController.h"
-#import "CHRFirstLaunchSource.h"
+#import "CHRFirstLaunchViewController.h"
 #import "CHRPreferences.h"
-
-static NSString *const kCHRUserDefaultsRootWindowFrameKey = @"RootWindowFrame";
 
 @implementation CHRAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
-	if ([CHRPreferences sharedInstance].firstLaunch == NO) {
-		_rootWindowController = [[UXWindowController alloc] initWithRootViewController:[[CHRFirstLaunchSource alloc] init]];
+	UXViewController *rootViewController;
+	
+	if ([CHRPreferences sharedInstance].lastLaunch) {
+		rootViewController = [[UXNavigationController alloc] initWithRootViewController:[[CHRFirstLaunchViewController alloc] init]];
 	} else {
-		_rootWindowController = [[UXWindowController alloc] initWithRootViewController:[[CHRRootViewController alloc] init]];
+		rootViewController = [[CHRRootViewController alloc] init];
 	}
-
+	
+	_rootWindowController = [[UXWindowController alloc] initWithRootViewController:rootViewController];
 	_rootWindowController.window.minSize = CGSizeMake(1000.f, 500.f);
 	_rootWindowController.window.contentSize = CGSizeMake(1000.f, 800.f);
 	[_rootWindowController.window center];
-	_rootWindowController.windowFrameAutosaveName = kCHRUserDefaultsRootWindowFrameKey;
+	_rootWindowController.windowFrameAutosaveName = kCHRPreferencesRootWindowFrameKey;
 	[_rootWindowController showWindow:self];
 	
 	[CHRPreferences sharedInstance].lastLaunch = [NSDate date];

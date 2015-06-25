@@ -1,133 +1,153 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<style>
-			html,body {
-				max-height: 100%;
-				max-width: 100%;
-			}
+<head>
+	<meta charset="utf-8">
 
-			* {
-				padding: 0;
-				margin: 0;
-			}
+	<style>
+	* {
+		box-sizing: border-box;
+	}
 
-			body{
-				font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-				font-size: 42px;
-			}
+	html, body {
+		width: 100%;
+		height: 100%;
+	}
 
-			small {
-				font-size: 20px;
-			}
+	body {
+		margin: 0;
+		font: 16px -apple-system-font;
+		text-align: center;
 
-			div.wrapper {
-				width: 50%;
-				height: 50%;
-				overflow: auto;
-				margin: auto;
-				position: absolute;
-				top: 0; left: 0; bottom: 0; right: 0;
-				text-align: center;
-				overflow:hidden;
-			}
+		display: table;
 
-			.loader {
-				margin: 60px auto;
-				font-size: 10px;
-				position: relative;
-				text-indent: -9999em;
-				border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-				border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-				border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-				border-left: 1.1em solid #000;
-				-webkit-transform: translateZ(0);
-				-ms-transform: translateZ(0);
-				transform: translateZ(0);
-				-webkit-animation: load8 1.1s infinite linear;
-				animation: load8 1.1s infinite linear;
-				overflow:hidden;
-			}
+		-webkit-user-select: none;
+		cursor: default;
+	}
 
-			.loader,
-			.loader:after {
-				border-radius: 50%;
-				width: 10em;
-				height: 10em;
-			}
+	h1 {
+		font-size: 2.625em;
+		font-weight: 400;
+	}
 
-			@-webkit-keyframes load8 {
-				0% {
-					-webkit-transform: rotate(0deg);
-					transform: rotate(0deg);
-				}
-				100% {
-					-webkit-transform: rotate(360deg);
-					transform: rotate(360deg);
-				}
-			}
-			@keyframes load8 {
-				0% {
-					-webkit-transform: rotate(0deg);
-					transform: rotate(0deg);
-				}
-				100% {
-					-webkit-transform: rotate(360deg);
-					transform: rotate(360deg);
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<div class="wrapper">
-			Installing Chariz<br />
-			<small id="status">Installing helper</small>
-			<div class="loader">Please wait...</div><br />
-		</div>
+	.container {
+		display: table-cell;
+		width: 100vh;
+		min-height: 100vh;
+		vertical-align: middle;
+	}
 
-		<script>
-		window.setTimeout(function() { window.location="startinstall://io.chariz.CharizHelper"; }, 2000);
-		window.onhashchange = function() {
-			changeStatus(window.location.hash.replace(/_/g, " ").replace(/#/g, ""));
-		}
-		
-		function fadeOut(el) {
-			el.style.opacity = 1;
+	.container[hidden] {
+		display: none;
+	}
 
-			var last = +new Date();
-			var tick = function() {
-				el.style.opacity = +el.style.opacity - (new Date() - last) / 400;
-				last = +new Date();
+	.loader {
+		margin: 60px auto;
+		font-size: 10px;
+		position: relative;
+		overflow: hidden;
+		text-indent: -99999px;
+		border: 1.1em solid transparent;
+		border-left-color: #aaa;
 
-				if (+el.style.opacity > 0) {
-					(window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16)
-				}
-			};
+		-webkit-transform: translateZ(0);
+		-webkit-animation: load8 1.1s infinite linear;
+	}
 
-			tick();
+	@-webkit-keyframes load8 {
+		0% {
+			-webkit-transform: rotate(0deg);
 		}
 
-		function fadeIn(el) {
-			el.style.opacity = 0;
-
-			var last = +new Date();
-			var tick = function() {
-				el.style.opacity = +el.style.opacity + (new Date() - last) / 400;
-				last = +new Date();
-
-				if (+el.style.opacity < 1) {
-					(window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16)
-				}
-			};
-
-			tick();
+		100% {
+			-webkit-transform: rotate(360deg);
 		}
+	}
 
-		function changeStatus(text) {
-			window.setTimeout(function() { fadeOut(document.getElementById("status")); }, 2000);
-			window.setTimeout(function() { document.getElementById("status").textContent = text; }, 3000);
-			window.setTimeout(function() { fadeIn(document.getElementById("status")); }, 3500);
+	.loader,
+	.loader:after {
+		border-radius: 50%;
+		width: 10em;
+		height: 10em;
+	}
+
+	.fadein {
+		opacity: 0;
+		-webkit-animation: fadein 300ms 1 ease-out;
+	}
+
+	.fadeout {
+		opacity: 1;
+		-webkit-animation: fadeout 300ms 1 ease-out;
+	}
+
+	@-webkit-keyframes fadein {
+		to {
+			opacity: 1;
 		}
-		</script>
-	</body>
+	}
+
+	@-webkit-keyframes fadeout {
+		to {
+			opacity: 0;
+		}
+	}
+
+	#go {
+		font-size: 13px;
+	}
+	</style>
+</head>
+<body data-state="welcome">
+	<div class="container" id="welcome">
+		<h1>Welcome to Chariz</h1>
+		<p>Chariz needs to install some components to finish installation.</p>
+		<p><button id="go">Continue</button></p>
+	</div>
+
+	<div class="container" id="installing" hidden>
+		<h1>Installing Chariz</h1>
+		<p id="status">Installing helper</p>
+		<div class="loader">Please wait…</div>
+	</div>
+
+	<script>
+	var welcome = document.querySelector("#welcome"),
+		installing = document.querySelector("#installing"),
+
+		status = document.querySelector("#status");
+
+	document.querySelector("#go").addEventListener("click", function() {
+		welcome.classList.add("fadeout");
+
+		setTimeout(function() {
+			welcome.remove();
+			installing.hidden = false;
+			installing.classList.add("fadein");
+
+			setTimeout(function() {
+				installing.classList.remove("fadein");
+				location = "startinstall://io.chariz.CharizHelper";
+			}, 300);
+		}, 300);
+	});
+
+	window.addEventListener("hashchange", function() {
+		setStatus(unescape(location.hash.substring(1)));
+	});
+
+	function setStatus(text) {
+		status.classList.add("fadeout");
+
+		setTimeout(function() {
+			status.classList.remove("fadeout");
+			status.textContent = text;
+			status.classList.add("fadein");
+
+			setTimeout(function() {
+				status.classList.remove("fadein");
+			}, 300);
+		}, 300);
+	}
+	</script>
+</body>
 </html>

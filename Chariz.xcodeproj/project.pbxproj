@@ -10,7 +10,6 @@
 		4503DB281B3188A7007B3719 /* io.chariz.CharizHelper in Copy Files */ = {isa = PBXBuildFile; fileRef = 4503DB271B3188A0007B3719 /* io.chariz.CharizHelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4503DB2F1B318935007B3719 /* CHRHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4503DB2E1B318935007B3719 /* CHRHelper.m */; };
 		450A96BF1B2D96F200D65471 /* CHRFirstLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A96BE1B2D96F200D65471 /* CHRFirstLaunchViewController.m */; };
-		450A96C21B2DA23B00D65471 /* CHRFirstLaunchSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A96C11B2DA23B00D65471 /* CHRFirstLaunchSource.m */; };
 		450A96C51B2DAD3500D65471 /* first_launch.html in Resources */ = {isa = PBXBuildFile; fileRef = 450A96C41B2DAD3500D65471 /* first_launch.html */; };
 		450A96C71B2E4DE100D65471 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450A96C61B2E4DE100D65471 /* Security.framework */; };
 		450A96C91B2E4DE800D65471 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450A96C81B2E4DE800D65471 /* ServiceManagement.framework */; };
@@ -93,8 +92,6 @@
 		4503DB2E1B318935007B3719 /* CHRHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRHelper.m; sourceTree = "<group>"; };
 		450A96BD1B2D96F200D65471 /* CHRFirstLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRFirstLaunchViewController.h; sourceTree = "<group>"; };
 		450A96BE1B2D96F200D65471 /* CHRFirstLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRFirstLaunchViewController.m; sourceTree = "<group>"; };
-		450A96C01B2DA23B00D65471 /* CHRFirstLaunchSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRFirstLaunchSource.h; sourceTree = "<group>"; };
-		450A96C11B2DA23B00D65471 /* CHRFirstLaunchSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRFirstLaunchSource.m; sourceTree = "<group>"; };
 		450A96C41B2DAD3500D65471 /* first_launch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = first_launch.html; sourceTree = "<group>"; };
 		450A96C61B2E4DE100D65471 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		450A96C81B2E4DE800D65471 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
@@ -178,8 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				450A96C31B2DAD2200D65471 /* HTML */,
-				450A96C01B2DA23B00D65471 /* CHRFirstLaunchSource.h */,
-				450A96C11B2DA23B00D65471 /* CHRFirstLaunchSource.m */,
 				450A96BD1B2D96F200D65471 /* CHRFirstLaunchViewController.h */,
 				450A96BE1B2D96F200D65471 /* CHRFirstLaunchViewController.m */,
 			);
@@ -471,6 +466,7 @@
 				TargetAttributes = {
 					CF678C0F1A84C7490084360F = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = N2LN9ZT493;
 					};
 				};
 			};
@@ -552,7 +548,6 @@
 				CF678C421A84E2C50084360F /* CHRRootViewController.m in Sources */,
 				450A96BF1B2D96F200D65471 /* CHRFirstLaunchViewController.m in Sources */,
 				4503DB2F1B318935007B3719 /* CHRHelper.m in Sources */,
-				450A96C21B2DA23B00D65471 /* CHRFirstLaunchSource.m in Sources */,
 				CF80DF551B13663200725929 /* CHRLoadingIndicatorView.m in Sources */,
 				CF678C5F1A8661D30084360F /* CHRSourcesListViewController.m in Sources */,
 				CF678C491A84E83F0084360F /* CHRWebViewController.m in Sources */,
@@ -656,7 +651,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application: The trustee for the Brighton South Property Trust (N2LN9ZT493)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -683,6 +679,7 @@
 				);
 				PLIST_FILE_OUTPUT_FORMAT = "same-as-input";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -690,7 +687,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application: The trustee for the Brighton South Property Trust (N2LN9ZT493)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -717,6 +715,7 @@
 				);
 				PLIST_FILE_OUTPUT_FORMAT = "same-as-input";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

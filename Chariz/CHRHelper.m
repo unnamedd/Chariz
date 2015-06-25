@@ -80,12 +80,12 @@
 	xpc_object_t message_request = xpc_dictionary_create(NULL, NULL, 0);
 	xpc_dictionary_set_string(message_request, "request", message);
 	
-	HBLogInfo(@"Sending request: %s", message);
+	HBLogDebug(@"Sending request: %s", message);
 	
 	xpc_connection_send_message_with_reply(self->con, message_request, dispatch_get_main_queue(), ^(xpc_object_t event) {
 		const char* response = xpc_dictionary_get_string(event, "reply");
 		self->last_response = response;
-		HBLogInfo(@"Received response: %s.", response);
+		HBLogDebug(@"Received response: %s.", response);
 		comp([NSString stringWithFormat:@"%s", response]);
 	});
 }

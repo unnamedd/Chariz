@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString *const kCHRPreferencesRootWindowFrameKey = @"RootWindowFrame";
+static NSString *const kCHRPreferencesLastLaunchKey = @"LastLaunch";
+
 @interface CHRPreferences : NSObject
 
 + (instancetype)sharedInstance;
 
 @property (strong, nonatomic) NSDate *lastLaunch;
-@property (nonatomic) BOOL firstLaunch;
 
 @end

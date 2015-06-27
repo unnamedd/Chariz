@@ -38,7 +38,6 @@
 		CFC8AE0D1A9750EB001D2C91 /* CHRInstalledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */; };
 		CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */; };
 		CFFE4F161A906D3E00051B92 /* CHRPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFE4F151A906D3E00051B92 /* CHRPreferences.m */; };
-		F849E64487BD828BAACC4C52 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E063264AAB01B6E98D54B2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -156,7 +155,6 @@
 				CF3E40D91A92151300C11DE3 /* ScriptingBridge.framework in Frameworks */,
 				CF678C371A84C83B0084360F /* UXKit.framework in Frameworks */,
 				CF678C4C1A84E8670084360F /* WebKit.framework in Frameworks */,
-				F849E64487BD828BAACC4C52 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

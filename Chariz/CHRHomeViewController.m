@@ -17,7 +17,7 @@
 	self.title = I18N(@"Home");
 	self.navigationItem.rightBarButtonItem = [[UXBarButtonItem alloc] initWithCustomView:[[CHRSearchField alloc] init]];
 	
-	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"featured" relativeToURL:[NSURL URLWithString:kCHRWebUIRootURL]]]];
+	[self.webView.mainFrame loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"featured" relativeToURL:[NSURL URLWithString:kCHRWebUIRootURL]]]];
 }
 
 @end

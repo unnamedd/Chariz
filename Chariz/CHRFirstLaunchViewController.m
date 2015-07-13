@@ -22,14 +22,14 @@
 	self.title = [NSBundle mainBundle].infoDictionary[(NSString *)kCFBundleNameKey];
 	
 	NSURL *html = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"first_launch" ofType:@"html"] isDirectory:NO];
-	[self.webView loadRequest:[NSURLRequest requestWithURL:html]];
+	[self.webView.mainFrame loadRequest:[NSURLRequest requestWithURL:html]];
 }
 
 #pragma mark - Web View
 
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-	if ([navigationAction.request.URL.scheme isEqualToString:@"startinstall"]) {
-		decisionHandler(WKNavigationActionPolicyCancel);
+- (void)webView:(WebView *)webView decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id <WebPolicyDecisionListener>)listener {
+	if ([request.URL.scheme isEqualToString:@"startinstall"]) {
+		[listener ignore];
 		CHRHelper *helper = [CHRHelper sharedInstance];
 		NSError *createHelper = [helper authorize];
 		if (createHelper) {
@@ -43,7 +43,7 @@
 			[helper check_brew:^(NSString *lastResponse){
 				if ([helper brew_installed] == 0) {
 					HBLogInfo(@"Installing Homebrew");
-					[self.webView evaluateJavaScript:@"window.location.href = '#Installing Homebrew'" completionHandler:nil];
+#warning [self.webView.mainFrame evaluateJavaScript:@"window.location.href = '#Installing Homebrew'" completionHandler:nil];
 					[helper install_brew:^(NSString *lastResponse){
 						if ([[helper install_status] containsString:@"error"]) {
 							HBLogError(@"[Chariz] Error: %@", [helper install_status]);
@@ -54,7 +54,7 @@
 						}
 					}];
 				} else {
-					[self.webView evaluateJavaScript:@"window.location.href = '#Installing dpkg'" completionHandler:nil];
+#warning [self.webView evaluateJavaScript:@"window.location.href = '#Installing dpkg'" completionHandler:nil];
 					[helper check_dpkg:^(NSString *lastResponse){
 						if ([helper dpkg_installed] == 0) {
 							[helper install_dpkg:^(NSString *lastResponse){
@@ -65,7 +65,7 @@
 									[alert runModal];
 									exit(0);
 								} else {
-									[self.webView evaluateJavaScript:@"window.location.href = '#Done! Chariz will now restart!'" completionHandler:nil];
+#warning [self.webView evaluateJavaScript:@"window.location.href = '#Done! Chariz will now restart!'" completionHandler:nil];
 									NSTask *task = [[NSTask alloc] init];
 									NSMutableArray *args = [NSMutableArray array];
 									[args addObject:@"-c"];
@@ -80,7 +80,7 @@
 								}
 							}];
 						} else {
-							[self.webView evaluateJavaScript:@"window.location.href = '#Done! Chariz will now restart!'" completionHandler:nil];
+#warning [self.webView evaluateJavaScript:@"window.location.href = '#Done! Chariz will now restart!'" completionHandler:nil];
 							NSTask *task = [[NSTask alloc] init];
 							NSMutableArray *args = [NSMutableArray array];
 							[args addObject:@"-c"];
@@ -97,12 +97,12 @@
 				}
 			}];
 		}
-	} else if ([navigationAction.request.URL.scheme isEqualToString:@"chariz"]) {
-		decisionHandler(WKNavigationActionPolicyCancel);
+	} else if ([request.URL.scheme isEqualToString:@"chariz"]) {
+		[listener ignore];
 		
 		[[CHRHelper sharedInstance] startXPCService];
 		
-		NSString * requestURL = [[NSString stringWithFormat:@"%@", navigationAction.request.URL] stringByReplacingOccurrencesOfString:@"chariz://" withString:@""];
+		NSString * requestURL = [[NSString stringWithFormat:@"%@", request.URL] stringByReplacingOccurrencesOfString:@"chariz://" withString:@""];
 		
 		NSArray * splitted_request = [requestURL componentsSeparatedByString:@"%7CAction%7C"];
 		
@@ -123,7 +123,7 @@
 			}];
 		}
 	} else {
-		[super webView:webView decidePolicyForNavigationAction:navigationAction decisionHandler:decisionHandler];
+		[super webView:webView decidePolicyForNavigationAction:actionInformation request:request frame:frame decisionListener:listener];
 	}
 }
 

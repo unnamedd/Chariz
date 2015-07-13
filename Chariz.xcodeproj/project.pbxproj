@@ -35,6 +35,7 @@
 		CF80DF4C1B13483D00725929 /* CHRRefreshStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF80DF4B1B13483D00725929 /* CHRRefreshStatusView.m */; };
 		CF80DF511B135F6800725929 /* CHRSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF80DF501B135F6800725929 /* CHRSearchField.m */; };
 		CF80DF551B13663200725929 /* CHRLoadingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF80DF541B13663200725929 /* CHRLoadingIndicatorView.m */; };
+		CF9EC62B1B53EF9E000491F3 /* CHRCharizWebScriptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9EC62A1B53EF9E000491F3 /* CHRCharizWebScriptObject.m */; };
 		CFC8AE0D1A9750EB001D2C91 /* CHRInstalledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */; };
 		CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */; };
 		CFFE4F161A906D3E00051B92 /* CHRPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFE4F151A906D3E00051B92 /* CHRPreferences.m */; };
@@ -131,6 +132,8 @@
 		CF80DF501B135F6800725929 /* CHRSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRSearchField.m; sourceTree = "<group>"; };
 		CF80DF531B13663200725929 /* CHRLoadingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRLoadingIndicatorView.h; sourceTree = "<group>"; };
 		CF80DF541B13663200725929 /* CHRLoadingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRLoadingIndicatorView.m; sourceTree = "<group>"; };
+		CF9EC6291B53EF9E000491F3 /* CHRCharizWebScriptObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRCharizWebScriptObject.h; sourceTree = "<group>"; };
+		CF9EC62A1B53EF9E000491F3 /* CHRCharizWebScriptObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRCharizWebScriptObject.m; sourceTree = "<group>"; };
 		CFA074E31A8F94560094C486 /* Chariz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chariz-Prefix.pch"; sourceTree = "<group>"; };
 		CFC8AE0B1A9750EB001D2C91 /* CHRInstalledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRInstalledViewController.h; sourceTree = "<group>"; };
 		CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRInstalledViewController.m; sourceTree = "<group>"; };
@@ -296,7 +299,6 @@
 		CF678C461A84E81F0084360F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				450A96B41B2D90DE00D65471 /* First Launch */,
 				CF678C451A84E2E50084360F /* Root */,
 				CF678C4A1A84E8490084360F /* Web View */,
 				CF678C5C1A85B43B0084360F /* Package List */,
@@ -310,6 +312,7 @@
 			children = (
 				CF678C471A84E83F0084360F /* CHRWebViewController.h */,
 				CF678C481A84E83F0084360F /* CHRWebViewController.m */,
+				450A96B41B2D90DE00D65471 /* First Launch */,
 				CF678C501A84E9640084360F /* Home */,
 			);
 			name = "Web View";
@@ -391,6 +394,23 @@
 			name = "Loading Indicator";
 			sourceTree = "<group>";
 		};
+		CF9EC62C1B53EFA1000491F3 /* Web Script Objects */ = {
+			isa = PBXGroup;
+			children = (
+				CF9EC62D1B53EFA9000491F3 /* Chariz */,
+			);
+			name = "Web Script Objects";
+			sourceTree = "<group>";
+		};
+		CF9EC62D1B53EFA9000491F3 /* Chariz */ = {
+			isa = PBXGroup;
+			children = (
+				CF9EC6291B53EF9E000491F3 /* CHRCharizWebScriptObject.h */,
+				CF9EC62A1B53EF9E000491F3 /* CHRCharizWebScriptObject.m */,
+			);
+			name = Chariz;
+			sourceTree = "<group>";
+		};
 		CFC8AE0E1A9750EE001D2C91 /* Installed */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +444,7 @@
 			children = (
 				CF3E40E31A92235A00C11DE3 /* Email Sending */,
 				CFFE4F171A906D4100051B92 /* Preferences */,
+				CF9EC62C1B53EFA1000491F3 /* Web Script Objects */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -543,6 +564,7 @@
 				CF678C4F1A84E95F0084360F /* CHRHomeViewController.m in Sources */,
 				CF678C191A84C7490084360F /* main.m in Sources */,
 				CF678C551A85AC270084360F /* CHRSourcesViewController.m in Sources */,
+				CF9EC62B1B53EF9E000491F3 /* CHRCharizWebScriptObject.m in Sources */,
 				CF678C421A84E2C50084360F /* CHRRootViewController.m in Sources */,
 				450A96BF1B2D96F200D65471 /* CHRFirstLaunchViewController.m in Sources */,
 				4503DB2F1B318935007B3719 /* CHRHelper.m in Sources */,

@@ -9,9 +9,8 @@
 #import <UXKit/UXKit.h>
 #import <WebKit/WebKit.h>
 
-@interface CHRWebViewController : UXViewController <WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler>
+@interface CHRWebViewController : UXViewController
 
-@property (strong, nonatomic) WKWebView *webView;
-@property (strong, nonatomic) WKUserContentController *userContentController;
+@property (strong, nonatomic) WebView *webView;
 
 @end

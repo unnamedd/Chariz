@@ -9,19 +9,7 @@
 #import "CHRWebViewController.h"
 #import "CHREmailSendingController.h"
 #import "CHRLoadingIndicatorView.h"
-
-static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
-	"var handlers = webkit.messageHandlers;"
-	"window.chariz = {};"
-
-	"for (var i in handlers) {"
-		"if (handlers.hasOwnProperty(i)) {"
-			"window.chariz[i] = function() {"
-				"handlers[i].postMessage.apply(this, arguments.length == 0 ? [ null ] : arguments);"
-			"};"
-		"}"
-	"}"
-"})(window, undefined)";
+#import "CHRCharizWebScriptObject.h"
 
 @implementation CHRWebViewController {
 	CHRLoadingIndicatorView *_loadingIndicatorView;
@@ -49,85 +37,67 @@ static NSString *const kCHRWebViewUserScript = @"(function(window, undefined) {"
 	
 	self.title = I18N(@"Untitled");
 	
-	WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
-	configuration.preferences.plugInsEnabled = NO;
-	configuration.preferences.javaEnabled = NO; // probably redundant?
-	
-	_userContentController = [[WKUserContentController alloc] init];
-	[_userContentController addUserScript:[[WKUserScript alloc] initWithSource:kCHRWebViewUserScript injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO]];
-	configuration.userContentController = _userContentController;
-	
-	_webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:configuration];
+	_webView = [[WebView alloc] initWithFrame:self.view.bounds];
 	_webView.autoresizingMask = UXViewAutoresizingFlexibleWidth | UXViewAutoresizingFlexibleHeight;
 	_webView.UIDelegate = self;
-	_webView.navigationDelegate = self;
+	_webView.policyDelegate = self;
+	_webView.frameLoadDelegate = self;
 	[self.view addSubview:_webView];
 	
 	_loadingIndicatorView = [[CHRLoadingIndicatorView alloc] init];
 	self.navigationItem.leftBarButtonItem = [[UXBarButtonItem alloc] initWithCustomView:_loadingIndicatorView];
 	
 	if (_initialRequest) {
-		[self.webView loadRequest:_initialRequest];
+		[_webView.mainFrame loadRequest:_initialRequest];
 		_initialRequest = nil;
 	}
 }
 
-#pragma mark - WKUIDelegate
+#pragma mark - WebKit
 
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+- (void)webView:(WebView *)webView didStartProvisionalLoadForFrame:(WebFrame *)webFrame {
 	[_loadingIndicatorView startAnimation:nil];
 }
 
-- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+- (void)webView:(WebView *)webView didCommitLoadForFrame:(WebFrame *)webFrame {
 	[_loadingIndicatorView stopAnimation:nil];
 }
 
-- (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures {
-	if (!navigationAction.targetFrame) {
-		Class viewControllerClass = [self.class viewControllerClassForURL:navigationAction.request.URL];
-		
-		CHRWebViewController *viewController = [[viewControllerClass alloc] initWithRequest:navigationAction.request];
-		[self.navigationController pushViewController:viewController animated:YES];
-		
-		return nil;
-	}
+- (WebView *)webView:(WebView *)webView createWebViewWithRequest:(NSURLRequest *)request {
+	Class viewControllerClass = [self.class viewControllerClassForURL:request.URL];
 	
-	HBLogWarn(@"%@: attempting to perform a navigation action in a frame that's not supported", self);
-	return nil;
+	CHRWebViewController *viewController = [[viewControllerClass alloc] initWithRequest:request];
+	[self.navigationController pushViewController:viewController animated:YES];
+	
+	return viewController.webView;
 }
 
-- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)())completionHandler {
-	// TODO: implement
-	HBLogDebug(@"alert: %@", message);
+- (void)webView:(WebView *)webView didFailProvisionalLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
+	[[NSAlert alertWithError:error] beginSheetModalForWindow:self.view.window completionHandler:nil];
 }
 
-- (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL result))completionHandler {
-	// TODO: implement
-	HBLogDebug(@"confirm: %@", message);
-	completionHandler(NO);
+- (void)webView:(WebView *)webView didFailLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
+	[[NSAlert alertWithError:error] beginSheetModalForWindow:self.view.window completionHandler:nil];
 }
 
-- (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString *result))completionHandler {
-	// TODO: implement
-	HBLogDebug(@"prompt: %@", prompt);
-	completionHandler(@"");
-}
-
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-	if ([navigationAction.request.URL.scheme isEqualToString:@"mailto"]) {
-		decisionHandler(WKNavigationActionPolicyCancel);
+- (void)webView:(WebView *)webView decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id <WebPolicyDecisionListener>)listener {
+	if ([request.URL.scheme isEqualToString:@"mailto"]) {
+		[listener ignore];
 		
 		CHREmailSendingController *emailSendingController = [[CHREmailSendingController alloc] init];
-		[emailSendingController handleEmailWithURL:navigationAction.request.URL window:self.view.window];
+		[emailSendingController handleEmailWithURL:request.URL window:self.view.window];
 	} else {
-		decisionHandler(WKNavigationActionPolicyAllow);
+		[listener use];
 	}
 }
 
-#pragma mark - WKScriptMessageHandler
-
-- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
-	HBLogDebug(@"unhandled script message: %@", message);
+- (void)webView:(WebView *)webView didClearWindowObject:(WebScriptObject *)windowObject forFrame:(WebFrame *)frame {
+	NSURL *url = frame.dataSource.request.URL;
+	
+	{//if ([url.scheme isEqualToString:@"https"] && [url.host isEqualToString:[NSURL URLWithString:kCHRWebUIRootURL].host]) {
+		// TODO: implement cydia API compatible object
+		[windowObject setValue:[[CHRCharizWebScriptObject alloc] init] forKey:@"chariz"];
+	}
 }
 
 @end

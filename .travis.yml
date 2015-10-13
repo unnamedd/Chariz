@@ -5,6 +5,7 @@ git:
   submodules: false
 
 before_install:
+  - sudo gem install cocoapods
   - git submodule update --init --recursive
 
 script: xctool -workspace Chariz.xcworkspace -scheme Chariz build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO

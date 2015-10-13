@@ -8,7 +8,7 @@
 
 #import "CHRChangesViewController.h"
 #import "CHRRefreshStatusView.h"
-#import <CPMPackageManagerAggregate.h>
+#import <CPM/CPM.h>
 
 @implementation CHRChangesViewController {
 	CHRRefreshState _refreshState;

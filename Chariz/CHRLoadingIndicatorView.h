@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import <AppKit/AppKit.h>
+@import AppKit;
 
 @interface CHRLoadingIndicatorView : NSProgressIndicator
 

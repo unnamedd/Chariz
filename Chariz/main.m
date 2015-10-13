@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 #import "CHRAppDelegate.h"
 
 int main(int argc, const char * argv[]) {

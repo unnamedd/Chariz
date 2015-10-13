@@ -8,7 +8,8 @@
 
 #ifdef __OBJC__
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
 #import <UXKit/UXKit.h>
 
 #define I18N(string) [[NSBundle mainBundle] localizedStringForKey:string value:string table:nil]

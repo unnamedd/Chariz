@@ -6,13 +6,13 @@
 //	Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
+@import ServiceManagement;
+@import Security;
+
 #import "CHRFirstLaunchViewController.h"
 #import "CHRLoadingIndicatorView.h"
 #import "CHRHelper.h"
 #import "CHRPreferences.h"
-
-#import <ServiceManagement/ServiceManagement.h>
-#import <Security/Authorization.h>
 
 @implementation CHRFirstLaunchViewController
 

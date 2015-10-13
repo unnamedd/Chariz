@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <ScriptingBridge/ScriptingBridge.h>
+@import Foundation;
+@import ScriptingBridge;
 
 @interface CHREmailSendingController : NSObject <SBApplicationDelegate>
 

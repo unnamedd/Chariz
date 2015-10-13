@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 static NSString *const kCHRPreferencesRootWindowFrameKey = @"RootWindowFrame";
 static NSString *const kCHRPreferencesLastLaunchKey = @"LastLaunch";

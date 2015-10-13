@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
+@import WebKit;
+
 #import "CHRCharizWebScriptObject.h"
-#import <CPMPackageManagerAggregate.h>
-#import <CPMPackage.h>
-#import <WebKit/WebKit.h>
+#import <CPM/CPM.h>
 
 @implementation CHRCharizWebScriptObject
 

@@ -4,7 +4,4 @@
    <FileRef
       location = "group:Chariz.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:cpm/cpm.xcodeproj">
-   </FileRef>
 </Workspace>

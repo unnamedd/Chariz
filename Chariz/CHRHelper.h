@@ -6,9 +6,9 @@
 //	Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <ServiceManagement/ServiceManagement.h>
-#import <Security/Authorization.h>
+@import Foundation;
+@import ServiceManagement;
+@import Security;
 
 @interface CHRHelper : NSObject {
 	xpc_connection_t con;

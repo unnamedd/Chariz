@@ -9,7 +9,7 @@
 #import <UXKit/UXKit.h>
 #import <WebKit/WebKit.h>
 
-@interface CHRWebViewController : UXViewController
+@interface CHRWebViewController : UXViewController <WebUIDelegate, WebPolicyDelegate, WebFrameLoadDelegate>
 
 @property (strong, nonatomic) WebView *webView;
 

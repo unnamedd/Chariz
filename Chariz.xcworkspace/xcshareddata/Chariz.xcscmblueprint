@@ -4,6 +4,7 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DACD6CEFDF528C8B72477CF83AC3E6AB54E3FEE4" : 0,
     "E3736543BCC435CC0C75EE3F8B5482FD8F6ED8A0" : 0,
     "04101981B66E318109934C9516F88D824BB96459" : 0,
     "3BB82CD20191FEE6772CC313D55E0EDB3E9D6927" : 0,
@@ -11,13 +12,14 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CFC05AF9-0169-4FBE-AC7D-1A900ADC30B1",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DACD6CEFDF528C8B72477CF83AC3E6AB54E3FEE4" : "chariz\/Helper\/CharizHelper\/libdpkg-objc\/",
     "E3736543BCC435CC0C75EE3F8B5482FD8F6ED8A0" : "Chariz\/Helper\/",
     "04101981B66E318109934C9516F88D824BB96459" : "Charizcpm\/cpm\/external\/fmdb",
     "3BB82CD20191FEE6772CC313D55E0EDB3E9D6927" : "Chariz",
     "941AA9852CF21CDC59ADBFB4BDEEAF923174FB79" : "Charizcpm"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Chariz",
-  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Chariz.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
@@ -34,6 +36,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CharizTeam\/cpm",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "941AA9852CF21CDC59ADBFB4BDEEAF923174FB79"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mstg\/libdpkg-objc",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DACD6CEFDF528C8B72477CF83AC3E6AB54E3FEE4"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CharizTeam\/Helper",

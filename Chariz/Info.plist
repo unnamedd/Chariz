@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>io.chariz.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -33,7 +33,7 @@
 	<key>SMPrivilegedExecutables</key>
 	<dict>
 		<key>io.chariz.CharizHelper</key>
-		<string>identifier io.chariz.CharizHelper and certificate leaf[subject.CN] = &quot;Developer ID Application: The trustee for the Brighton South Property Trust (N2LN9ZT493)&quot;</string>
+		<string>identifier io.chariz.CharizHelper and certificate leaf[subject.CN] = "Developer ID Application: The trustee for the Brighton South Property Trust (N2LN9ZT493)"</string>
 	</dict>
 </dict>
 </plist>

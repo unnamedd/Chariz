@@ -16,7 +16,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
 	UXViewController *rootViewController;
 	
-	if ([CHRPreferences sharedInstance].lastLaunch) {
+	if (NO && [CHRPreferences sharedInstance].lastLaunch) {
 		rootViewController = [[UXNavigationController alloc] initWithRootViewController:[[CHRFirstLaunchViewController alloc] init]];
 	} else {
 		rootViewController = [[CHRRootViewController alloc] init];

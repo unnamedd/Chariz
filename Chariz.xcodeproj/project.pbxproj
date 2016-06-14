@@ -32,6 +32,7 @@
 		CFC8AE0D1A9750EB001D2C91 /* CHRInstalledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */; };
 		CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */; };
 		CFEC7F511BCD3F130065ED6C /* UXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF678C361A84C83B0084360F /* UXKit.framework */; };
+		CFEC7F561BCD44D50065ED6C /* FirstRun.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFEC7F551BCD44D50065ED6C /* FirstRun.xib */; };
 		CFFE4F161A906D3E00051B92 /* CHRPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFE4F151A906D3E00051B92 /* CHRPreferences.m */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +174,7 @@
 		CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRChangesViewController.m; sourceTree = "<group>"; };
 		CFEC7F301BCD34FC0065ED6C /* CPM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CPM.framework; path = cpm/build/Debug/CPM.framework; sourceTree = "<group>"; };
 		CFEC7F321BCD35620065ED6C /* cpm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cpm.xcodeproj; path = cpm/cpm.xcodeproj; sourceTree = "<group>"; };
+		CFEC7F551BCD44D50065ED6C /* FirstRun.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstRun.xib; sourceTree = "<group>"; };
 		CFFE4F141A906D3E00051B92 /* CHRPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHRPreferences.h; path = Chariz/CHRPreferences.h; sourceTree = "<group>"; };
 		CFFE4F151A906D3E00051B92 /* CHRPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHRPreferences.m; path = Chariz/CHRPreferences.m; sourceTree = "<group>"; };
 		F9E063264AAB01B6E98D54B2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +264,7 @@
 				CFFE4F181A906D4A00051B92 /* Model */,
 				CF678C461A84E81F0084360F /* View Controllers */,
 				CF80DF4E1B1349F200725929 /* Interface */,
+				CFEC7F541BCD44B50065ED6C /* Interface Builder */,
 				CF3E40D01A91E10A00C11DE3 /* Images.xcassets */,
 				CF678C131A84C7490084360F /* Supporting Files */,
 			);
@@ -275,7 +278,6 @@
 				CF3E40D71A920EA900C11DE3 /* PrivateAPIs.h */,
 				CF678C141A84C7490084360F /* Info.plist */,
 				CF678C181A84C7490084360F /* main.m */,
-				CF678C511A84F0650084360F /* MainMenu.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -467,6 +469,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CFEC7F541BCD44B50065ED6C /* Interface Builder */ = {
+			isa = PBXGroup;
+			children = (
+				CF678C511A84F0650084360F /* MainMenu.xib */,
+				CFEC7F551BCD44D50065ED6C /* FirstRun.xib */,
+			);
+			name = "Interface Builder";
+			sourceTree = "<group>";
+		};
 		CFFE4F171A906D4100051B92 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
@@ -589,6 +600,7 @@
 			files = (
 				CF678C521A84F0650084360F /* MainMenu.xib in Resources */,
 				CF3E40D11A91E10A00C11DE3 /* Images.xcassets in Resources */,
+				CFEC7F561BCD44D50065ED6C /* FirstRun.xib in Resources */,
 				450A96C51B2DAD3500D65471 /* first_launch.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

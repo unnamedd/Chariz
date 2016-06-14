@@ -26,10 +26,11 @@
 		CF80DF4C1B13483D00725929 /* CHRRefreshStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF80DF4B1B13483D00725929 /* CHRRefreshStatusView.m */; };
 		CF80DF511B135F6800725929 /* CHRSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF80DF501B135F6800725929 /* CHRSearchField.m */; };
 		CF80DF551B13663200725929 /* CHRLoadingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF80DF541B13663200725929 /* CHRLoadingIndicatorView.m */; };
+		CF90EB241D0C339600452C80 /* CPM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFEC7F3A1BCD35630065ED6C /* CPM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CF90EB581D0D908300452C80 /* CPM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEC7F3A1BCD35630065ED6C /* CPM.framework */; };
 		CF9EC62B1B53EF9E000491F3 /* CHRCharizWebScriptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9EC62A1B53EF9E000491F3 /* CHRCharizWebScriptObject.m */; };
 		CFC8AE0D1A9750EB001D2C91 /* CHRInstalledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */; };
 		CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */; };
-		CFEC7F501BCD3EF10065ED6C /* CPM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEC7F3A1BCD35630065ED6C /* CPM.framework */; };
 		CFEC7F511BCD3F130065ED6C /* UXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF678C361A84C83B0084360F /* UXKit.framework */; };
 		CFFE4F161A906D3E00051B92 /* CHRPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFE4F151A906D3E00051B92 /* CHRPreferences.m */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4BE4905C10445E0A006BE471;
 			remoteInfo = io.chariz.CharizHelper;
+		};
+		CF90EB251D0C339600452C80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFEC7F321BCD35620065ED6C /* cpm.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CFEC7F111BCD31F80065ED6C;
+			remoteInfo = "cpm-framework";
 		};
 		CFEC7F371BCD35630065ED6C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -96,6 +104,17 @@
 				4503DB281B3188A7007B3719 /* io.chariz.CharizHelper in Copy Files */,
 			);
 			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF90EB271D0C339600452C80 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CF90EB241D0C339600452C80 /* CPM.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -164,8 +183,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFEC7F501BCD3EF10065ED6C /* CPM.framework in Frameworks */,
 				CFEC7F511BCD3F130065ED6C /* UXKit.framework in Frameworks */,
+				CF90EB581D0D908300452C80 /* CPM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +499,7 @@
 				CF678C0E1A84C7490084360F /* Resources */,
 				45DF49D81B2F79B70077DFA9 /* Set Build Number */,
 				450CE7681B2F407C001EC8F6 /* Copy Files */,
+				CF90EB271D0C339600452C80 /* Embed Frameworks */,
 			);
 			buildRules = (
 				457C75A91B2F8C4C007C019F /* PBXBuildRule */,
@@ -487,6 +507,7 @@
 			dependencies = (
 				CFEC7F3C1BCD35670065ED6C /* PBXTargetDependency */,
 				4503DB2A1B3188A9007B3719 /* PBXTargetDependency */,
+				CF90EB261D0C339600452C80 /* PBXTargetDependency */,
 			);
 			name = Chariz;
 			productName = Chariz;
@@ -625,6 +646,11 @@
 			isa = PBXTargetDependency;
 			name = io.chariz.CharizHelper;
 			targetProxy = 4503DB291B3188A9007B3719 /* PBXContainerItemProxy */;
+		};
+		CF90EB261D0C339600452C80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "cpm-framework";
+			targetProxy = CF90EB251D0C339600452C80 /* PBXContainerItemProxy */;
 		};
 		CFEC7F3C1BCD35670065ED6C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

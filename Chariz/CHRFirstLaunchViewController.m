@@ -27,6 +27,7 @@
 
 #pragma mark - Web View
 
+/*
 - (void)webView:(WebView *)webView decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id <WebPolicyDecisionListener>)listener {
 	if ([request.URL.scheme isEqualToString:@"startinstall"]) {
 		[listener ignore];
@@ -126,5 +127,6 @@
 		[super webView:webView decidePolicyForNavigationAction:actionInformation request:request frame:frame decisionListener:listener];
 	}
 }
+*/
 
 @end

@@ -74,10 +74,18 @@
 
 - (void)webView:(WebView *)webView didFailProvisionalLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
 	[[NSAlert alertWithError:error] beginSheetModalForWindow:self.view.window completionHandler:nil];
+
+	if (frame == webView.mainFrame) {
+		[_loadingIndicatorView stopAnimation:nil];
+	}
 }
 
 - (void)webView:(WebView *)webView didFailLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
 	[[NSAlert alertWithError:error] beginSheetModalForWindow:self.view.window completionHandler:nil];
+
+	if (frame == webView.mainFrame) {
+		[_loadingIndicatorView stopAnimation:nil];
+	}
 }
 
 - (void)webView:(WebView *)webView decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id <WebPolicyDecisionListener>)listener {

@@ -10,10 +10,6 @@
 
 @import Foundation;
 
-#import <UXKit/UXKit.h>
-
-#define I18N(string) [[NSBundle mainBundle] localizedStringForKey:string value:string table:nil]
-
 static NSString *const kCHRCharizWebsiteURL = @"https://chariz.io/";
 static NSString *const kCHRWebUIRootURL = @"https://cdn.chariz.io/app/macos/1.0/";
 

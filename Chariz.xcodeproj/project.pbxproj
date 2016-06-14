@@ -11,29 +11,31 @@
 		4503DB2F1B318935007B3719 /* CHRHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4503DB2E1B318935007B3719 /* CHRHelper.m */; };
 		450A96BF1B2D96F200D65471 /* CHRFirstLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A96BE1B2D96F200D65471 /* CHRFirstLaunchViewController.m */; };
 		450A96C51B2DAD3500D65471 /* first_launch.html in Resources */ = {isa = PBXBuildFile; fileRef = 450A96C41B2DAD3500D65471 /* first_launch.html */; };
+		CF3652C61D103F3000D8DE43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652C51D103F3000D8DE43 /* AppDelegate.swift */; };
+		CF3652C91D1041A700D8DE43 /* Mail.app in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3E40DE1A92172700C11DE3 /* Mail.app */; };
+		CF3652CB1D1041CB00D8DE43 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652CA1D1041CB00D8DE43 /* LoadingIndicatorView.swift */; };
+		CF3652CD1D10424900D8DE43 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652CC1D10424900D8DE43 /* SearchField.swift */; };
+		CF3652CF1D10429B00D8DE43 /* RefreshStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652CE1D10429B00D8DE43 /* RefreshStatusView.swift */; };
+		CF3652D11D10444B00D8DE43 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652D01D10444B00D8DE43 /* Preferences.swift */; };
+		CF3652D31D1046E500D8DE43 /* CharizWebScriptObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652D21D1046E500D8DE43 /* CharizWebScriptObject.swift */; };
 		CF3E40D11A91E10A00C11DE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3E40D01A91E10A00C11DE3 /* Images.xcassets */; };
 		CF3E40DF1A92172700C11DE3 /* Mail.app in Sources */ = {isa = PBXBuildFile; fileRef = CF3E40DE1A92172700C11DE3 /* Mail.app */; };
 		CF3E40E21A92235600C11DE3 /* CHREmailSendingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3E40E11A92235600C11DE3 /* CHREmailSendingController.m */; };
-		CF678C171A84C7490084360F /* CHRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C161A84C7490084360F /* CHRAppDelegate.m */; };
 		CF678C191A84C7490084360F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C181A84C7490084360F /* main.m */; };
-		CF678C421A84E2C50084360F /* CHRRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C411A84E2C50084360F /* CHRRootViewController.m */; };
-		CF678C491A84E83F0084360F /* CHRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C481A84E83F0084360F /* CHRWebViewController.m */; };
-		CF678C4F1A84E95F0084360F /* CHRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C4E1A84E95F0084360F /* CHRHomeViewController.m */; };
 		CF678C521A84F0650084360F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF678C511A84F0650084360F /* MainMenu.xib */; };
 		CF678C551A85AC270084360F /* CHRSourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C541A85AC270084360F /* CHRSourcesViewController.m */; };
 		CF678C5A1A85B4370084360F /* CHRPackageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C581A85B4370084360F /* CHRPackageListViewController.m */; };
 		CF678C5F1A8661D30084360F /* CHRSourcesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C5E1A8661D30084360F /* CHRSourcesListViewController.m */; };
-		CF80DF4C1B13483D00725929 /* CHRRefreshStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF80DF4B1B13483D00725929 /* CHRRefreshStatusView.m */; };
-		CF80DF511B135F6800725929 /* CHRSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF80DF501B135F6800725929 /* CHRSearchField.m */; };
-		CF80DF551B13663200725929 /* CHRLoadingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF80DF541B13663200725929 /* CHRLoadingIndicatorView.m */; };
 		CF90EB241D0C339600452C80 /* CPM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFEC7F3A1BCD35630065ED6C /* CPM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF90EB581D0D908300452C80 /* CPM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEC7F3A1BCD35630065ED6C /* CPM.framework */; };
-		CF9EC62B1B53EF9E000491F3 /* CHRCharizWebScriptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9EC62A1B53EF9E000491F3 /* CHRCharizWebScriptObject.m */; };
+		CF933F561D104CD70044413A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF933F551D104CD70044413A /* RootViewController.swift */; };
+		CF933F591D104D500044413A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF933F581D104D500044413A /* WebViewController.swift */; };
+		CF933F5B1D1051850044413A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF933F5A1D1051850044413A /* HomeViewController.swift */; };
+		CF933F5D1D1052250044413A /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF933F5C1D1052250044413A /* URLs.swift */; };
 		CFC8AE0D1A9750EB001D2C91 /* CHRInstalledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */; };
 		CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */; };
 		CFEC7F511BCD3F130065ED6C /* UXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF678C361A84C83B0084360F /* UXKit.framework */; };
 		CFEC7F561BCD44D50065ED6C /* FirstRun.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFEC7F551BCD44D50065ED6C /* FirstRun.xib */; };
-		CFFE4F161A906D3E00051B92 /* CHRPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFE4F151A906D3E00051B92 /* CHRPreferences.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -129,6 +131,13 @@
 		450A96C41B2DAD3500D65471 /* first_launch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = first_launch.html; sourceTree = "<group>"; };
 		450A96C61B2E4DE100D65471 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		450A96C81B2E4DE800D65471 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		CF3652C51D103F3000D8DE43 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF3652C81D103F4800D8DE43 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		CF3652CA1D1041CB00D8DE43 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		CF3652CC1D10424900D8DE43 /* SearchField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
+		CF3652CE1D10429B00D8DE43 /* RefreshStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshStatusView.swift; sourceTree = "<group>"; };
+		CF3652D01D10444B00D8DE43 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = Chariz/Preferences.swift; sourceTree = "<group>"; };
+		CF3652D21D1046E500D8DE43 /* CharizWebScriptObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharizWebScriptObject.swift; sourceTree = "<group>"; };
 		CF3E40D01A91E10A00C11DE3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF3E40D71A920EA900C11DE3 /* PrivateAPIs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateAPIs.h; sourceTree = "<group>"; };
 		CF3E40D81A92151300C11DE3 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
@@ -137,20 +146,12 @@
 		CF3E40E11A92235600C11DE3 /* CHREmailSendingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHREmailSendingController.m; sourceTree = "<group>"; };
 		CF678C101A84C7490084360F /* Chariz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chariz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF678C141A84C7490084360F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF678C151A84C7490084360F /* CHRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHRAppDelegate.h; sourceTree = "<group>"; };
-		CF678C161A84C7490084360F /* CHRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHRAppDelegate.m; sourceTree = "<group>"; };
 		CF678C181A84C7490084360F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF678C361A84C83B0084360F /* UXKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UXKit.framework; path = /System/Library/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks/UXKit.framework; sourceTree = "<absolute>"; };
 		CF678C3A1A84D49F0084360F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CF678C3C1A84D4A40084360F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CF678C3E1A84D4A80084360F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CF678C401A84E2C50084360F /* CHRRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRRootViewController.h; sourceTree = "<group>"; };
-		CF678C411A84E2C50084360F /* CHRRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRRootViewController.m; sourceTree = "<group>"; };
-		CF678C471A84E83F0084360F /* CHRWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRWebViewController.h; sourceTree = "<group>"; };
-		CF678C481A84E83F0084360F /* CHRWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRWebViewController.m; sourceTree = "<group>"; };
 		CF678C4B1A84E8660084360F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		CF678C4D1A84E95F0084360F /* CHRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRHomeViewController.h; sourceTree = "<group>"; };
-		CF678C4E1A84E95F0084360F /* CHRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRHomeViewController.m; sourceTree = "<group>"; };
 		CF678C511A84F0650084360F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		CF678C531A85AC270084360F /* CHRSourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRSourcesViewController.h; sourceTree = "<group>"; };
 		CF678C541A85AC270084360F /* CHRSourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRSourcesViewController.m; sourceTree = "<group>"; };
@@ -159,14 +160,10 @@
 		CF678C5D1A8661D30084360F /* CHRSourcesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRSourcesListViewController.h; sourceTree = "<group>"; };
 		CF678C5E1A8661D30084360F /* CHRSourcesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRSourcesListViewController.m; sourceTree = "<group>"; };
 		CF79F6141B0228C500887121 /* libcpm.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcpm.dylib; path = cpm/build/Debug/libcpm.dylib; sourceTree = "<group>"; };
-		CF80DF4A1B13483D00725929 /* CHRRefreshStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRRefreshStatusView.h; sourceTree = "<group>"; };
-		CF80DF4B1B13483D00725929 /* CHRRefreshStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRRefreshStatusView.m; sourceTree = "<group>"; };
-		CF80DF4F1B135F6800725929 /* CHRSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRSearchField.h; sourceTree = "<group>"; };
-		CF80DF501B135F6800725929 /* CHRSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRSearchField.m; sourceTree = "<group>"; };
-		CF80DF531B13663200725929 /* CHRLoadingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRLoadingIndicatorView.h; sourceTree = "<group>"; };
-		CF80DF541B13663200725929 /* CHRLoadingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRLoadingIndicatorView.m; sourceTree = "<group>"; };
-		CF9EC6291B53EF9E000491F3 /* CHRCharizWebScriptObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRCharizWebScriptObject.h; sourceTree = "<group>"; };
-		CF9EC62A1B53EF9E000491F3 /* CHRCharizWebScriptObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRCharizWebScriptObject.m; sourceTree = "<group>"; };
+		CF933F551D104CD70044413A /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		CF933F581D104D500044413A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		CF933F5A1D1051850044413A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CF933F5C1D1052250044413A /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		CFA074E31A8F94560094C486 /* Chariz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chariz-Prefix.pch"; sourceTree = "<group>"; };
 		CFC8AE0B1A9750EB001D2C91 /* CHRInstalledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRInstalledViewController.h; sourceTree = "<group>"; };
 		CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRInstalledViewController.m; sourceTree = "<group>"; };
@@ -175,8 +172,6 @@
 		CFEC7F301BCD34FC0065ED6C /* CPM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CPM.framework; path = cpm/build/Debug/CPM.framework; sourceTree = "<group>"; };
 		CFEC7F321BCD35620065ED6C /* cpm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cpm.xcodeproj; path = cpm/cpm.xcodeproj; sourceTree = "<group>"; };
 		CFEC7F551BCD44D50065ED6C /* FirstRun.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstRun.xib; sourceTree = "<group>"; };
-		CFFE4F141A906D3E00051B92 /* CHRPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHRPreferences.h; path = Chariz/CHRPreferences.h; sourceTree = "<group>"; };
-		CFFE4F151A906D3E00051B92 /* CHRPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHRPreferences.m; path = Chariz/CHRPreferences.m; sourceTree = "<group>"; };
 		F9E063264AAB01B6E98D54B2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -185,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF3652C91D1041A700D8DE43 /* Mail.app in Frameworks */,
 				CFEC7F511BCD3F130065ED6C /* UXKit.framework in Frameworks */,
 				CF90EB581D0D908300452C80 /* CPM.framework in Frameworks */,
 			);
@@ -275,6 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				CFA074E31A8F94560094C486 /* Chariz-Prefix.pch */,
+				CF933F5C1D1052250044413A /* URLs.swift */,
+				CF3652C81D103F4800D8DE43 /* BridgingHeader.h */,
 				CF3E40D71A920EA900C11DE3 /* PrivateAPIs.h */,
 				CF678C141A84C7490084360F /* Info.plist */,
 				CF678C181A84C7490084360F /* main.m */,
@@ -301,36 +299,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CF678C431A84E2CC0084360F /* App Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				CF678C151A84C7490084360F /* CHRAppDelegate.h */,
-				CF678C161A84C7490084360F /* CHRAppDelegate.m */,
-			);
-			name = "App Delegate";
-			sourceTree = "<group>";
-		};
 		CF678C441A84E2D20084360F /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C431A84E2CC0084360F /* App Delegate */,
+				CF3652C51D103F3000D8DE43 /* AppDelegate.swift */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
 		};
-		CF678C451A84E2E50084360F /* Root */ = {
+		CF678C451A84E2E50084360F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C401A84E2C50084360F /* CHRRootViewController.h */,
-				CF678C411A84E2C50084360F /* CHRRootViewController.m */,
+				CF933F551D104CD70044413A /* RootViewController.swift */,
 			);
-			name = Root;
+			name = Core;
 			sourceTree = "<group>";
 		};
 		CF678C461A84E81F0084360F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C451A84E2E50084360F /* Root */,
+				CF678C451A84E2E50084360F /* Core */,
 				CF678C4A1A84E8490084360F /* Web View */,
 				CF678C5C1A85B43B0084360F /* Package List */,
 				CF678C561A85AC2B0084360F /* Sources */,
@@ -341,8 +329,7 @@
 		CF678C4A1A84E8490084360F /* Web View */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C471A84E83F0084360F /* CHRWebViewController.h */,
-				CF678C481A84E83F0084360F /* CHRWebViewController.m */,
+				CF933F581D104D500044413A /* WebViewController.swift */,
 				450A96B41B2D90DE00D65471 /* First Launch */,
 				CF678C501A84E9640084360F /* Home */,
 			);
@@ -352,8 +339,7 @@
 		CF678C501A84E9640084360F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C4D1A84E95F0084360F /* CHRHomeViewController.h */,
-				CF678C4E1A84E95F0084360F /* CHRHomeViewController.m */,
+				CF933F5A1D1051850044413A /* HomeViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -391,8 +377,7 @@
 		CF80DF4D1B1349EE00725929 /* Refresh Status */ = {
 			isa = PBXGroup;
 			children = (
-				CF80DF4A1B13483D00725929 /* CHRRefreshStatusView.h */,
-				CF80DF4B1B13483D00725929 /* CHRRefreshStatusView.m */,
+				CF3652CE1D10429B00D8DE43 /* RefreshStatusView.swift */,
 			);
 			name = "Refresh Status";
 			sourceTree = "<group>";
@@ -400,46 +385,27 @@
 		CF80DF4E1B1349F200725929 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				CF80DF561B13663800725929 /* Loading Indicator */,
+				CF80DF561B13663800725929 /* Controls */,
 				CF80DF4D1B1349EE00725929 /* Refresh Status */,
-				CF80DF521B135F6A00725929 /* Search Field */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
 		};
-		CF80DF521B135F6A00725929 /* Search Field */ = {
+		CF80DF561B13663800725929 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				CF80DF4F1B135F6800725929 /* CHRSearchField.h */,
-				CF80DF501B135F6800725929 /* CHRSearchField.m */,
+				CF3652CA1D1041CB00D8DE43 /* LoadingIndicatorView.swift */,
+				CF3652CC1D10424900D8DE43 /* SearchField.swift */,
 			);
-			name = "Search Field";
-			sourceTree = "<group>";
-		};
-		CF80DF561B13663800725929 /* Loading Indicator */ = {
-			isa = PBXGroup;
-			children = (
-				CF80DF531B13663200725929 /* CHRLoadingIndicatorView.h */,
-				CF80DF541B13663200725929 /* CHRLoadingIndicatorView.m */,
-			);
-			name = "Loading Indicator";
+			name = Controls;
 			sourceTree = "<group>";
 		};
 		CF9EC62C1B53EFA1000491F3 /* Web Script Objects */ = {
 			isa = PBXGroup;
 			children = (
-				CF9EC62D1B53EFA9000491F3 /* Chariz */,
+				CF3652D21D1046E500D8DE43 /* CharizWebScriptObject.swift */,
 			);
 			name = "Web Script Objects";
-			sourceTree = "<group>";
-		};
-		CF9EC62D1B53EFA9000491F3 /* Chariz */ = {
-			isa = PBXGroup;
-			children = (
-				CF9EC6291B53EF9E000491F3 /* CHRCharizWebScriptObject.h */,
-				CF9EC62A1B53EF9E000491F3 /* CHRCharizWebScriptObject.m */,
-			);
-			name = Chariz;
 			sourceTree = "<group>";
 		};
 		CFC8AE0E1A9750EE001D2C91 /* Installed */ = {
@@ -481,8 +447,7 @@
 		CFFE4F171A906D4100051B92 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				CFFE4F141A906D3E00051B92 /* CHRPreferences.h */,
-				CFFE4F151A906D3E00051B92 /* CHRPreferences.m */,
+				CF3652D01D10444B00D8DE43 /* Preferences.swift */,
 			);
 			name = Preferences;
 			path = ..;
@@ -532,12 +497,13 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CHR;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "HASHBANG Productions";
 				TargetAttributes = {
 					CF678C0F1A84C7490084360F = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = N2LN9ZT493;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -630,21 +596,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF3E40DF1A92172700C11DE3 /* Mail.app in Sources */,
+				CF3652D31D1046E500D8DE43 /* CharizWebScriptObject.swift in Sources */,
 				CFC8AE0D1A9750EB001D2C91 /* CHRInstalledViewController.m in Sources */,
-				CF80DF4C1B13483D00725929 /* CHRRefreshStatusView.m in Sources */,
-				CF678C4F1A84E95F0084360F /* CHRHomeViewController.m in Sources */,
+				CF933F591D104D500044413A /* WebViewController.swift in Sources */,
+				CF3652D11D10444B00D8DE43 /* Preferences.swift in Sources */,
+				CF3652CF1D10429B00D8DE43 /* RefreshStatusView.swift in Sources */,
 				CF678C191A84C7490084360F /* main.m in Sources */,
 				CF678C551A85AC270084360F /* CHRSourcesViewController.m in Sources */,
-				CF9EC62B1B53EF9E000491F3 /* CHRCharizWebScriptObject.m in Sources */,
-				CF678C421A84E2C50084360F /* CHRRootViewController.m in Sources */,
+				CF3652CD1D10424900D8DE43 /* SearchField.swift in Sources */,
+				CF933F5D1D1052250044413A /* URLs.swift in Sources */,
+				CF933F561D104CD70044413A /* RootViewController.swift in Sources */,
+				CF3652C61D103F3000D8DE43 /* AppDelegate.swift in Sources */,
 				450A96BF1B2D96F200D65471 /* CHRFirstLaunchViewController.m in Sources */,
 				4503DB2F1B318935007B3719 /* CHRHelper.m in Sources */,
-				CF80DF551B13663200725929 /* CHRLoadingIndicatorView.m in Sources */,
+				CF3652CB1D1041CB00D8DE43 /* LoadingIndicatorView.swift in Sources */,
+				CF933F5B1D1051850044413A /* HomeViewController.swift in Sources */,
 				CF678C5F1A8661D30084360F /* CHRSourcesListViewController.m in Sources */,
-				CF678C491A84E83F0084360F /* CHRWebViewController.m in Sources */,
-				CFFE4F161A906D3E00051B92 /* CHRPreferences.m in Sources */,
-				CF678C171A84C7490084360F /* CHRAppDelegate.m in Sources */,
-				CF80DF511B135F6800725929 /* CHRSearchField.m in Sources */,
 				CF3E40E21A92235600C11DE3 /* CHREmailSendingController.m in Sources */,
 				CF678C5A1A85B4370084360F /* CHRPackageListViewController.m in Sources */,
 				CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */,
@@ -695,6 +662,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -737,6 +705,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -753,12 +722,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks",
+					"$(PROJECT_DIR)/cpm/Carthage/Build/Mac",
 				);
 				GCC_PREFIX_HEADER = "Chariz/Chariz-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -783,6 +754,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.chariz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -790,12 +764,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks",
+					"$(PROJECT_DIR)/cpm/Carthage/Build/Mac",
 				);
 				GCC_PREFIX_HEADER = "Chariz/Chariz-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -820,6 +796,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.chariz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = BridgingHeader.h;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

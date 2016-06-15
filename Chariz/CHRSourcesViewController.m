@@ -8,7 +8,6 @@
 
 #import "CHRSourcesViewController.h"
 #import "CHRSourcesListViewController.h"
-#import "CHRPackageListViewController.h"
 
 @implementation CHRSourcesViewController
 

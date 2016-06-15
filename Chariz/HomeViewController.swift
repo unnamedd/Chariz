@@ -13,7 +13,7 @@ class HomeViewController: WebViewController {
 	func loadView() {
 		super.loadView()
 
-		title = NSLocalizedString("HOME", "Title of the home tab.")
+		title = NSLocalizedString("HOME", "Title of the home page.")
 		navigationItem.rightBarButtonItem = UXBarButtonItem(customView: CHRSearchField())
 
 		webView.mainFrame.loadRequest(NSURLRequest(url: charizWebUIURL.URLByAppendingPathComponent("featured")))

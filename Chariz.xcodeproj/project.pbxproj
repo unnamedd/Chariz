@@ -11,6 +11,9 @@
 		4503DB2F1B318935007B3719 /* CHRHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4503DB2E1B318935007B3719 /* CHRHelper.m */; };
 		450A96BF1B2D96F200D65471 /* CHRFirstLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A96BE1B2D96F200D65471 /* CHRFirstLaunchViewController.m */; };
 		450A96C51B2DAD3500D65471 /* first_launch.html in Resources */ = {isa = PBXBuildFile; fileRef = 450A96C41B2DAD3500D65471 /* first_launch.html */; };
+		CF2926E51D10D04C00502A27 /* PackageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2926E41D10D04C00502A27 /* PackageListViewController.swift */; };
+		CF2926E81D10D22200502A27 /* ChangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2926E71D10D22200502A27 /* ChangesViewController.swift */; };
+		CF2926EA1D10D83700502A27 /* InstalledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2926E91D10D83700502A27 /* InstalledViewController.swift */; };
 		CF3652C61D103F3000D8DE43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652C51D103F3000D8DE43 /* AppDelegate.swift */; };
 		CF3652C91D1041A700D8DE43 /* Mail.app in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3E40DE1A92172700C11DE3 /* Mail.app */; };
 		CF3652CB1D1041CB00D8DE43 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652CA1D1041CB00D8DE43 /* LoadingIndicatorView.swift */; };
@@ -24,7 +27,6 @@
 		CF678C191A84C7490084360F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C181A84C7490084360F /* main.m */; };
 		CF678C521A84F0650084360F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF678C511A84F0650084360F /* MainMenu.xib */; };
 		CF678C551A85AC270084360F /* CHRSourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C541A85AC270084360F /* CHRSourcesViewController.m */; };
-		CF678C5A1A85B4370084360F /* CHRPackageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C581A85B4370084360F /* CHRPackageListViewController.m */; };
 		CF678C5F1A8661D30084360F /* CHRSourcesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF678C5E1A8661D30084360F /* CHRSourcesListViewController.m */; };
 		CF90EB241D0C339600452C80 /* CPM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFEC7F3A1BCD35630065ED6C /* CPM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF90EB581D0D908300452C80 /* CPM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEC7F3A1BCD35630065ED6C /* CPM.framework */; };
@@ -32,8 +34,6 @@
 		CF933F591D104D500044413A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF933F581D104D500044413A /* WebViewController.swift */; };
 		CF933F5B1D1051850044413A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF933F5A1D1051850044413A /* HomeViewController.swift */; };
 		CF933F5D1D1052250044413A /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF933F5C1D1052250044413A /* URLs.swift */; };
-		CFC8AE0D1A9750EB001D2C91 /* CHRInstalledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */; };
-		CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */; };
 		CFEC7F511BCD3F130065ED6C /* UXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF678C361A84C83B0084360F /* UXKit.framework */; };
 		CFEC7F561BCD44D50065ED6C /* FirstRun.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFEC7F551BCD44D50065ED6C /* FirstRun.xib */; };
 /* End PBXBuildFile section */
@@ -131,6 +131,9 @@
 		450A96C41B2DAD3500D65471 /* first_launch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = first_launch.html; sourceTree = "<group>"; };
 		450A96C61B2E4DE100D65471 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		450A96C81B2E4DE800D65471 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		CF2926E41D10D04C00502A27 /* PackageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageListViewController.swift; sourceTree = "<group>"; };
+		CF2926E71D10D22200502A27 /* ChangesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangesViewController.swift; sourceTree = "<group>"; };
+		CF2926E91D10D83700502A27 /* InstalledViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstalledViewController.swift; sourceTree = "<group>"; };
 		CF3652C51D103F3000D8DE43 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF3652C81D103F4800D8DE43 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		CF3652CA1D1041CB00D8DE43 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
@@ -155,8 +158,6 @@
 		CF678C511A84F0650084360F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		CF678C531A85AC270084360F /* CHRSourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRSourcesViewController.h; sourceTree = "<group>"; };
 		CF678C541A85AC270084360F /* CHRSourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRSourcesViewController.m; sourceTree = "<group>"; };
-		CF678C571A85B4370084360F /* CHRPackageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRPackageListViewController.h; sourceTree = "<group>"; };
-		CF678C581A85B4370084360F /* CHRPackageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRPackageListViewController.m; sourceTree = "<group>"; };
 		CF678C5D1A8661D30084360F /* CHRSourcesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRSourcesListViewController.h; sourceTree = "<group>"; };
 		CF678C5E1A8661D30084360F /* CHRSourcesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRSourcesListViewController.m; sourceTree = "<group>"; };
 		CF79F6141B0228C500887121 /* libcpm.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcpm.dylib; path = cpm/build/Debug/libcpm.dylib; sourceTree = "<group>"; };
@@ -165,10 +166,6 @@
 		CF933F5A1D1051850044413A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CF933F5C1D1052250044413A /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		CFA074E31A8F94560094C486 /* Chariz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chariz-Prefix.pch"; sourceTree = "<group>"; };
-		CFC8AE0B1A9750EB001D2C91 /* CHRInstalledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRInstalledViewController.h; sourceTree = "<group>"; };
-		CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRInstalledViewController.m; sourceTree = "<group>"; };
-		CFC8AE0F1A975117001D2C91 /* CHRChangesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRChangesViewController.h; sourceTree = "<group>"; };
-		CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRChangesViewController.m; sourceTree = "<group>"; };
 		CFEC7F301BCD34FC0065ED6C /* CPM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CPM.framework; path = cpm/build/Debug/CPM.framework; sourceTree = "<group>"; };
 		CFEC7F321BCD35620065ED6C /* cpm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cpm.xcodeproj; path = cpm/cpm.xcodeproj; sourceTree = "<group>"; };
 		CFEC7F551BCD44D50065ED6C /* FirstRun.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstRun.xib; sourceTree = "<group>"; };
@@ -357,10 +354,9 @@
 		CF678C5C1A85B43B0084360F /* Package List */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C571A85B4370084360F /* CHRPackageListViewController.h */,
-				CF678C581A85B4370084360F /* CHRPackageListViewController.m */,
-				CFC8AE141A975123001D2C91 /* Changes */,
-				CFC8AE0E1A9750EE001D2C91 /* Installed */,
+				CF2926E41D10D04C00502A27 /* PackageListViewController.swift */,
+				CF2926E71D10D22200502A27 /* ChangesViewController.swift */,
+				CF2926E91D10D83700502A27 /* InstalledViewController.swift */,
 			);
 			name = "Package List";
 			sourceTree = "<group>";
@@ -406,24 +402,6 @@
 				CF3652D21D1046E500D8DE43 /* CharizWebScriptObject.swift */,
 			);
 			name = "Web Script Objects";
-			sourceTree = "<group>";
-		};
-		CFC8AE0E1A9750EE001D2C91 /* Installed */ = {
-			isa = PBXGroup;
-			children = (
-				CFC8AE0B1A9750EB001D2C91 /* CHRInstalledViewController.h */,
-				CFC8AE0C1A9750EB001D2C91 /* CHRInstalledViewController.m */,
-			);
-			name = Installed;
-			sourceTree = "<group>";
-		};
-		CFC8AE141A975123001D2C91 /* Changes */ = {
-			isa = PBXGroup;
-			children = (
-				CFC8AE0F1A975117001D2C91 /* CHRChangesViewController.h */,
-				CFC8AE101A975117001D2C91 /* CHRChangesViewController.m */,
-			);
-			name = Changes;
 			sourceTree = "<group>";
 		};
 		CFEC7F331BCD35620065ED6C /* Products */ = {
@@ -595,12 +573,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2926E51D10D04C00502A27 /* PackageListViewController.swift in Sources */,
 				CF3E40DF1A92172700C11DE3 /* Mail.app in Sources */,
 				CF3652D31D1046E500D8DE43 /* CharizWebScriptObject.swift in Sources */,
-				CFC8AE0D1A9750EB001D2C91 /* CHRInstalledViewController.m in Sources */,
 				CF933F591D104D500044413A /* WebViewController.swift in Sources */,
 				CF3652D11D10444B00D8DE43 /* Preferences.swift in Sources */,
 				CF3652CF1D10429B00D8DE43 /* RefreshStatusView.swift in Sources */,
+				CF2926E81D10D22200502A27 /* ChangesViewController.swift in Sources */,
 				CF678C191A84C7490084360F /* main.m in Sources */,
 				CF678C551A85AC270084360F /* CHRSourcesViewController.m in Sources */,
 				CF3652CD1D10424900D8DE43 /* SearchField.swift in Sources */,
@@ -608,13 +587,12 @@
 				CF933F561D104CD70044413A /* RootViewController.swift in Sources */,
 				CF3652C61D103F3000D8DE43 /* AppDelegate.swift in Sources */,
 				450A96BF1B2D96F200D65471 /* CHRFirstLaunchViewController.m in Sources */,
+				CF2926EA1D10D83700502A27 /* InstalledViewController.swift in Sources */,
 				4503DB2F1B318935007B3719 /* CHRHelper.m in Sources */,
 				CF3652CB1D1041CB00D8DE43 /* LoadingIndicatorView.swift in Sources */,
 				CF933F5B1D1051850044413A /* HomeViewController.swift in Sources */,
 				CF678C5F1A8661D30084360F /* CHRSourcesListViewController.m in Sources */,
 				CF3E40E21A92235600C11DE3 /* CHREmailSendingController.m in Sources */,
-				CF678C5A1A85B4370084360F /* CHRPackageListViewController.m in Sources */,
-				CFC8AE121A975117001D2C91 /* CHRChangesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

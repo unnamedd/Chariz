@@ -104,7 +104,7 @@ class WebViewController: UXViewController, WebUIDelegate, WebPolicyDelegate, Web
 	func handleFailedLoad(error: NSError, for frame: WebFrame) {
 		// display error alert
 		let alert = NSAlert(error: error)
-		alert.beginSheetModal(for: view.window, completionHandler: nil)
+		alert.beginSheetModal(for: view.window)
 
 		// if this is the main frame
 		if frame == webView.mainFrame {

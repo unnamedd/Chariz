@@ -1,5 +1,5 @@
 //
-//  CHREmailSendingController.h
+//  EmailSendingController.h
 //  Chariz
 //
 //  Created by Adam D on 16/02/2015.
@@ -9,7 +9,7 @@
 @import Foundation;
 @import ScriptingBridge;
 
-@interface CHREmailSendingController : NSObject <SBApplicationDelegate>
+@interface EmailSendingController : NSObject <SBApplicationDelegate>
 
 - (void)handleEmailWithURL:(NSURL *)url window:(NSWindow *)window;
 

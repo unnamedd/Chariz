@@ -1,19 +1,19 @@
 //
-//  CHREmailSendingController.m
+//  EmailSendingController.m
 //  Chariz
 //
 //  Created by Adam D on 16/02/2015.
 //  Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import "CHREmailSendingController.h"
+#import "EmailSendingController.h"
 #import "PrivateAPIs.h"
 #import "Mail.h"
 #include <sys/sysctl.h>
 
-static NSString *const kCHREmailSendingControllerDpkgListURL = @"file:///tmp/chariz_dpkgl.txt";
+static NSString *const kEmailSendingControllerDpkgListURL = @"file:///tmp/chariz_dpkgl.txt";
 
-@implementation CHREmailSendingController {
+@implementation EmailSendingController {
 	NSWindow *_window;
 }
 
@@ -23,7 +23,7 @@ static NSString *const kCHREmailSendingControllerDpkgListURL = @"file:///tmp/cha
 	
 	_window = window;
 	
-	NSURL *dpkglURL = [NSURL URLWithString:kCHREmailSendingControllerDpkgListURL];
+	NSURL *dpkglURL = [NSURL URLWithString:kEmailSendingControllerDpkgListURL];
 	
 	[self writeDpkgListToURL:dpkglURL completion:^(NSTask *task, NSError *dpkglError) {
 		if (dpkglError) {

@@ -1,16 +1,18 @@
 //
-//  CHRHelper.m
+//  HelperController.m
 //  Chariz
 //
 //  Created by Mustafa Gezen on 15.06.2015.
 //	Copyright (c) 2015 HASHBANG Productions. All rights reserved.
 //
 
-#import "CHRHelper.h"
+@import Cocoa;
 
-@implementation CHRHelper
+#import "HelperController.h"
+
+@implementation HelperController
 + (instancetype)sharedInstance {
-	static CHRHelper *sharedInstance = nil;
+	static HelperController *sharedInstance = nil;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
 		sharedInstance = [[self.class alloc] init];

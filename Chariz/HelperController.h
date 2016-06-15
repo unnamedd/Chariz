@@ -1,5 +1,5 @@
 //
-//  CHRHelper.h
+//  HelperController.h
 //  Chariz
 //
 //  Created by Mustafa Gezen on 15.06.2015.
@@ -10,7 +10,7 @@
 @import ServiceManagement;
 @import Security;
 
-@interface CHRHelper : NSObject {
+@interface HelperController : NSObject {
 	xpc_connection_t con;
 	const char* last_response;
 	NSInteger _brew_installed;

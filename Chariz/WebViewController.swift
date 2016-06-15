@@ -83,7 +83,7 @@ class WebViewController: UXViewController, WebUIDelegate, WebPolicyDelegate, Web
 		// if the url matches one that should be allowed to use the script object
 		if url.scheme == "https" && url.host == NSURL(kCHRWebUIRootURL).host {
 			// set the web script objects
-			let webScriptObject = CHRCharizWebScriptObject()
+			let webScriptObject = CharizWebScriptObject()
 			windowObject.setValue(webScriptObject, forKey: "chariz")
 			windowObject.setValue(webScriptObject, forKey: "cydia")
 		}

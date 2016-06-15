@@ -19,7 +19,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		// if this is the first run
 		if Preferences.sharedInstance.lastLaunch == nil {
 			// display the first run UI
-			rootViewController = UXNavigationController(rootViewController: CHRFirstLaunchViewController())
+			// TODO: needs to be rewritten and swiftified™
+			// rootViewController = UXNavigationController(rootViewController: CHRFirstLaunchViewController())
 		} else {
 			// use the usual UI
 			rootViewController = CHRRootViewController()

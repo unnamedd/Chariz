@@ -9,7 +9,7 @@
 import CPM
 import WebKit
 
-class CHRCharizWebScriptObject: NSObject {
+class CharizWebScriptObject: NSObject {
 
 	let packageManagerAggregate = CPMPackageManagerAggregate.sharedInstance()
 

@@ -1,5 +1,5 @@
 //
-//  CHRFirstLaunchViewController.m
+//  FirstLaunchViewController.m
 //  Chariz
 //
 //  Created by Mustafa Gezen on 14.06.2015.
@@ -9,12 +9,9 @@
 @import ServiceManagement;
 @import Security;
 
-#import "CHRFirstLaunchViewController.h"
-#import "CHRLoadingIndicatorView.h"
-#import "CHRHelper.h"
-#import "CHRPreferences.h"
+#import "FirstLaunchViewController.h"
 
-@implementation CHRFirstLaunchViewController
+@implementation FirstLaunchViewController
 
 - (void)loadView {
     [super loadView];

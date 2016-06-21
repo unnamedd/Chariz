@@ -16,7 +16,7 @@ class HomeViewController: WebViewController {
 		title = NSLocalizedString("HOME", "Title of the home page.")
 		navigationItem.rightBarButtonItem = UXBarButtonItem(customView: CHRSearchField())
 
-		webView.mainFrame.loadRequest(NSURLRequest(url: charizWebUIURL.URLByAppendingPathComponent("featured")))
+		webView.mainFrame.loadRequest(NSURLRequest(url: charizWebUIURL.URLByAppendingPathComponent("home/")))
 	}
 
 }

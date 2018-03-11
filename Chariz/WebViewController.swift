@@ -9,57 +9,74 @@
 import Cocoa
 import WebKit
 
-class WebViewController: UXViewController, WebUIDelegate, WebPolicyDelegate, WebFrameLoadDelegate {
+@objc class WebViewController: UXViewController, WebUIDelegate, WebPolicyDelegate, WebFrameLoadDelegate {
 
 	let webView = WebView()
-	let loadingIndicatorView = CHRLoadingIndicatorView()
+	let loadingIndicatorView = LoadingIndicatorView()
 
-	var initialRequest: NSURLRequest?
+	var initialRequest: URLRequest?
+	private var deferredAlert: NSAlert?
 
-	func viewControllerClass(for url: URL) -> Class {
+	class func viewControllerClass(for url: URL?) -> WebViewController.Type {
 		// TODO: implement
-		HBLogInfo("url: %@", url)
-		return CHRWebViewController.dynamicType
+		log(.debug, "url: \(String(describing: url))")
+		return WebViewController.self
+	}
+	
+	required init() {
+		super.init(nibName: nil, bundle: nil)
+		title = NSLocalizedString("UNTITLED", comment: "Title of a page that has no defined title.")
 	}
 
-	init(request: NSURLRequest) {
+	convenience init(request: URLRequest) {
+		self.init()
 		initialRequest = request
 	}
-
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+	
 	// MARK: - View
 
-	func loadView() {
+	override func loadView() {
 		super.loadView()
 
-		title = NSLocalizedString("UNTITLED", "Title of a page that has no defined title.")
-
-		webView = WebView(frame: view.bounds)
+		webView.frame = view.bounds
 		webView.autoresizingMask = [ .flexibleWidth, .flexibleHeight ]
-		webView.UIDelegate = self;
-		webView.policyDelegate = self;
-		webView.frameLoadDelegate = self;
+		webView.uiDelegate = self
+		webView.policyDelegate = self
+		webView.frameLoadDelegate = self
 		view.addSubview(webView)
 
 		self.navigationItem.leftBarButtonItem = UXBarButtonItem(customView: loadingIndicatorView)
+	}
+	
+	override func viewWillAppear() {
+		super.viewWillAppear()
 
 		if initialRequest != nil {
-			webView.mainFrame.loadRequest(initialRequest!)
+			webView.mainFrame.load(initialRequest!)
 			initialRequest = nil
+		}
+		
+		if deferredAlert != nil {
+			deferredAlert!.beginSheetModal(for: view.window!)
+			deferredAlert = nil
 		}
 	}
 
 	// MARK: - WebKit
-
-	func webView(_ webView: WebView!, decidePolicyForNavigationAction actionInformation: [NSObject : AnyObject]!, request: URLRequest!, frame: WebFrame!, decisionListener listener: WebPolicyDecisionListener!) {
-		// based on the url being loaded, determine whether we should do some sort
-		// of native thing here
-		if request.URL.scheme == "mailto" {
+	
+	func webView(_ webView: WebView!, decidePolicyForNavigationAction actionInformation: [AnyHashable : Any]!, request: URLRequest!, frame: WebFrame!, decisionListener listener: WebPolicyDecisionListener!) {
+		// based on the url being loaded, determine whether we should do some sort of native thing here
+		if request.url?.scheme == "mailto" {
 			// cancel request
 			listener.ignore()
 
 			// hand over to our email sending controller
-			let emailSendingController = CHREmailSendingController()
-			emailSendingController.handleEmailWithURL(request.URL, window: view.window)
+			let emailSendingController = EmailSendingController()
+			emailSendingController.handleEmail(with: request.url, window: view.window)
 		} else {
 			// tell it to go ahead
 			listener.use()
@@ -67,21 +84,25 @@ class WebViewController: UXViewController, WebUIDelegate, WebPolicyDelegate, Web
 	}
 
 	func webView(_ sender: WebView!, createWebViewWith request: URLRequest!) -> WebView! {
-		// the page wants to open a new window. determine the web view controller
-		// subclass to use
-		let newClass = WebViewController.viewControllerClass(for: request.URL)
+		// the page wants to open a new window. determine the web view controller subclass to use
+		let newClass = WebViewController.viewControllerClass(for: request.url)
 
 		// instantiate it with the request, and push it
-		let viewController = newClass(request: request)
+		let viewController = newClass.init()
+		viewController.initialRequest = request
 		navigationController.pushViewController(viewController, animated: true)
+		
+		// WebView needs to know the new WebView so the two windows can communicate if necessary
+		return viewController.webView
 	}
 
 	func webView(_ webView: WebView!, didClearWindowObject windowObject: WebScriptObject!, for frame: WebFrame!) {
-		// the javascript `window` object has been reset. use this opportunity to
-		// inject our web script objects
+		// the javascript `window` object has been reset, probably because a new page is being loaded.
+		// use this opportunity to inject our web script objects
+		let url = frame.dataSource!.request!.url!
 
 		// if the url matches one that should be allowed to use the script object
-		if url.scheme == "https" && url.host == NSURL(kCHRWebUIRootURL).host {
+		if url.scheme == "https" && url.host == charizWebUIURL.host {
 			// set the web script objects
 			let webScriptObject = CharizWebScriptObject()
 			windowObject.setValue(webScriptObject, forKey: "chariz")
@@ -101,10 +122,15 @@ class WebViewController: UXViewController, WebUIDelegate, WebPolicyDelegate, Web
 		loadingIndicatorView.stopAnimation(nil)
 	}
 
-	func handleFailedLoad(error: NSError, for frame: WebFrame) {
+	func handleFailedLoad(error: Error, for frame: WebFrame) {
 		// display error alert
-		let alert = NSAlert(error: error)
-		alert.beginSheetModal(for: view.window)
+		let alert = NSAlert(error: error as NSError)
+		
+		if view.window == nil {
+			deferredAlert = alert
+		} else {
+			alert.beginSheetModal(for: view.window!)
+		}
 
 		// if this is the main frame
 		if frame == webView.mainFrame {
@@ -113,12 +139,12 @@ class WebViewController: UXViewController, WebUIDelegate, WebPolicyDelegate, Web
 		}
 	}
 
-	func webView(_ sender: WebView!, didFailProvisionalLoadWithError error: NSError!, for frame: WebFrame!) {
-		handleFailedLoad(error, frame: frame)
+	func webView(_ sender: WebView!, didFailProvisionalLoadWithError error: Error!, for frame: WebFrame!) {
+		handleFailedLoad(error: error, for: frame)
 	}
 
-	func webView(_ sender: WebView!, didFailLoadWithError error: NSError!, for frame: WebFrame!) {
-		handleFailedLoad(error, frame: frame)
+	func webView(_ sender: WebView!, didFailLoadWithError error: Error!, for frame: WebFrame!) {
+		handleFailedLoad(error: error, for: frame)
 	}
 
 }

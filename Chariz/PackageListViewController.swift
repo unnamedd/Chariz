@@ -7,36 +7,47 @@
 //
 
 import Cocoa
+import CPM
 
-class PackageListViewController: UXTableViewController {
+class PackageListViewController: UXCollectionViewController {
 
 	static let packageCellReuseIdentifier = "PackageCell"
 
-	var packages: [CHRPackage] = []
-
-	func viewDidLoad() {
+	var packages: [CPMPackage] = [CPMPackage]()
+	
+	init() {
+		let collectionViewLayout = UXCollectionViewFlowLayout()
+		
+		super.init(collectionViewLayout: collectionViewLayout)
+		
+		title = NSLocalizedString("PACKAGES", comment: "Generic title for a list of packages.")
+	}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+	
+	override func viewDidLoad() {
 		super.viewDidLoad()
-
-		title = NSLocalizedString("PACKAGES", "Generic title for a list of packages.")
-
-		tableView.registerClass(UXTableViewCell.class, forCellWithReuseIdentifier: PackageListViewController.packageCellReuseIdentifier)
+		
+		collectionView.register(UXTableViewCell.self, forCellWithReuseIdentifier: PackageListViewController.packageCellReuseIdentifier)
 	}
 
-	// MARK: - Table View
-
-	func tableView(_ tableView: UXTableView, numberOfRowsInSection section: Integer) -> UnsignedInteger {
-		return packages.count
+	// MARK: - Collection View
+	
+	override func collectionView(_ collectionView: UXCollectionView!, numberOfItemsInSection section: Int) -> Int {
+		return 100 //packages.count
 	}
-
-	func tableView(_ tableView: UXTableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UXTableViewCell {
-		var cell = tableView.dequeueReusableCellWithIdentifier(PackageListViewController.packageCellReuseIdentifier, forIndexPath: indexPath)
-
+	
+	override func collectionView(_ collectionView: UXCollectionView!, cellForItemAt indexPath: IndexPath!) -> UXCollectionViewCell! {
+		var cell = collectionView.dequeueReusableCell(withReuseIdentifier: PackageListViewController.packageCellReuseIdentifier, for: indexPath!) as? UXTableViewCell
+		
 		if cell == nil {
 			cell = UXTableViewCell(style: .default, reuseIdentifier: PackageListViewController.packageCellReuseIdentifier)
 		}
 
-		cell.textLabel.text = "hi"
-		cell.detailTextLabel.text = "hi"
+		cell!.textLabel.text = "hi"
+		cell!.detailTextLabel.text = "hi"
 
 		return cell
 	}

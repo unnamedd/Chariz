@@ -10,29 +10,33 @@ import Cocoa
 
 class RefreshStatusView: UXView {
 
-	let progressIndicator = NSProgressIndicator(frame: CGRectMake(0, 0, 22, 22))
+	let progressIndicator = NSProgressIndicator(frame: CGRect(x: 0, y: 0, width: 22, height: 22))
 	let label = UXLabel()
+	
+	override init(frame frameRect: NSRect) {
+		super.init(frame: frameRect)
 
-	init() {
-		super.init()
-
-		progressIndicator.style = .spinningStyle
+		progressIndicator.style = .spinning
 		progressIndicator.controlSize = .small
 		progressIndicator.startAnimation(nil)
 		addSubview(progressIndicator)
 
-		label.text = NSLocalizedString("UPDATING_SOURCES", "Message displayed while sources are being loaded.")
+		label.text = NSLocalizedString("UPDATING_SOURCES", comment: "Message displayed while sources are being loaded.")
 		label.font = NSFont.titleBarFont(ofSize: 0)
 		label.centerVertically = true
-		label.frame = CGRectMake(progressIndicator.frame.size.width + 4, 0, ceilf(label.sizeThatFits(CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)).width), progressIndicator.frame.size.height)
+		label.frame = CGRect(x: progressIndicator.frame.size.width + 4, y: 0, width: CGFloat(ceilf(Float(label.sizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)).width))), height: progressIndicator.frame.size.height)
 		addSubview(label)
+	}
+	
+	required init?(coder decoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
 	}
 
 	override var intrinsicContentSize: NSSize {
-		return CGSizeMake(progressIndicator.frame.size.width + label.frame.origin.x + label.frame.size.width, progressIndicator.frame.size.height);
+		return CGSize(width: progressIndicator.frame.size.width + label.frame.origin.x + label.frame.size.width, height: progressIndicator.frame.size.height)
 	}
 
-	var statusText: String {
+	var statusText: String = "" {
 		didSet {
 			// set the label text and ask to be redrawn
 			label.text = statusText

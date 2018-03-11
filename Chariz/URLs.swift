@@ -8,5 +8,5 @@
 
 import Foundation
 
-let charizWebsiteURL = NSURL(URL: "https://chariz.io/")
-let charizWebUIURL = NSURL(URL: "https://cdn.chariz.io/app/macos/1.0/")
+let charizWebsiteURL = URL(string: "https://chariz.io/")!
+let charizWebUIURL = URL(string: "https://cdn.chariz.io/app/macos/1.0/")!

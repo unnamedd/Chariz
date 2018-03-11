@@ -11,11 +11,15 @@ import Cocoa
 class InstalledViewController: PackageListViewController {
 
 	// MARK: - View Controller
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
-
-		title = NSLocalizedString("INSTALLED", "Title of the installed page.")
+	
+	override init() {
+		super.init()
+		
+		title = NSLocalizedString("INSTALLED", comment: "Title of the installed page.")
 	}
-
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+	
 }

@@ -58,9 +58,11 @@ static NSString *const kEmailSendingControllerDpkgListURL = @"file:///tmp/chariz
 		MailApplication *mail = [SBApplication applicationWithBundleIdentifier:@"com.apple.Mail"];
 		mail.delegate = self;
 		
+		NSString *bodyDeviceInfo = [NSString stringWithFormat:@"\n\n%@: %@, %@\n\n", NSLocalizedString(@"Device information:", @""), [NSProcessInfo processInfo].operatingSystemVersionString, hardwareModel];
+		
 		MailOutgoingMessage *email = [[[mail classForScriptingClass:@"outgoing message"] alloc] initWithProperties:@{
 			@"subject": components[@"subject"] ?: @"",
-			@"content": [components[@"body"] ?: @"" stringByAppendingFormat:@"\n\n%@: %@, %@\n\n", I18N(@"Device information:"), [NSProcessInfo processInfo].operatingSystemVersionString, hardwareModel]
+			@"content": [components[@"body"] ?: @"" stringByAppendingString:bodyDeviceInfo]
 		}];
 		
 		[mail.outgoingMessages addObject:email];

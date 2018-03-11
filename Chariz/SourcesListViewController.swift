@@ -7,36 +7,42 @@
 //
 
 import Cocoa
+import CPM
 
 class SourcesListViewController: UXTableViewController {
 
 	static let sourceCellReuseIdentifier = "SourceCell"
 
-	var sources: [CHRSource] = []
+	// TODO: [Source]
+	var sources: [NSObject] = []
+	
+	convenience init() {
+		self.init(style: .plain)
 
-	func viewDidLoad() {
+		title = NSLocalizedString("SOURCES", comment: "Title of the sources page.")
+	}
+	
+	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		title = NSLocalizedString("SOURCES", "Title of the sources page.")
-
-		tableView.registerClass(UXTableViewCell.class, forCellWithReuseIdentifier: SourcesListViewController.sourceCellReuseIdentifier)
+		tableView.register(UXTableViewCell.self, forCellWithReuseIdentifier: SourcesListViewController.sourceCellReuseIdentifier)
 	}
 
 	// MARK: - Table View
 
-	func tableView(_ tableView: UXTableView, numberOfRowsInSection section: Integer) -> UnsignedInteger {
-		return sources.count
+	override func tableView(_ tableView: UXTableView, numberOfRowsInSection section: Int) -> UInt {
+		return UInt(sources.count)
 	}
 
-	func tableView(_ tableView: UXTableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UXTableViewCell {
-		var cell = tableView.dequeueReusableCellWithIdentifier(SourcesListViewController.sourceCellReuseIdentifier, forIndexPath: indexPath)
+	override func tableView(_ tableView: UXTableView!, cellForRowAt indexPath: IndexPath!) -> UXTableViewCell! {
+		var cell = tableView.dequeueReusableCell(withIdentifier: SourcesListViewController.sourceCellReuseIdentifier, for: indexPath)
 
 		if cell == nil {
 			cell = UXTableViewCell(style: .default, reuseIdentifier: SourcesListViewController.sourceCellReuseIdentifier)
 		}
 
-		cell.textLabel.text = "hi"
-		cell.detailTextLabel.text = "hi"
+		cell!.textLabel.text = "hi"
+		cell!.detailTextLabel.text = "hi"
 
 		return cell
 	}

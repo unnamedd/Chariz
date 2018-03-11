@@ -9,13 +9,15 @@
 import Cocoa
 
 class SearchField: NSSearchField {
-
-	init?(coder: NSCoder) {
-		super.init(coder: coder)
-
-		frame = CGRectMake(0, 0, 160, 22)
+	
+	override init(frame frameRect: NSRect) {
+		super.init(frame: CGRect(x: 0, y: 0, width: 160, height: 22))
 	}
-
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+	
 	override var intrinsicContentSize: NSSize {
 		return frame.size
 	}

@@ -10,26 +10,21 @@ import Cocoa
 
 class Preferences {
 
-	static let rootWindowFrameKey = "RootWindowFrame"
+	static let rootWindowFrameKey = NSWindow.FrameAutosaveName("RootWindowFrame")
 
 	static let sharedInstance = Preferences()
 
-	let preferences = NSUserDefaults.standardUserDefaults()
+	let preferences = UserDefaults.standard
 
 	init() {
-		preferences.registerDefaults([
-			
+		preferences.register(defaults: [
+			"LastLaunch": Date.distantPast
 		])
 	}
 
 	var lastLaunch: Date {
-		get { return preferences.objectForKey("LastLaunch") }
-		set { preferences.setObject(newValue, forKey: "LastLaunch") }
-	}
-
-	var lastLaunch: Date {
-		get { return preferences.objectForKey("LastLaunch") }
-		set { preferences.setObject(newValue, forKey: "LastLaunch") }
+		get { return preferences.object(forKey: "LastLaunch") as! Date }
+		set { preferences.set(newValue, forKey: "LastLaunch") }
 	}
 
 }

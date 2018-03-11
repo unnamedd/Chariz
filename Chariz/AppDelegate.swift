@@ -11,30 +11,31 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-	let rootWindowController: UXWindowController?
+	var rootWindowController: UXWindowController!
 
 	func applicationDidFinishLaunching(_ notification: Notification) {
 		let rootViewController: UXViewController
 
 		// if this is the first run
-		if Preferences.sharedInstance.lastLaunch == nil {
+		if Preferences.sharedInstance.lastLaunch == .distantPast {
 			// display the first run UI
 			// TODO: needs to be rewritten and swiftified™
 			// rootViewController = UXNavigationController(rootViewController: CHRFirstLaunchViewController())
+			rootViewController = UXNavigationController()
 		} else {
 			// use the usual UI
-			rootViewController = CHRRootViewController()
+			rootViewController = RootViewController()
 		}
 
 		// set up the root window
 		rootWindowController = UXWindowController(rootViewController: rootViewController)
 
 		// set the minimum size and default size
-		rootWindowController.window.minSize = CGSizeMake(width: 1000, height: 500)
-		rootWindowController.window.contentSize = CGSizeMake(width: 1000, height: 800)
+		rootWindowController.window!.minSize = CGSize(width: 1000, height: 500)
+		rootWindowController.window!.setContentSize(CGSize(width: 1000, height: 800))
 
 		// center the window by default
-		rootWindowController.window.center()
+		rootWindowController.window!.center()
 
 		// set the autosave preferences key, which remembers the position and size
 		rootWindowController.windowFrameAutosaveName = Preferences.rootWindowFrameKey
@@ -43,7 +44,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		rootWindowController.showWindow(self)
 
 		// update the last launch date
-		Preferences.sharedInstance.lastLaunch = NSDate()
+		Preferences.sharedInstance.lastLaunch = Date()
 	}
 
 	func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {

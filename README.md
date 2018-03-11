@@ -1,10 +1,5 @@
-<center>
-
-# <img src="https://chariz.io/img/favicon.png" alt="Chariz" width="128" height="128">
-
-**A package management app for macOS.**
-
-</center>
+<h1 align="center"><img src="https://chariz.io/img/favicon.png" alt="Chariz" width="128" height="128"></h1>
+<p align="center"><strong>A package management app for macOS.</strong></p>
 
 [![Build Status](https://travis-ci.org/CharizTeam/Chariz.svg)](https://travis-ci.org/CharizTeam/Chariz) [![GitHub release](https://img.shields.io/github/release/CharizTeam/Chariz.svg)](https://github.com/CharizTeam/Chariz/releases)
 

@@ -1,17 +1,23 @@
-# ![Chariz](https://i.imgur.com/9RHFBv4.png) [![Build Status](https://travis-ci.org/CharizTeam/Chariz.svg)](https://travis-ci.org/CharizTeam/Chariz)
-A package management app for OS X.
+<center>
 
-License: [GNU GPL v2](https://www.gnu.org/licenses/gpl-2.0.html)
+# <img src="https://chariz.io/img/favicon.png" alt="Chariz" width="128" height="128">
+
+**A package management app for macOS.**
+
+</center>
+
+[![Build Status](https://travis-ci.org/CharizTeam/Chariz.svg)](https://travis-ci.org/CharizTeam/Chariz) [![GitHub release](https://img.shields.io/github/release/CharizTeam/Chariz.svg)](https://github.com/CharizTeam/Chariz/releases)
 
 ## Building
-First, **you need an Apple Developer account**. Unfortunately OS X requires helper binaries to have a code signature or they won’t be installed, and Chariz isn’t going to be too useful if the helper isn’t running. You also should be using the latest public Xcode version.
+First, **you need an Apple Developer account**. Unfortunately macOS requires helper binaries to have a code signature or they won’t be installed, and Chariz isn’t going to be too useful if the helper isn’t running. You also should be using the latest public Xcode version.
 
-Other than that, you simply need to clone the repo and all the submodules, and then build from the `.xcworkspace`:
-
-```
-$ git clone --recursive https://github.com/CharizTeam/Chariz.git
-$ cd Chariz
-$ open Chariz.xcworkspace
-```
+1. Install Carthage (e.g. from Homebrew): `brew install carthage`
+2. Clone the repo: `git clone --recursive https://github.com/CharizTeam/Chariz.git`
+3. Enter the directory: `cd Chariz`
+4. Initialise Carthage dependencies: `./init.sh`
+5. Open the Xcode workspace: `open Chariz.xcworkspace`
 
 Note that the `.xcodeproj` is the Chariz app itself, while `.xcworkspace` contains other projects such as cpm. Chariz will not compile from the standalone `.xcodeproj`.
+
+## License
+Licensed under the GNU General Public License, version 2.0. Refer to [LICENSE.md](LICENSE.md).

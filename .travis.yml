@@ -1,15 +1,13 @@
 language: objective-c
-osx_image: beta-xcode6.3
+osx_image: xcode9.4
 
 git:
   submodules: false
 
 before_install:
-  - sudo gem install cocoapods
+  - sudo gem install cocoapods xcpretty xcpretty-travis-formatter
   - git submodule update --init --recursive
+  - ./init.sh
 
-script: xctool -workspace Chariz.xcworkspace -scheme Chariz build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-
-notifications:
-  slack:
-    secure: GafPr/W9TKQF2/oYF0SHHZSrE6OS2ea9+CwEdpgCl2ZDkkvCcFHCyy2SkK4b7cYpqUfEp0Q9+sPQqkmdWyWD+WQAM6IdNNI8xU8/SWcb5hKCanNzfVUwGXk0xhULaLDKr9rtypGZrtkvgenT0JYrh/xTNnNEBU4hkXxplIuSSBo=
+script:
+  - set -o pipefail && xcodebuild -workspace Chariz.xcworkspace -scheme Chariz build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -f $(xcpretty-travis-formatter)

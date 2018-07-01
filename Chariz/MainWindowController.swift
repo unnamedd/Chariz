@@ -12,7 +12,7 @@ enum MainWindowToolbarItem: String {
 	case back, refreshProgress, tabs, downloads, search
 }
 
-class MainWindowController: NSWindowController, NSToolbarItemValidation {
+class MainWindowController: NSWindowController {
 	
 	@IBOutlet weak var tabSegmentControl: NSSegmentedControl!
 	@IBOutlet weak var progressIndicator: NSProgressIndicator!

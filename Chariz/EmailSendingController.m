@@ -7,7 +7,6 @@
 //
 
 #import "EmailSendingController.h"
-#import "PrivateAPIs.h"
 #import "Mail.h"
 #include <sys/sysctl.h>
 
@@ -33,12 +32,18 @@ static NSString *const kEmailSendingControllerDpkgListURL = @"file:///tmp/chariz
 	
 		NSString *urlString = url.absoluteString;
 		NSRange queryRange = [urlString rangeOfString:@"?"];
-		NSDictionary *components = @{};
+		NSMutableDictionary <NSString *, NSString *> *query = [NSMutableDictionary dictionary];
 		NSString *address;
 		
 		if (queryRange.location != NSNotFound) {
-			components = [urlString substringWithRange:NSMakeRange(queryRange.location + 1, urlString.length - queryRange.location - 1)].queryToDict;
-			address = [url.resourceSpecifier substringToIndex:queryRange.location];
+			NSURLComponents *components = [[NSURLComponents alloc] init];
+			components.query = [urlString substringWithRange:NSMakeRange(queryRange.location + 1, urlString.length - queryRange.location - 1)];
+			
+			for (NSURLQueryItem *item in components.queryItems) {
+				query[item.name] = item.value;
+			}
+
+			address = query[@"to"] ?: [url.resourceSpecifier substringToIndex:queryRange.location];
 		} else {
 			address = url.resourceSpecifier;
 		}
@@ -61,8 +66,8 @@ static NSString *const kEmailSendingControllerDpkgListURL = @"file:///tmp/chariz
 		NSString *bodyDeviceInfo = [NSString stringWithFormat:@"\n\n%@: %@, %@\n\n", NSLocalizedString(@"Device information:", @""), [NSProcessInfo processInfo].operatingSystemVersionString, hardwareModel];
 		
 		MailOutgoingMessage *email = [[[mail classForScriptingClass:@"outgoing message"] alloc] initWithProperties:@{
-			@"subject": components[@"subject"] ?: @"",
-			@"content": [components[@"body"] ?: @"" stringByAppendingString:bodyDeviceInfo]
+			@"subject": query[@"subject"] ?: @"",
+			@"content": [query[@"body"] ?: @"" stringByAppendingString:bodyDeviceInfo]
 		}];
 		
 		[mail.outgoingMessages addObject:email];
@@ -86,7 +91,7 @@ static NSString *const kEmailSendingControllerDpkgListURL = @"file:///tmp/chariz
 			return;
 		}
 		
-		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC), dispatch_get_main_queue(), ^{
 			NSError *removeError = nil;
 			[[NSFileManager defaultManager] removeItemAtURL:dpkglURL error:&removeError];
 			

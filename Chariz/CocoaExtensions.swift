@@ -1,5 +1,5 @@
 //
-//  UXKitDefines.swift
+//  CocoaExtensions.swift
 //  Chariz
 //
 //  Created by Adam Demasi on 12/2/18.

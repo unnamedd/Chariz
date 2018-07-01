@@ -1,6 +1,3 @@
-[submodule "UXKit"]
-	path = headers/UXKit
-	url = https://github.com/hbang/UXKit-Headers
 [submodule "cpm"]
 	path = cpm
 	url = https://github.com/CharizTeam/cpm

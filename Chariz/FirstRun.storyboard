@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Lqz-nX-NqB">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.12"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="TRI-r6-cWC">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="Lqz-nX-NqB" sceneMemberID="viewController">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" tabbingMode="disallowed" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="o3C-xC-ewg">
+                        <windowStyleMask key="styleMask" titled="YES" fullSizeContentView="YES"/>
+                        <rect key="contentRect" x="294" y="362" width="500" height="150"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+                        <connections>
+                            <outlet property="delegate" destination="Lqz-nX-NqB" id="RJo-gf-TCR"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="IzZ-y3-6MY" kind="relationship" relationship="window.shadowedContentViewController" id="dCB-5C-XSa"/>
+                    </connections>
+                </windowController>
+                <customObject id="Ejl-ov-YPc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-147" y="-68"/>
+        </scene>
+        <!--Welcome to Chariz-->
+        <scene sceneID="psU-Pt-Lpu">
+            <objects>
+                <viewController title="Welcome to Chariz" showSeguePresentationStyle="single" id="IzZ-y3-6MY" sceneMemberID="viewController">
+                    <view key="view" id="FVf-wC-2d0">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="163"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="dHW-HC-fII">
+                                <rect key="frame" x="340" y="20" width="140" height="21"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fG3-M2-UTY">
+                                        <rect key="frame" x="-6" y="-7" width="76" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Skip" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oV8-TU-nAp">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="utq-Pg-3OL">
+                                        <rect key="frame" x="70" y="-7" width="76" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Install" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gzV-U9-PEi">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                        </buttonCell>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="utq-Pg-3OL" secondAttribute="trailing" id="4S3-f2-vjv"/>
+                                    <constraint firstItem="utq-Pg-3OL" firstAttribute="leading" secondItem="fG3-M2-UTY" secondAttribute="trailing" constant="12" id="AM5-Yk-vAp"/>
+                                    <constraint firstItem="fG3-M2-UTY" firstAttribute="top" secondItem="dHW-HC-fII" secondAttribute="top" id="UmA-Rz-3vK"/>
+                                    <constraint firstItem="fG3-M2-UTY" firstAttribute="leading" secondItem="dHW-HC-fII" secondAttribute="leading" id="WrL-ZL-B53"/>
+                                    <constraint firstItem="utq-Pg-3OL" firstAttribute="width" secondItem="fG3-M2-UTY" secondAttribute="width" id="Xw3-Kd-rzU"/>
+                                    <constraint firstItem="utq-Pg-3OL" firstAttribute="top" secondItem="dHW-HC-fII" secondAttribute="top" id="jyd-FE-Tqy"/>
+                                    <constraint firstAttribute="bottom" secondItem="utq-Pg-3OL" secondAttribute="bottom" id="k6t-kk-cSp"/>
+                                    <constraint firstAttribute="bottom" secondItem="fG3-M2-UTY" secondAttribute="bottom" id="lqt-Vs-Grq"/>
+                                </constraints>
+                            </customView>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="8Aj-IV-nxp">
+                                <rect key="frame" x="102" y="61" width="380" height="51"/>
+                                <textFieldCell key="cell" alignment="left" id="eEK-Bm-BkJ">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">Chariz needs to set up components. Choose Install and enter your password to allow this. If you choose Skip, Chariz’s functionality will be limited.</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WQo-3f-ah5">
+                                <rect key="frame" x="20" y="79" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Cib-Oj-I5a"/>
+                                    <constraint firstAttribute="width" constant="64" id="dNV-Uy-GEN"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon.icns" id="ffl-u4-bjc"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rn3-MP-ZCp">
+                                <rect key="frame" x="102" y="116" width="380" height="27"/>
+                                <textFieldCell key="cell" alignment="left" title="Welcome to Chariz" id="mQh-RX-hWx">
+                                    <font key="font" metaFont="system" size="22"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Rn3-MP-ZCp" firstAttribute="top" secondItem="WQo-3f-ah5" secondAttribute="top" id="1K3-SS-XBF"/>
+                            <constraint firstAttribute="trailing" secondItem="Rn3-MP-ZCp" secondAttribute="trailing" constant="20" id="5Oh-Gq-QYk"/>
+                            <constraint firstItem="8Aj-IV-nxp" firstAttribute="top" secondItem="Rn3-MP-ZCp" secondAttribute="bottom" constant="4" id="6nN-g7-h52"/>
+                            <constraint firstAttribute="bottom" secondItem="dHW-HC-fII" secondAttribute="bottom" constant="20" id="DAM-8q-rKZ"/>
+                            <constraint firstItem="Rn3-MP-ZCp" firstAttribute="leading" secondItem="WQo-3f-ah5" secondAttribute="trailing" constant="20" id="LBu-zH-RNa"/>
+                            <constraint firstItem="Rn3-MP-ZCp" firstAttribute="leading" secondItem="WQo-3f-ah5" secondAttribute="trailing" constant="20" id="Ps3-Pn-jxu"/>
+                            <constraint firstItem="WQo-3f-ah5" firstAttribute="top" secondItem="FVf-wC-2d0" secondAttribute="top" constant="20" id="U29-Ky-WcB"/>
+                            <constraint firstAttribute="trailing" secondItem="dHW-HC-fII" secondAttribute="trailing" constant="20" id="Vo1-zN-j19"/>
+                            <constraint firstItem="8Aj-IV-nxp" firstAttribute="leading" secondItem="Rn3-MP-ZCp" secondAttribute="leading" id="Zhn-rM-1Bo"/>
+                            <constraint firstItem="dHW-HC-fII" firstAttribute="top" secondItem="8Aj-IV-nxp" secondAttribute="bottom" constant="20" id="qrr-iM-PTO"/>
+                            <constraint firstAttribute="trailing" secondItem="8Aj-IV-nxp" secondAttribute="trailing" constant="20" id="sO4-Ti-yEV"/>
+                            <constraint firstItem="WQo-3f-ah5" firstAttribute="leading" secondItem="FVf-wC-2d0" secondAttribute="leading" constant="20" id="yKS-6D-fnT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="dV7-ZP-xhl" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="-63"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppIcon.icns" width="128" height="128"/>
+    </resources>
+</document>

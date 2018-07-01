@@ -7,25 +7,15 @@
 //
 
 import Cocoa
+import WebKit
 
-class HomeViewController: WebViewController {
-	
-	required init() {
-		super.init()
-		
-		title = NSLocalizedString("HOME", comment: "Title of the home page.")
-	}
-	
-	required init?(coder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
-	}
+class HomeViewController: NSViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		navigationItem.rightBarButtonItem = UXBarButtonItem(customView: SearchField())
-
-		webView.mainFrame.load(URLRequest(url: charizWebsiteURL)) // charizWebUIURL.appendingPathComponent("home/")))
+		let webView = view as! WKWebView
+		webView.load(URLRequest(url: charizWebsiteURL)) // charizWebUIURL.appendingPathComponent("home/")))
 	}
 
 }

@@ -8,20 +8,4 @@
 
 import Cocoa
 
-class RootViewController: UXSourceController {
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-		title = Bundle.main.infoDictionary![kCFBundleNameKey as String] as? String
-		style = .tabBar
-
-		rootViewControllers = [
-			HomeViewController(),
-			SourcesViewController(),
-			ChangesViewController(),
-			InstalledViewController()
-		]
-	}
-
-}
+class RootViewController: NSTabViewController {}

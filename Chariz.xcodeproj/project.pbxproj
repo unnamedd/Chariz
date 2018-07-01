@@ -8,33 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		4503DB281B3188A7007B3719 /* io.chariz.CharizHelper in Copy Files */ = {isa = PBXBuildFile; fileRef = 4503DB271B3188A0007B3719 /* io.chariz.CharizHelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4503DB2F1B318935007B3719 /* HelperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4503DB2E1B318935007B3719 /* HelperController.m */; };
 		450A96C51B2DAD3500D65471 /* first_launch.html in Resources */ = {isa = PBXBuildFile; fileRef = 450A96C41B2DAD3500D65471 /* first_launch.html */; };
-		CF2926E51D10D04C00502A27 /* PackageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2926E41D10D04C00502A27 /* PackageListViewController.swift */; };
-		CF2926E81D10D22200502A27 /* ChangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2926E71D10D22200502A27 /* ChangesViewController.swift */; };
-		CF2926EA1D10D83700502A27 /* InstalledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2926E91D10D83700502A27 /* InstalledViewController.swift */; };
-		CF2926EC1D11073400502A27 /* SourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2926EB1D11073400502A27 /* SourcesViewController.swift */; };
-		CF2926EE1D11086500502A27 /* SourcesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2926ED1D11086500502A27 /* SourcesListViewController.swift */; };
 		CF3652C61D103F3000D8DE43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652C51D103F3000D8DE43 /* AppDelegate.swift */; };
-		CF3652CB1D1041CB00D8DE43 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652CA1D1041CB00D8DE43 /* LoadingIndicatorView.swift */; };
-		CF3652CD1D10424900D8DE43 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652CC1D10424900D8DE43 /* SearchField.swift */; };
-		CF3652CF1D10429B00D8DE43 /* RefreshStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652CE1D10429B00D8DE43 /* RefreshStatusView.swift */; };
 		CF3652D11D10444B00D8DE43 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652D01D10444B00D8DE43 /* Preferences.swift */; };
-		CF3652D31D1046E500D8DE43 /* CharizWebScriptObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3652D21D1046E500D8DE43 /* CharizWebScriptObject.swift */; };
 		CF3E40D11A91E10A00C11DE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3E40D01A91E10A00C11DE3 /* Images.xcassets */; };
 		CF3E40DF1A92172700C11DE3 /* Mail.app in Sources */ = {isa = PBXBuildFile; fileRef = CF3E40DE1A92172700C11DE3 /* Mail.app */; };
 		CF3E40E21A92235600C11DE3 /* EmailSendingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3E40E11A92235600C11DE3 /* EmailSendingController.m */; };
-		CF678C521A84F0650084360F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF678C511A84F0650084360F /* MainMenu.xib */; };
-		CF74A8E62054DF14003EEEB6 /* CPM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFEC7F3A1BCD35630065ED6C /* CPM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CF933F561D104CD70044413A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF933F551D104CD70044413A /* RootViewController.swift */; };
-		CF933F591D104D500044413A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF933F581D104D500044413A /* WebViewController.swift */; };
-		CF933F5B1D1051850044413A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF933F5A1D1051850044413A /* HomeViewController.swift */; };
 		CF933F5D1D1052250044413A /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF933F5C1D1052250044413A /* URLs.swift */; };
+		CFA875F320E8C60B007A3C8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA875F220E8C60B007A3C8F /* Main.storyboard */; };
+		CFB0F5E120E8E5DA0024CC3F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF933F551D104CD70044413A /* RootViewController.swift */; };
+		CFB0F5E820E8F45B0024CC3F /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB0F5E720E8F45B0024CC3F /* MainWindowController.swift */; };
+		CFB0F5E920E92FD50024CC3F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF933F5A1D1051850044413A /* HomeViewController.swift */; };
+		CFB0F5EB20E93B5F0024CC3F /* FirstRun.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB0F5EA20E93B5F0024CC3F /* FirstRun.storyboard */; };
 		CFDA9EC820311A840097348A /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA9EC720311A840097348A /* Logging.swift */; };
-		CFDA9ECB203121DA0097348A /* UXKitDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA9ECA203121DA0097348A /* UXKitDefines.swift */; };
-		CFDA9ECD20312AFA0097348A /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA9ECC20312AFA0097348A /* FirstLaunchViewController.swift */; };
-		CFEC7F511BCD3F130065ED6C /* UXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF678C361A84C83B0084360F /* UXKit.framework */; };
-		CFEC7F561BCD44D50065ED6C /* FirstRun.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFEC7F551BCD44D50065ED6C /* FirstRun.xib */; };
+		CFDA9ECB203121DA0097348A /* CocoaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA9ECA203121DA0097348A /* CocoaExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -59,20 +46,6 @@
 			remoteGlobalIDString = 4BE4905D10445E0A006BE471;
 			remoteInfo = io.chariz.CharizHelper;
 		};
-		4503DB291B3188A9007B3719 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4503DB221B3188A0007B3719 /* CharizHelper.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4BE4905C10445E0A006BE471;
-			remoteInfo = io.chariz.CharizHelper;
-		};
-		CF90EB251D0C339600452C80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CFEC7F321BCD35620065ED6C /* cpm.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = CFEC7F111BCD31F80065ED6C;
-			remoteInfo = "cpm-framework";
-		};
 		CFEC7F371BCD35630065ED6C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CFEC7F321BCD35620065ED6C /* cpm.xcodeproj */;
@@ -85,13 +58,6 @@
 			containerPortal = CFEC7F321BCD35620065ED6C /* cpm.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = CFEC7F121BCD31F80065ED6C;
-			remoteInfo = CPM;
-		};
-		CFEC7F3B1BCD35670065ED6C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CFEC7F321BCD35620065ED6C /* cpm.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = CFEC7F111BCD31F80065ED6C;
 			remoteInfo = CPM;
 		};
 /* End PBXContainerItemProxy section */
@@ -114,7 +80,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CF74A8E62054DF14003EEEB6 /* CPM.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +101,6 @@
 		4503DB2D1B318935007B3719 /* HelperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperController.h; sourceTree = "<group>"; };
 		4503DB2E1B318935007B3719 /* HelperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperController.m; sourceTree = "<group>"; };
 		450A96C41B2DAD3500D65471 /* first_launch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = first_launch.html; sourceTree = "<group>"; };
-		450A96C61B2E4DE100D65471 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		450A96C81B2E4DE800D65471 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		CF2926E41D10D04C00502A27 /* PackageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageListViewController.swift; sourceTree = "<group>"; };
 		CF2926E71D10D22200502A27 /* ChangesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangesViewController.swift; sourceTree = "<group>"; };
 		CF2926E91D10D83700502A27 /* InstalledViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstalledViewController.swift; sourceTree = "<group>"; };
@@ -145,37 +108,25 @@
 		CF2926ED1D11086500502A27 /* SourcesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourcesListViewController.swift; sourceTree = "<group>"; };
 		CF3652C51D103F3000D8DE43 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF3652C81D103F4800D8DE43 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
-		CF3652CA1D1041CB00D8DE43 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
-		CF3652CC1D10424900D8DE43 /* SearchField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
-		CF3652CE1D10429B00D8DE43 /* RefreshStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshStatusView.swift; sourceTree = "<group>"; };
 		CF3652D01D10444B00D8DE43 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = Chariz/Preferences.swift; sourceTree = "<group>"; };
-		CF3652D21D1046E500D8DE43 /* CharizWebScriptObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharizWebScriptObject.swift; sourceTree = "<group>"; };
 		CF3E40D01A91E10A00C11DE3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CF3E40D71A920EA900C11DE3 /* PrivateAPIs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateAPIs.h; sourceTree = "<group>"; };
-		CF3E40D81A92151300C11DE3 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		CF3E40DE1A92172700C11DE3 /* Mail.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Mail.app; path = /Applications/Mail.app; sourceTree = "<absolute>"; };
 		CF3E40E01A92235600C11DE3 /* EmailSendingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailSendingController.h; sourceTree = "<group>"; };
 		CF3E40E11A92235600C11DE3 /* EmailSendingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailSendingController.m; sourceTree = "<group>"; };
 		CF678C101A84C7490084360F /* Chariz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chariz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF678C141A84C7490084360F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF678C361A84C83B0084360F /* UXKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UXKit.framework; path = /System/Library/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks/UXKit.framework; sourceTree = "<absolute>"; };
-		CF678C3A1A84D49F0084360F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		CF678C3C1A84D4A40084360F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		CF678C3E1A84D4A80084360F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CF678C4B1A84E8660084360F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		CF678C511A84F0650084360F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		CF79F6141B0228C500887121 /* libcpm.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcpm.dylib; path = cpm/build/Debug/libcpm.dylib; sourceTree = "<group>"; };
 		CF933F551D104CD70044413A /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		CF933F581D104D500044413A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CF933F5A1D1051850044413A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CF933F5C1D1052250044413A /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		CFA074E31A8F94560094C486 /* Chariz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chariz-Prefix.pch"; sourceTree = "<group>"; };
+		CFA875F220E8C60B007A3C8F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CFB0F5E720E8F45B0024CC3F /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		CFB0F5EA20E93B5F0024CC3F /* FirstRun.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstRun.storyboard; sourceTree = "<group>"; };
 		CFDA9EC720311A840097348A /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
-		CFDA9ECA203121DA0097348A /* UXKitDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UXKitDefines.swift; sourceTree = "<group>"; };
+		CFDA9ECA203121DA0097348A /* CocoaExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaExtensions.swift; sourceTree = "<group>"; };
 		CFDA9ECC20312AFA0097348A /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
-		CFEC7F301BCD34FC0065ED6C /* CPM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CPM.framework; path = cpm/build/Debug/CPM.framework; sourceTree = "<group>"; };
 		CFEC7F321BCD35620065ED6C /* cpm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cpm.xcodeproj; path = cpm/cpm.xcodeproj; sourceTree = "<group>"; };
-		CFEC7F551BCD44D50065ED6C /* FirstRun.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstRun.xib; sourceTree = "<group>"; };
 		F9E063264AAB01B6E98D54B2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -184,7 +135,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFEC7F511BCD3F130065ED6C /* UXKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,9 +224,8 @@
 				CFA074E31A8F94560094C486 /* Chariz-Prefix.pch */,
 				CF933F5C1D1052250044413A /* URLs.swift */,
 				CFDA9EC720311A840097348A /* Logging.swift */,
-				CFDA9ECA203121DA0097348A /* UXKitDefines.swift */,
+				CFDA9ECA203121DA0097348A /* CocoaExtensions.swift */,
 				CF3652C81D103F4800D8DE43 /* BridgingHeader.h */,
-				CF3E40D71A920EA900C11DE3 /* PrivateAPIs.h */,
 				CF678C141A84C7490084360F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -285,17 +234,7 @@
 		CF678C381A84C8450084360F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CFEC7F301BCD34FC0065ED6C /* CPM.framework */,
-				450A96C81B2E4DE800D65471 /* ServiceManagement.framework */,
-				450A96C61B2E4DE100D65471 /* Security.framework */,
-				CF79F6141B0228C500887121 /* libcpm.dylib */,
-				CF678C3C1A84D4A40084360F /* AppKit.framework */,
-				CF678C3A1A84D49F0084360F /* Cocoa.framework */,
-				CF678C3E1A84D4A80084360F /* CoreGraphics.framework */,
 				CF3E40DE1A92172700C11DE3 /* Mail.app */,
-				CF3E40D81A92151300C11DE3 /* ScriptingBridge.framework */,
-				CF678C361A84C83B0084360F /* UXKit.framework */,
-				CF678C4B1A84E8660084360F /* WebKit.framework */,
 				F9E063264AAB01B6E98D54B2 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -312,6 +251,7 @@
 		CF678C451A84E2E50084360F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CFB0F5E720E8F45B0024CC3F /* MainWindowController.swift */,
 				CF933F551D104CD70044413A /* RootViewController.swift */,
 			);
 			name = Core;
@@ -365,19 +305,10 @@
 			name = "Package List";
 			sourceTree = "<group>";
 		};
-		CF80DF4D1B1349EE00725929 /* Refresh Status */ = {
-			isa = PBXGroup;
-			children = (
-				CF3652CE1D10429B00D8DE43 /* RefreshStatusView.swift */,
-			);
-			name = "Refresh Status";
-			sourceTree = "<group>";
-		};
 		CF80DF4E1B1349F200725929 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
 				CF80DF561B13663800725929 /* Controls */,
-				CF80DF4D1B1349EE00725929 /* Refresh Status */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -385,18 +316,8 @@
 		CF80DF561B13663800725929 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				CF3652CA1D1041CB00D8DE43 /* LoadingIndicatorView.swift */,
-				CF3652CC1D10424900D8DE43 /* SearchField.swift */,
 			);
 			name = Controls;
-			sourceTree = "<group>";
-		};
-		CF9EC62C1B53EFA1000491F3 /* Web Script Objects */ = {
-			isa = PBXGroup;
-			children = (
-				CF3652D21D1046E500D8DE43 /* CharizWebScriptObject.swift */,
-			);
-			name = "Web Script Objects";
 			sourceTree = "<group>";
 		};
 		CFEC7F331BCD35620065ED6C /* Products */ = {
@@ -411,8 +332,8 @@
 		CFEC7F541BCD44B50065ED6C /* Interface Builder */ = {
 			isa = PBXGroup;
 			children = (
-				CF678C511A84F0650084360F /* MainMenu.xib */,
-				CFEC7F551BCD44D50065ED6C /* FirstRun.xib */,
+				CFA875F220E8C60B007A3C8F /* Main.storyboard */,
+				CFB0F5EA20E93B5F0024CC3F /* FirstRun.storyboard */,
 			);
 			name = "Interface Builder";
 			sourceTree = "<group>";
@@ -431,7 +352,6 @@
 			children = (
 				CF3E40E31A92235A00C11DE3 /* Email Sending */,
 				CFFE4F171A906D4100051B92 /* Preferences */,
-				CF9EC62C1B53EFA1000491F3 /* Web Script Objects */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -455,9 +375,6 @@
 				457C75A91B2F8C4C007C019F /* PBXBuildRule */,
 			);
 			dependencies = (
-				CFEC7F3C1BCD35670065ED6C /* PBXTargetDependency */,
-				4503DB2A1B3188A9007B3719 /* PBXTargetDependency */,
-				CF90EB261D0C339600452C80 /* PBXTargetDependency */,
 			);
 			name = Chariz;
 			productName = Chariz;
@@ -471,13 +388,13 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CHR;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "HASHBANG Productions";
 				TargetAttributes = {
 					CF678C0F1A84C7490084360F = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = N2LN9ZT493;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -538,9 +455,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF678C521A84F0650084360F /* MainMenu.xib in Resources */,
+				CFA875F320E8C60B007A3C8F /* Main.storyboard in Resources */,
 				CF3E40D11A91E10A00C11DE3 /* Images.xcassets in Resources */,
-				CFEC7F561BCD44D50065ED6C /* FirstRun.xib in Resources */,
+				CFB0F5EB20E93B5F0024CC3F /* FirstRun.storyboard in Resources */,
 				450A96C51B2DAD3500D65471 /* first_launch.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,49 +486,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF2926E51D10D04C00502A27 /* PackageListViewController.swift in Sources */,
-				CFDA9ECD20312AFA0097348A /* FirstLaunchViewController.swift in Sources */,
 				CF3E40DF1A92172700C11DE3 /* Mail.app in Sources */,
-				CF3652D31D1046E500D8DE43 /* CharizWebScriptObject.swift in Sources */,
-				CF933F591D104D500044413A /* WebViewController.swift in Sources */,
 				CF3652D11D10444B00D8DE43 /* Preferences.swift in Sources */,
-				CF3652CF1D10429B00D8DE43 /* RefreshStatusView.swift in Sources */,
-				CFDA9ECB203121DA0097348A /* UXKitDefines.swift in Sources */,
-				CF2926E81D10D22200502A27 /* ChangesViewController.swift in Sources */,
-				CF3652CD1D10424900D8DE43 /* SearchField.swift in Sources */,
+				CFDA9ECB203121DA0097348A /* CocoaExtensions.swift in Sources */,
 				CF933F5D1D1052250044413A /* URLs.swift in Sources */,
 				CFDA9EC820311A840097348A /* Logging.swift in Sources */,
-				CF933F561D104CD70044413A /* RootViewController.swift in Sources */,
+				CFB0F5E920E92FD50024CC3F /* HomeViewController.swift in Sources */,
 				CF3652C61D103F3000D8DE43 /* AppDelegate.swift in Sources */,
-				CF2926EA1D10D83700502A27 /* InstalledViewController.swift in Sources */,
-				4503DB2F1B318935007B3719 /* HelperController.m in Sources */,
-				CF3652CB1D1041CB00D8DE43 /* LoadingIndicatorView.swift in Sources */,
-				CF2926EE1D11086500502A27 /* SourcesListViewController.swift in Sources */,
-				CF933F5B1D1051850044413A /* HomeViewController.swift in Sources */,
+				CFB0F5E120E8E5DA0024CC3F /* RootViewController.swift in Sources */,
 				CF3E40E21A92235600C11DE3 /* EmailSendingController.m in Sources */,
-				CF2926EC1D11073400502A27 /* SourcesViewController.swift in Sources */,
+				CFB0F5E820E8F45B0024CC3F /* MainWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4503DB2A1B3188A9007B3719 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = io.chariz.CharizHelper;
-			targetProxy = 4503DB291B3188A9007B3719 /* PBXContainerItemProxy */;
-		};
-		CF90EB261D0C339600452C80 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "cpm-framework";
-			targetProxy = CF90EB251D0C339600452C80 /* PBXContainerItemProxy */;
-		};
-		CFEC7F3C1BCD35670065ED6C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CPM;
-			targetProxy = CFEC7F3B1BCD35670065ED6C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CF678C2E1A84C74A0084360F /* Debug */ = {
@@ -626,12 +514,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -658,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -677,12 +567,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -703,7 +595,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -721,7 +613,6 @@
 				DEVELOPMENT_TEAM = N2LN9ZT493;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks",
 					"$(PROJECT_DIR)/cpm/Carthage/Build/Mac",
 				);
 				GCC_PREFIX_HEADER = "Chariz/Chariz-Prefix.pch";
@@ -748,7 +639,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Chariz/BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -763,7 +654,6 @@
 				DEVELOPMENT_TEAM = N2LN9ZT493;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks",
 					"$(PROJECT_DIR)/cpm/Carthage/Build/Mac",
 				);
 				GCC_PREFIX_HEADER = "Chariz/Chariz-Prefix.pch";
@@ -789,7 +679,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.chariz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Chariz/BridgingHeader.h;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
